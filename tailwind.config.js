@@ -11,6 +11,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'custom-yellow': '#FDC31E3D', // Add your custom color with alpha value
+      },
+      borderWidth: {
+        '0.8': '0.8px', // Add a custom border width
+      },
+      backgroundImage: {
+        'custom-gradient': 'linear-gradient(71.4deg, #FDF1EC 0%, #EEE3F8 96.24%)',
+        'line-gradeint': 'linear-gradient(90deg, #FFFFFF 0%, #FFB35C 100%)'
+      },
       fontFamily: {
         sans: ["Onest", "sans-serif"],
       },

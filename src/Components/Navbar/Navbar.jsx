@@ -39,8 +39,6 @@ export default function Navbar() {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  
-
   return (
     <div id="navFix" className="flex h-30 rounded-2xl mx-auto ">
       <Navbar_ maxWidth="full" className="rounded-2xl backdrop-lg h-16 mt-5 shadow-xl ring-slate-200 ring-2 ring-offset-2" >
