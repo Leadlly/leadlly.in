@@ -53,7 +53,7 @@ const Contact = (props: Props) => {
 					<SocialIcon Icon={InstagramIcon} />
 				</div>
 			</div>
-			<form action='' className='flex px-96 gap-5 m-6 justify-center'>
+			<form action='' className='flex px-96 gap-5 py-6 justify-center'>
 				<input
 					type='text'
 					className='flex-1 p-3  rounded-2xl  outline-0 border-2 border-black/40'

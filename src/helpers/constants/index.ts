@@ -25,7 +25,7 @@ export const PlannerPoints: Points[] = [
 export const TrackerPoints: Points[] = [
 	{ icon: RevisionFrequency, label: 'Check your  revision frequency.' },
 	{ icon: KnowledgeGap, label: 'Identify knowledge gaps.' },
-	{ icon: TrackEfficiency, label: 'Current and Cumulative efficiency tracking.' },
+	{ icon: TrackEfficiency, label: 'Current and Cumulative efficiency .' },
 	{ icon: Tracking, label: 'Subject,Chapter,Topic tracking.' },
 ];
 

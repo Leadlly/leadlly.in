@@ -1,39 +1,55 @@
-import Image from "next/image";
-import DailyMotivation from "../Icons/GrowthMeter/DailyMotivation";
-import { GrowthMeterPoints } from "@/helpers/constants";
-import IconWithLabel from "../shared/IconWIthLabel";
+'use client';
+import Image from 'next/image';
+import { GrowthMeterPoints } from '@/helpers/constants';
+import IconWithLabel from '../shared/IconWIthLabel';
+import Reveal from '../shared/Reveal';
+import RevealImage from '../shared/RevealImage';
 
-type Props = {}
+type Props = {};
 const GrowthMeter = (props: Props) => {
-  return (
+	return (
 		<section>
-			<div className='text-primary-blue text-6xl font-bold m-40'>
-				<h1>Stay motivated. </h1>
-				<h1>Visualize your progress.</h1>
+			<div className='text-primary-blue text-6xl font-bold mx-40 my-20'>
+				<Reveal>
+					<h1>Stay motivated. </h1>
+				</Reveal>
+				<Reveal>
+					<h1>Visualize your progress.</h1>
+				</Reveal>
 			</div>
-			<div className='flex items-center justify-evenly'>
-				<Image
-					alt='planner'
-					height={312}
-					width={616}
-					src={'/assets/images/growthMeter.png'}
-				/>
-				<p className='text-[#5B437D] font-semibold text-xl w-96 text-right'>
-					Watch your self-study soar with the Growth Meter - see daily, weekly, and monthly progress
-					take flight!
-				</p>
-			</div>
-			<div className='grid grid-cols-2 gap-y-14 p-28'>
+			<RevealImage
+				rightItem={
+					<Image
+						alt='growthMeter'
+						height={498}
+						width={498}
+						src={'/assets/images/growthMeter.png'}
+						className='z-10'
+					/>
+				}
+				leftItem={
+					<p className='text-[#5B437D] font-semibold text-xl w-96 text-right'>
+						Watch your self-study soar with the Growth Meter - see daily, weekly, and monthly
+						progress take flight!
+					</p>
+				}
+				delay={0.2}
+				motionDivClass='flex items-center justify-evenly'
+				imagePosition='right' // Specify image position
+			/>
+			<div className='grid grid-cols-2 gap-y-14 p-28 py-14'>
 				{GrowthMeterPoints.map((item, index) => (
 					<IconWithLabel
 						key={index}
 						icon={<item.icon className='size-full' />}
 						label={item.label}
+						delay={(index + 1) * 0.2}
 					/>
 				))}
 			</div>
 			{/* <FloatButton text="Dive into planner"/> */}
 		</section>
 	);
-}
-export default GrowthMeter
+};
+
+export default GrowthMeter;
