@@ -15,7 +15,7 @@ const Reveal = ({ children, width = 'fit-content', delay,motionDivClass }: Props
 	return (
 		<div
 			ref={ref}
-			style={{ position: 'relative', width, overflow: 'hidden' }}
+			style={{ position: 'relative', width, overflow: 'hidden',borderRadius:'20px' }} 
 		>
 			<motion.div
 				variants={{

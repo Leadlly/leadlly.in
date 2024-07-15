@@ -12,7 +12,10 @@ interface PricingCardProps {
 
 const PricingCard: React.FC<PricingCardProps> = ({ title, price, features, isHighlighted }) => {
 	return (
-		<Reveal delay={isHighlighted? 0.1:0.4}>
+		<Reveal 
+			delay={isHighlighted ? 0.1 : 0.4}
+			motionDivClass='rounded-[20px]'
+		>
 			<div
 				className={cn('border p-10 min-w-[300px] rounded-[20px]', {
 					'bg-white shadow-xl': isHighlighted,

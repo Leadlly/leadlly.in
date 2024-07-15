@@ -20,32 +20,28 @@ const RevealImage = ({ leftItem, rightItem, delay = 0, motionDivClass, imagePosi
 		if (imagePosition === 'left') {
 			imageControls.start({
 				opacity: [0, 0.5, 1, 1, 1],
-				x: ['-65%', '-65%', '-65%', '-65%', 0],
+				x: ['-50%', '-50%', '-50%', '-50%', 0],
 				transition: {
 					duration: 1.5,
 					delay: 0.2,
 					ease: 'easeInOut',
-					type: 'spring',
-					damping: 10,
-					mass: 0.75,
-					stiffness: 100,
-				}, // Custom cubic-bezier for smoother bounce effect
+				},
 			});
 			textControls.start({
 				opacity: [0, 0, 0, 0.2, 1],
-				x: ['77%', '77%', '77%', '77%', 0],
-				transition: { duration: 1.5, delay: 0.2, ease:'easeInOut',}, // Custom cubic-bezier for smoother bounce effect
+				x: ['100%', '100%', '100%', '100%', 0],
+				transition: { duration: 1.5, delay: 0.2, ease: 'easeInOut' },
 			});
 		} else {
 			imageControls.start({
 				opacity: [0, 0.5, 1, 1, 1],
-				x: ['65%', '65%', '65%', '65%', 0],
-				transition: { duration: 1.5, delay: 0.2, ease:'easeInOut',}, // Custom cubic-bezier for smoother bounce effect
+				x: ['50%', '50%', '50%', '50%', 0],
+				transition: { duration: 1.5, delay: 0.2, ease: 'easeInOut' },
 			});
 			textControls.start({
 				opacity: [0, 0, 0, 0.2, 1],
-				x: ['-77%', '--77%', '-77%', '-77%', 0],
-				transition: { duration: 1.5, delay: 0.2, ease:'easeInOut',}, // Custom cubic-bezier for smoother bounce effect
+				x: ['-100%', '--100%', '-100%', '-100%', 0],
+				transition: { duration: 1.5, delay: 0.2, ease: 'easeInOut' },
 			});
 		}
 	};
@@ -64,14 +60,14 @@ const RevealImage = ({ leftItem, rightItem, delay = 0, motionDivClass, imagePosi
 			{imagePosition === 'left' ? (
 				<>
 					<motion.div
-						initial={{ opacity: 0, x: '-65%' }}
+						initial={{ opacity: 0, x: '-50%' }}
 						animate={imageControls}
 						style={{ zIndex: 10 }}
 					>
 						{leftItem}
 					</motion.div>
 					<motion.div
-						initial={{ opacity: 0, x: '65%' }}
+						initial={{ opacity: 0, x: '50%' }}
 						animate={textControls}
 					>
 						{rightItem}
@@ -80,14 +76,14 @@ const RevealImage = ({ leftItem, rightItem, delay = 0, motionDivClass, imagePosi
 			) : (
 				<>
 					<motion.div
-						initial={{ opacity: 0, x: '65%' }}
+						initial={{ opacity: 0, x: '50%' }}
 						animate={imageControls}
 						style={{ zIndex: 10 }}
 					>
 						{rightItem}
 					</motion.div>
 					<motion.div
-						initial={{ opacity: 0, x: '-65%' }}
+						initial={{ opacity: 0, x: '-50%' }}
 						animate={textControls}
 					>
 						{leftItem}

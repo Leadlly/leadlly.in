@@ -43,7 +43,7 @@ const Planner = (props: Props) => {
 						key={index}
 						icon={<item.icon className='size-full' />}
 						label={item.label}
-						delay={(index + 1) * 0.2}
+						delay={(index + 1) * 0.15}
 					/>
 				))}
 			</div>
