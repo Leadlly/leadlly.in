@@ -4,11 +4,16 @@ import IconWithLabel from '../shared/IconWIthLabel';
 import { PlannerPoints } from '@/helpers/constants';
 import Reveal from '../shared/Reveal';
 import RevealImage from '../shared/RevealImage';
+import FloatButton from '../shared/FloatButton';
+import { useRef } from 'react';
+import { useInView } from 'framer-motion';
 
 type Props = {};
 const Planner = (props: Props) => {
+	const ref = useRef(null)
+	const isInView = useInView(ref, { amount: 0.4 });
 	return (
-		<section>
+		<section ref={ref}>
 			<div className='text-primary-blue text-6xl font-bold mx-40 my-20'>
 				<Reveal>
 					<h1>Planner.</h1>
@@ -47,7 +52,7 @@ const Planner = (props: Props) => {
 					/>
 				))}
 			</div>
-			{/* <FloatButton text="Dive into planner"/> */}
+			<FloatButton isInView={isInView} text="Dive into planner"/>
 		</section>
 	);
 };

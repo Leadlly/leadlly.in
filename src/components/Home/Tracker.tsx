@@ -4,11 +4,16 @@ import Image from 'next/image';
 import IconWithLabel from '../shared/IconWIthLabel';
 import Reveal from '../shared/Reveal';
 import RevealImage from '../shared/RevealImage'; // Import the RevealImage component
+import { useRef } from 'react';
+import { useInView } from 'framer-motion';
+import FloatButton from '../shared/FloatButton';
 
 type Props = {};
 const Tracker = (props: Props) => {
+	const ref = useRef(null)
+	const isInView = useInView(ref, { amount: 0.4 });
 	return (
-		<section>
+		<section ref={ref}>	
 			<div className='text-primary-blue text-6xl font-bold mx-40 my-20'>
 				<Reveal>
 					<h1>Never lose.</h1>
@@ -46,7 +51,10 @@ const Tracker = (props: Props) => {
 					/>
 				))}
 			</div>
-			{/* <FloatButton text="Dive into planner"/> */}
+			<FloatButton
+				isInView={isInView}
+				text='Zoom into tracker'
+			/>
 		</section>
 	);
 };

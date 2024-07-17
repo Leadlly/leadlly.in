@@ -4,11 +4,16 @@ import { GrowthMeterPoints } from '@/helpers/constants';
 import IconWithLabel from '../shared/IconWIthLabel';
 import Reveal from '../shared/Reveal';
 import RevealImage from '../shared/RevealImage';
+import { useRef } from 'react';
+import { useInView } from 'framer-motion';
+import FloatButton from '../shared/FloatButton';
 
 type Props = {};
 const GrowthMeter = (props: Props) => {
+	const ref = useRef(null);
+	const isInView = useInView(ref, { amount: 0.4 });
 	return (
-		<section>
+		<section ref={ref}>
 			<div className='text-primary-blue text-6xl font-bold mx-40 my-20'>
 				<Reveal>
 					<h1>Stay motivated. </h1>
@@ -47,7 +52,10 @@ const GrowthMeter = (props: Props) => {
 					/>
 				))}
 			</div>
-			{/* <FloatButton text="Dive into planner"/> */}
+			<FloatButton
+				isInView={isInView}
+				text='Explore growth meter'
+			/>
 		</section>
 	);
 };
