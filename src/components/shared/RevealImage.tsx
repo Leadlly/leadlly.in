@@ -30,18 +30,18 @@ const RevealImage = ({ leftItem, rightItem, delay = 0, motionDivClass, imagePosi
 			textControls.start({
 				opacity: [0, 0, 0, 0.2, 1],
 				x: ['100%', '100%', '100%', '100%', 0],
-				transition: { duration: 1.5, delay: 0.2, ease: 'easeInOut' },
+				transition: { duration: 1, delay: 0.2, ease: 'easeInOut' },
 			});
 		} else {
 			imageControls.start({
 				opacity: [0, 0.5, 1, 1, 1],
 				x: ['50%', '50%', '50%', '50%', 0],
-				transition: { duration: 1.5, delay: 0.2, ease: 'easeInOut' },
+				transition: { duration: 1, delay: 0.2, ease: 'easeInOut' },
 			});
 			textControls.start({
 				opacity: [0, 0, 0, 0.2, 1],
 				x: ['-100%', '--100%', '-100%', '-100%', 0],
-				transition: { duration: 1.5, delay: 0.2, ease: 'easeInOut' },
+				transition: { duration: 1, delay: 0.2, ease: 'easeInOut' },
 			});
 		}
 	};

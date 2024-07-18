@@ -1,5 +1,4 @@
-import PricingCard from "../shared/PricingCard";
-
+import PricingCard from '../shared/PricingCard';
 
 const plans = [
 	{
@@ -24,7 +23,7 @@ const plans = [
 
 const PricingSection: React.FC = () => {
 	return (
-		<div className='flex justify-center space-x-4'>
+		<div className='flex flex-col sm:flex-row justify-center items-center	 space-y-4 sm:space-y-0 sm:space-x-4 px-4 sm:px-0'>
 			{plans.map((plan, index) => (
 				<PricingCard
 					key={index}
