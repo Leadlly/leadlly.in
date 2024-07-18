@@ -1,6 +1,6 @@
 'use client';
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect } from 'react';
+import { AnimationControls, motion, useAnimation } from 'framer-motion';
 import { cn } from '@/utils/cn';
 
 type Testimonial = {
@@ -27,48 +27,88 @@ const testimonials: Testimonial[] = [
 		text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper, lacus ac dignissim efficitur, ante orci varius turpis, non accumsan urna lorem vitae velit. Nunc accumsan odio nec egestas vulputate. Ut semper aliquet euismod..',
 		avatar: '/assets/avatar.png',
 	},
+	{
+		name: 'Alice Johnson',
+		text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper, lacus ac dignissim efficitur, ante orci varius turpis, non accumsan urna lorem vitae velit. Nunc accumsan odio nec egestas vulputate. Ut semper aliquet euismod..',
+		avatar: '/assets/avatar.png',
+	},
 ];
 
 const TestimonialsMarquee: React.FC<Props> = () => {
+	const controls = useAnimation();
+	useEffect(() => {
+		controls.start({
+			x: '-100%',
+			transition: { duration: 20, repeat: Infinity, ease: 'linear' },
+		});
+	}, []);
+	const handleMouseEnter = () => {
+		controls.stop();
+	};
+
+	const handleMouseLeave = () => {
+		controls.start({
+			x: '-100%',
+			transition: { duration: 20, repeat: Infinity, ease: 'linear' },
+		});
+	};
+
 	return (
-		<div className='container mx-auto my-20  w-full flex MarqueeGradient'>
-			<MarqueeMotionDiv testimonials={testimonials} />
-			<MarqueeMotionDiv testimonials={testimonials} />
-		</div>
+		<motion.div
+			onMouseEnter={handleMouseEnter}
+			onMouseLeave={handleMouseLeave}
+			className='container mx-auto my-10 sm:my-20 w-full flex overflow-hidden MarqueeGradient'
+		>
+			<MarqueeMotionDiv
+				testimonials={testimonials}
+				controls={controls}
+			/>
+			<MarqueeMotionDiv
+				testimonials={testimonials}
+				controls={controls}
+			/>
+		</motion.div>
 	);
 };
 
-const MarqueeMotionDiv = ({ testimonials }: { testimonials: Testimonial[] }) => {
+
+const MarqueeMotionDiv = ({
+	testimonials,
+	controls,
+}: {
+	testimonials: Testimonial[];
+	controls: AnimationControls;
+}) => {
 	return (
 		<motion.div
 			initial={{ x: '0' }}
-			animate={{ x: '-100%' }}
-			transition={{ duration: 10, repeat: Infinity, ease: 'linear' }}
+			animate={controls}
 			className='flex'
+			whileHover={{ animationPlayState: 'paused' }}
 		>
 			{testimonials.map((testimonial, index) => (
 				<div
 					key={index}
 					className={cn(
-						'flex flex-col items-center gap-5 p-10 mr-3 min-h-[340px] min-w-[370px]',
+						'flex flex-col items-center gap-3 sm:gap-5 p-5 sm:p-10 mr-3 min-h-[200px] min-w-[300px] sm:min-h-[340px] sm:min-w-[370px]',
 						index % 2 == 0
-							? 'border-2 border-[#D0B5F9] rounded-[40px] bg-[#E8DAEE] text-white'
-							: 'border-2 border-black/30 rounded-[40px] bg-[#FEFBFF] text-black'
+							? 'border-2 border-[#D0B5F9] rounded-[20px] sm:rounded-[40px] bg-[#E8DAEE] text-white'
+							: 'border-2 border-black/30 rounded-[20px] sm:rounded-[40px] bg-[#FEFBFF] text-black'
 					)}
 				>
-					<div className='flex items-center gap-5'>
-						<div className='size-14 rounded-full overflow-hidden '>
+					<div className='flex items-center gap-3 sm:gap-5'>
+						<div className='w-10 h-10 sm:w-14 sm:h-14 rounded-full overflow-hidden'>
 							<img
 								src={testimonial.avatar}
 								alt={`${testimonial.name} avatar`}
-								className='size-full object-cover object-center '
+								className='w-full h-full object-cover object-center'
 							/>
 						</div>
-						<p className='font-semibold text-xl '>{testimonial.name}</p>
+						<p className='font-semibold text-base sm:text-xl'>{testimonial.name}</p>
 					</div>
 
 					<div className='text-center'>
-						<p className='font-medium  text-left'>{testimonial.text}</p>
+						<p className='font-medium text-sm sm:text-base text-left'>{testimonial.text}</p>
 					</div>
 				</div>
 			))}

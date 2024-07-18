@@ -12,37 +12,64 @@ type Props = {};
 const GrowthMeter = (props: Props) => {
 	const ref = useRef(null);
 	const isInView = useInView(ref, { amount: 0.4 });
+
 	return (
 		<section ref={ref}>
-			<div className='text-primary-blue text-6xl font-bold mx-40 my-20'>
+			<div className='text-primary-blue text-[27px] sm:text-6xl font-bold mx-10 sm:mx-40 my-10 sm:my-20'>
 				<Reveal>
-					<h1>Stay motivated. </h1>
+					<h1>Stay motivated.</h1>
 				</Reveal>
 				<Reveal>
 					<h1>Visualize your progress.</h1>
 				</Reveal>
 			</div>
-			<RevealImage
-				rightItem={
-					<Image
-						alt='growthMeter'
-						height={498}
-						width={498}
-						src={'/assets/images/growthMeter.png'}
-						className='z-10'
-					/>
-				}
-				leftItem={
-					<p className='text-[#5B437D] font-semibold text-xl w-96 text-right'>
-						Watch your self-study soar with the Growth Meter - see daily, weekly, and monthly
-						progress take flight!
-					</p>
-				}
-				delay={0.2}
-				motionDivClass='flex items-center justify-evenly'
-				imagePosition='right' // Specify image position
-			/>
-			<div className='grid grid-cols-2 gap-y-14 p-28 py-14'>
+
+			{/* Display for tab and desktop */}
+			<div className='hidden sm:block'>
+				<RevealImage
+					rightItem={
+						<Image
+							alt='growthMeter'
+							height={498}
+							width={498}
+							src={'/assets/images/growthMeter.png'}
+							className='z-10'
+						/>
+					}
+					leftItem={
+						<p className='text-[#5B437D] font-semibold text-xl w-full sm:w-96 text-right'>
+							Watch your self-study soar with the Growth Meter - see daily, weekly, and monthly
+							progress take flight!
+						</p>
+					}
+					delay={0.2}
+					motionDivClass='flex items-center justify-evenly'
+					imagePosition='right'
+				/>
+			</div>
+
+			{/* Display for mobile */}
+			<div className='block sm:hidden px-10'>
+				<div className='flex flex-col items-center'>
+					<Reveal>
+						<Image
+							alt='growthMeter'
+							height={498}
+							width={498}
+							src={'/assets/images/growthMeter.png'}
+							className='z-10'
+						/>
+					</Reveal>
+					<Reveal>
+						<p className='text-[#5B437D] font-semibold text-[11px] sm:text-xl text-center mt-10'>
+							Watch your self-study soar with the Growth Meter - see daily, weekly, and monthly
+							progress take flight!
+						</p>
+					</Reveal>
+				</div>
+			</div>
+
+			<div className='grid grid-cols-1 sm:grid-cols-2 gap-y-8 px-14 sm:p-28 py-14'>
 				{GrowthMeterPoints.map((item, index) => (
 					<IconWithLabel
 						key={index}
@@ -52,10 +79,10 @@ const GrowthMeter = (props: Props) => {
 					/>
 				))}
 			</div>
-			<FloatButton
+			{/* <FloatButton
 				isInView={isInView}
 				text='Explore growth meter'
-			/>
+			/> */}
 		</section>
 	);
 };

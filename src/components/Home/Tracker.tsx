@@ -3,18 +3,19 @@ import { TrackerPoints } from '@/helpers/constants';
 import Image from 'next/image';
 import IconWithLabel from '../shared/IconWIthLabel';
 import Reveal from '../shared/Reveal';
-import RevealImage from '../shared/RevealImage'; // Import the RevealImage component
+import RevealImage from '../shared/RevealImage';
 import { useRef } from 'react';
 import { useInView } from 'framer-motion';
 import FloatButton from '../shared/FloatButton';
 
 type Props = {};
 const Tracker = (props: Props) => {
-	const ref = useRef(null)
+	const ref = useRef(null);
 	const isInView = useInView(ref, { amount: 0.4 });
+
 	return (
-		<section ref={ref}>	
-			<div className='text-primary-blue text-6xl font-bold mx-40 my-20'>
+		<section ref={ref}>
+			<div className='text-primary-blue text-[27px] sm:text-6xl font-bold mx-10 sm:mx-40 my-10 sm:my-20'>
 				<Reveal>
 					<h1>Never lose.</h1>
 				</Reveal>
@@ -22,26 +23,53 @@ const Tracker = (props: Props) => {
 					<h1>Track of your progress.</h1>
 				</Reveal>
 			</div>
-			<RevealImage
-				rightItem={
-					<Image
-						alt='Tracker'
-						height={312}
-						width={616}
-						src={'/assets/images/tracker.png'}
-						className='z-10'
-					/>
-				}
-				leftItem={
-					<p className='text-[#5B437D] font-semibold text-xl w-96 text-left'>
-						Monitor how many times you've revised each topic with current and cumulative efficiency.
-					</p>
-				}
-				delay={0.2}
-				motionDivClass='flex items-center justify-evenly'
-				imagePosition='right' // Specify image position
-			/>
-			<div className='grid grid-cols-2 gap-y-14 p-28 py-14'>
+
+			{/* Display for tab and desktop */}
+			<div className='hidden sm:block'>
+				<RevealImage
+					rightItem={
+						<Image
+							alt='Tracker'
+							height={312}
+							width={616}
+							src={'/assets/images/tracker.png'}
+							className='z-10'
+						/>
+					}
+					leftItem={
+						<p className='text-[#5B437D] font-semibold text-xl w-full sm:w-96 text-left'>
+							Monitor how many times you've revised each topic with current and cumulative
+							efficiency.
+						</p>
+					}
+					delay={0.2}
+					motionDivClass='flex items-center justify-evenly'
+					imagePosition='right' // Specify image position
+				/>
+			</div>
+
+			{/* Display for mobile */}
+			<div className='block sm:hidden px-10'>
+				<div className='flex flex-col items-center'>
+					<Reveal>
+						<Image
+							alt='Tracker'
+							height={312}
+							width={616}
+							src={'/assets/images/tracker.png'}
+							className='z-10'
+						/>
+					</Reveal>
+					<Reveal>
+						<p className='text-[#5B437D] font-semibold text-[11px] sm:text-xl text-center mt-10'>
+							Monitor how many times you've revised each topic with current and cumulative
+							efficiency.
+						</p>
+					</Reveal>
+				</div>
+			</div>
+
+			<div className='grid grid-cols-1 sm:grid-cols-2 gap-y-8 px-14 sm:p-28 py-14'>
 				{TrackerPoints.map((item, index) => (
 					<IconWithLabel
 						key={index}
@@ -51,10 +79,10 @@ const Tracker = (props: Props) => {
 					/>
 				))}
 			</div>
-			<FloatButton
+			{/* <FloatButton
 				isInView={isInView}
 				text='Zoom into tracker'
-			/>
+			/> */}
 		</section>
 	);
 };

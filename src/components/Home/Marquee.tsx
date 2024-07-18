@@ -28,7 +28,7 @@ const MarqueeList: React.FC<Props> = () => {
 	];
 
 	return (
-		<div className='container mx-auto my-20	w-full flex MarqueeGradient'>
+		<div className='container mx-auto my-5 sm:my-20	w-full flex MarqueeGradient'>
 			<MarqueeMotionDiv items={items} />
 			<MarqueeMotionDiv items={items} />
 		</div>
@@ -48,7 +48,7 @@ const MarqueeMotionDiv = ({ items }: { items: any[] }) => {
 			{items.map((item, index) => (
 				<div
 					key={index}
-					className='flex flex-grow items-center gap-5 pr-20'
+					className='flex flex-grow items-center gap-3 sm:gap-5 pr-14 sm:pr-20'
 				>
 					<div className='size-5'>
 						<item.icon className='size-full stroke-[#2B2B2B]' />
