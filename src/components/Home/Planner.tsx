@@ -15,8 +15,11 @@ const Planner = (props: Props) => {
 	const isInView = useInView(ref, { amount: 0.4 });
 
 	return (
-		<section ref={ref}>
-			<div className='text-primary-blue max-sm:w-40 text-[27px] sm:text-6xl font-bold mx-10 sm:mx-40 my-10 sm:my-20'>
+		<section
+			ref={ref}
+			id='planner'
+		>
+			<div className='text-primary-blue max-md:w-40 text-[27px] md:text-6xl font-bold mx-10 md:mx-40 my-10 md:my-20'>
 				<Reveal>
 					<h1>Planner.</h1>
 				</Reveal>
@@ -25,7 +28,7 @@ const Planner = (props: Props) => {
 				</Reveal>
 			</div>
 
-			<div className='hidden sm:block'>
+			<div className='hidden md:block'>
 				<RevealImage
 					rightItem={
 						<Image
@@ -37,7 +40,7 @@ const Planner = (props: Props) => {
 						/>
 					}
 					leftItem={
-						<p className='text-[#5B437D] font-semibold text-xl w-full sm:w-96 text-right'>
+						<p className='text-[#5B437D] font-semibold text-xl w-full md:w-96 text-right'>
 							Ditch generic study plans and level up your revision with Leadlly's intelligent
 							Revision Planner!
 						</p>
@@ -48,7 +51,7 @@ const Planner = (props: Props) => {
 				/>
 			</div>
 
-			<div className='block sm:hidden px-10'>
+			<div className='block md:hidden px-10'>
 				<div className='flex flex-col items-center'>
 					<Reveal>
 						<Image
@@ -60,15 +63,14 @@ const Planner = (props: Props) => {
 						/>
 					</Reveal>
 					<Reveal>
-						<p className='text-[#5B437D] font-semibold text-[11px] sm:text-xl text-center mt-10'>
+						<p className='text-[#5B437D] font-semibold text-[11px] md:text-xl text-center mt-10'>
 							Ditch generic study plans and level up your revision with Leadlly's intelligent
 							Revision Planner!
 						</p>
 					</Reveal>
 				</div>
 			</div>
-
-			<div className='grid grid-cols-1 sm:grid-cols-2 gap-y-8 px-14 sm:p-28 py-14'>
+			<div className='grid grid-cols-1 md:grid-cols-2  gap-y-8 px-14 sm:px-48  md:p-48 md:py-24 py-14'>
 				{PlannerPoints.map((item, index) => (
 					<IconWithLabel
 						key={index}

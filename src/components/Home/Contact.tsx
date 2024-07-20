@@ -9,7 +9,7 @@ const Contact = () => {
 		<section className='px-4 md:px-0'>
 			<div className='flex justify-start w-full'>
 				<div className='w-full md:w-fit'>
-					<h1 className=' text-3xl sm:text-6xl my-10 text-left font-bold bg-gradient-to-r pl-0 sm:pl-20 from-purple-700 via-orange-400 to-purple-700 bg-clip-text text-transparent'>
+					<h1 className=' text-3xl md:text-6xl my-10 text-left font-bold bg-gradient-to-r pl-0 md:pl-20 from-purple-700 via-orange-400 to-purple-700 bg-clip-text text-transparent'>
 						Contact
 					</h1>
 				</div>

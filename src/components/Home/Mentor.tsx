@@ -14,8 +14,11 @@ const Mentor = (props: Props) => {
 	const isInView = useInView(ref, { amount: 0.4 });
 
 	return (
-		<section ref={ref}>
-			<div className='text-primary-blue text-[27px] sm:text-6xl font-bold mx-10 sm:mx-40 my-10 sm:my-20'>
+		<section
+			id='mentor'
+			ref={ref}
+		>
+			<div className='text-primary-blue text-[27px] md:text-6xl font-bold mx-10 md:mx-40 my-10 md:my-20'>
 				<Reveal>
 					<h1>Don't Go It Alone.</h1>
 				</Reveal>
@@ -25,7 +28,7 @@ const Mentor = (props: Props) => {
 			</div>
 
 			{/* Display for tab and desktop */}
-			<div className='hidden sm:block'>
+			<div className='hidden md:block'>
 				<RevealImage
 					rightItem={
 						<Image
@@ -36,7 +39,7 @@ const Mentor = (props: Props) => {
 						/>
 					}
 					leftItem={
-						<p className='text-[#5B437D] font-semibold text-xl w-full sm:w-96 text-left'>
+						<p className='text-[#5B437D] font-semibold text-lg xl:text-xl w-full md:w-72 xl:w-96 text-left'>
 							Gain valuable insights and strategies from someone experienced in your field of study.
 						</p>
 					}
@@ -47,7 +50,7 @@ const Mentor = (props: Props) => {
 			</div>
 
 			{/* Display for mobile */}
-			<div className='block sm:hidden px-10'>
+			<div className='block md:hidden px-10'>
 				<div className='flex flex-col items-center'>
 					<Reveal>
 						<Image
@@ -58,14 +61,15 @@ const Mentor = (props: Props) => {
 						/>
 					</Reveal>
 					<Reveal>
-						<p className='text-[#5B437D] font-semibold text-[11px] sm:text-xl text-center mt-10'>
+						<p className='text-[#5B437D] font-semibold text-[11px] md:text-xl text-center mt-10'>
 							Gain valuable insights and strategies from someone experienced in your field of study.
 						</p>
 					</Reveal>
 				</div>
 			</div>
 
-			<div className='grid grid-cols-1 sm:grid-cols-2 gap-y-8 px-14 sm:p-28 py-14'>
+			<div className='grid grid-cols-1 md:grid-cols-2  gap-y-8 px-14 sm:px-48  md:p-48 md:py-24 py-14'>
+				{' '}
 				{MentorPoints.map((item, index) => (
 					<IconWithLabel
 						key={index}
