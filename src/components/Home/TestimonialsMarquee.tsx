@@ -105,7 +105,7 @@ const MarqueeMotionDiv = ({
 									className='w-full h-full object-cover object-center'
 								/>
 							) : (
-								<div className='w-full h-full text-center items-center flex justify-center text-4xl bg-slate-200'>
+								<div className='w-full h-full text-center items-center flex justify-center text-2xl md:text-4xl bg-slate-200'>
 									{testimonial.name[0]}
 								</div>
 							)}

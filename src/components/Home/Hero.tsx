@@ -36,7 +36,7 @@ const Hero = (props: Props) => {
 					{/* Download <Download className='w-4 h-4 md:w-5 md:h-5' /> */}
 				</Link>
 			</Reveal>
-			<div className='mt-10 md:mt-20 flex flex-col md:flex-row items-center'>
+			<div className='mt-20 md:mt-10 flex flex-col md:flex-row items-center'>
 				<div className='w-full md:w-2/3 xl:w-1/3 mb-10 md:mb-0'>
 					<Reveal motionDivClass=''>
 						<p className='text-[#5B437D] font-semibold text-xs ml-5  max-md:max-w-60 md:text-xl text-left lg:ml-20'>
