@@ -36,15 +36,7 @@ const Contact = () => {
 					Send
 				</button>
 			</form>
-			<div className='flex flex-col items-center gap-5 mt-10 md:mt-20'>
-				<h2 className='text-primary-blue font-bold'>Follow us:</h2>
-				<div className='flex gap-3'>
-					<SocialIcon Icon={FacebookIcon} />
-					<SocialIcon Icon={TwitterIcon} />
-					<SocialIcon Icon={LinkedInIcon} />
-					<SocialIcon Icon={InstagramIcon} />
-				</div>
-			</div>
+			
 			{/* <form className='flex flex-col items-center gap-5 px-4 mt-10 md:mt-20'>
 				<input
 					type='text'
