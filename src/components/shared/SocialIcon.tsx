@@ -5,6 +5,7 @@ function SocialIcon({ Icon ,href}: Props) {
 	return (
 		<Link
 			href={href || '/'}
+			target="_blank"
 			className='border relative border-black/30 rounded-[14px] p-2   transition-all ease-in-out overflow-hidden'
 		>
 			<div className="absolute size-0 scale-150 bg-black"></div>
