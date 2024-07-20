@@ -15,7 +15,7 @@ const GrowthMeter = (props: Props) => {
 
 	return (
 		<section ref={ref}>
-			<div className='text-primary-blue text-[27px] sm:text-6xl font-bold mx-10 sm:mx-40 my-10 sm:my-20'>
+			<div className='text-primary-blue text-[27px] md:text-6xl font-bold mx-10 md:mx-40 my-10 md:my-20'>
 				<Reveal>
 					<h1>Stay motivated.</h1>
 				</Reveal>
@@ -25,7 +25,7 @@ const GrowthMeter = (props: Props) => {
 			</div>
 
 			{/* Display for tab and desktop */}
-			<div className='hidden sm:block'>
+			<div className='hidden md:block'>
 				<RevealImage
 					rightItem={
 						<Image
@@ -37,7 +37,7 @@ const GrowthMeter = (props: Props) => {
 						/>
 					}
 					leftItem={
-						<p className='text-[#5B437D] font-semibold text-xl w-full sm:w-96 text-right'>
+						<p className='text-[#5B437D] font-semibold text-xl w-full md:w-96 text-right'>
 							Watch your self-study soar with the Growth Meter - see daily, weekly, and monthly
 							progress take flight!
 						</p>
@@ -49,7 +49,7 @@ const GrowthMeter = (props: Props) => {
 			</div>
 
 			{/* Display for mobile */}
-			<div className='block sm:hidden px-10'>
+			<div className='block md:hidden px-10'>
 				<div className='flex flex-col items-center'>
 					<Reveal>
 						<Image
@@ -61,7 +61,7 @@ const GrowthMeter = (props: Props) => {
 						/>
 					</Reveal>
 					<Reveal>
-						<p className='text-[#5B437D] font-semibold text-[11px] sm:text-xl text-center mt-10'>
+						<p className='text-[#5B437D] font-semibold text-[11px] md:text-xl text-center mt-10'>
 							Watch your self-study soar with the Growth Meter - see daily, weekly, and monthly
 							progress take flight!
 						</p>
@@ -69,7 +69,7 @@ const GrowthMeter = (props: Props) => {
 				</div>
 			</div>
 
-			<div className='grid grid-cols-1 sm:grid-cols-2 gap-y-8 px-14 sm:p-28 py-14'>
+			<div className='grid grid-cols-1 md:grid-cols-2  gap-y-8 px-14 sm:px-48  md:p-48 md:py-24 py-14'>
 				{GrowthMeterPoints.map((item, index) => (
 					<IconWithLabel
 						key={index}

@@ -5,17 +5,20 @@ import { useEffect, useRef } from 'react';
 type Props = { children: JSX.Element; width?: 'fit-content' | '100%'; delay?: number , motionDivClass?:string};
 const Reveal = ({ children, width = 'fit-content', delay,motionDivClass }: Props) => {
 	const ref = useRef(null);
-	const isInView = useInView(ref);
+	const isInView = useInView(ref, {once:false});
 	const controls = useAnimation();
 	useEffect(() => {
 		if (isInView) {
 			controls.start('visible');
 		}
+		else{
+			controls.start('hidden')
+		}
 	}, [isInView]);
 	return (
 		<div
 			ref={ref}
-			style={{ position: 'relative', width, overflow: 'hidden',borderRadius:'20px' }} 
+			style={{ position: 'relative', width, overflow: 'hidden', paddingBottom:'5px' }} 
 		>
 			<motion.div
 				variants={{

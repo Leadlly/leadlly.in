@@ -6,31 +6,32 @@ import { cn } from '@/utils/cn';
 type Testimonial = {
 	name: string;
 	text: string;
-	avatar: string;
+	avatar?: string;
+	aspirantOf?: string;
 };
 
 type Props = {};
 
 const testimonials: Testimonial[] = [
 	{
-		name: 'John Doe',
-		text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper, lacus ac dignissim efficitur, ante orci varius turpis, non accumsan urna lorem vitae velit. Nunc accumsan odio nec egestas vulputate. Ut semper aliquet euismod..',
-		avatar: '/assets/avatar.png',
+		name: 'Aadhya',
+		aspirantOf: 'NEET Aspirant',
+		text: "Talking about revision tracker and planners both these things helped me a lot and nearly stopped all my procrastination and anxiousness. And my mentor was Saumya didi. She is really helpful and relatable. She never disappoint me in her responses and I've tried doing what she told me to do and it has helped significantly in my process of learning better.",
 	},
 	{
-		name: 'Jane Smith',
-		text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper, lacus ac dignissim efficitur, ante orci varius turpis, non accumsan urna lorem vitae velit. Nunc accumsan odio nec egestas vulputate. Ut semper aliquet euismod..',
-		avatar: '/assets/avatar.png',
+		name: 'Vaibhav',
+		aspirantOf: 'JEE Aspirant',
+		text: 'Mahip bhaiya is a very good mentor, the way in which he guided me and the tasks that he gave me are very good. I saw improvement in my learning skills. Also tracker and error book ne bhi meri bahut help ki. Overall leadlly helped me a lot in my journey....',
 	},
 	{
-		name: 'Alice Johnson',
-		text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper, lacus ac dignissim efficitur, ante orci varius turpis, non accumsan urna lorem vitae velit. Nunc accumsan odio nec egestas vulputate. Ut semper aliquet euismod..',
-		avatar: '/assets/avatar.png',
+		name: 'Bhavya Dubey',
+		aspirantOf: 'NEET Aspirant',
+		text: 'My mentor was Manan Bhaiya, He is a very good guide. He use to talk in a friendly manner( never felt that I am talking to an elder).He use to motivate me even in bad situations( like getting low grades..). After all, under his guidance I have seen good changes in my schedule and in myself ...',
 	},
 	{
-		name: 'Alice Johnson',
-		text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper, lacus ac dignissim efficitur, ante orci varius turpis, non accumsan urna lorem vitae velit. Nunc accumsan odio nec egestas vulputate. Ut semper aliquet euismod..',
-		avatar: '/assets/avatar.png',
+		name: 'Krishna Yadav',
+		aspirantOf: 'Boards student',
+		text: 'Leadlly seriously rocks! Their tips, support, and all that expert knowledge totally helped me level up. Thanks for being there every step of the way',
 	},
 ];
 
@@ -57,7 +58,7 @@ const TestimonialsMarquee: React.FC<Props> = () => {
 		<motion.div
 			onMouseEnter={handleMouseEnter}
 			onMouseLeave={handleMouseLeave}
-			className='container mx-auto my-10 sm:my-20 w-full flex overflow-hidden MarqueeGradient'
+			className='container mx-auto my-10 md:my-20 w-full flex overflow-hidden MarqueeGradient'
 		>
 			<MarqueeMotionDiv
 				testimonials={testimonials}
@@ -70,7 +71,6 @@ const TestimonialsMarquee: React.FC<Props> = () => {
 		</motion.div>
 	);
 };
-
 
 const MarqueeMotionDiv = ({
 	testimonials,
@@ -90,25 +90,35 @@ const MarqueeMotionDiv = ({
 				<div
 					key={index}
 					className={cn(
-						'flex flex-col items-center gap-3 sm:gap-5 p-5 sm:p-10 mr-3 min-h-[200px] min-w-[300px] sm:min-h-[340px] sm:min-w-[370px]',
+						'flex flex-col items-center gap-3 md:gap-5 p-5 md:p-10 mr-3 min-h-[200px] min-w-[300px] md:max-h-[340px] md:min-w-[370px]',
 						index % 2 == 0
-							? 'border-2 border-[#D0B5F9] rounded-[20px] sm:rounded-[40px] bg-[#E8DAEE] text-white'
-							: 'border-2 border-black/30 rounded-[20px] sm:rounded-[40px] bg-[#FEFBFF] text-black'
+							? 'border-2 border-[#D0B5F9] rounded-[20px] md:rounded-[40px] bg-[#E8DAEE] text-white'
+							: 'border-2 border-black/30 rounded-[20px] md:rounded-[40px] bg-[#FEFBFF] text-black'
 					)}
 				>
-					<div className='flex items-center gap-3 sm:gap-5'>
-						<div className='w-10 h-10 sm:w-14 sm:h-14 rounded-full overflow-hidden'>
-							<img
-								src={testimonial.avatar}
-								alt={`${testimonial.name} avatar`}
-								className='w-full h-full object-cover object-center'
-							/>
+					<div className='flex items-center gap-3 md:gap-5'>
+						<div className='w-10 h-10 md:w-14 md:h-14 rounded-full overflow-hidden'>
+							{testimonial.avatar ? (
+								<img
+									src={testimonial.avatar}
+									alt={`${testimonial.name} avatar`}
+									className='w-full h-full object-cover object-center'
+								/>
+							) : (
+								<div className='w-full h-full text-center items-center flex justify-center text-2xl md:text-4xl bg-slate-200'>
+									{testimonial.name[0]}
+								</div>
+							)}
 						</div>
-						<p className='font-semibold text-base sm:text-xl'>{testimonial.name}</p>
+						<div className='flex flex-col'>
+							{' '}
+							<p className='font-semibold text-base md:text-xl'>{testimonial.name}</p>
+							<p className='text-sm'>{testimonial.aspirantOf}</p>
+						</div>
 					</div>
 
 					<div className='text-center'>
-						<p className='font-medium text-sm sm:text-base text-left'>{testimonial.text}</p>
+						<p className='font-medium text-sm md:text-base text-left line-clamp-[7]'>{testimonial.text}</p>
 					</div>
 				</div>
 			))}

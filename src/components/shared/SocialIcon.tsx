@@ -1,10 +1,10 @@
 import Link from "next/link";
 
-type Props = { Icon: any };
-function SocialIcon({ Icon }: Props) {
+type Props = { Icon: any, href:string };
+function SocialIcon({ Icon ,href}: Props) {
 	return (
 		<Link
-			href={'/'}
+			href={href || '/'}
 			className='border relative border-black/30 rounded-[14px] p-2   transition-all ease-in-out overflow-hidden'
 		>
 			<div className="absolute size-0 scale-150 bg-black"></div>

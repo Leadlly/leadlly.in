@@ -9,7 +9,7 @@ const Contact = () => {
 		<section className='px-4 md:px-0'>
 			<div className='flex justify-start w-full'>
 				<div className='w-full md:w-fit'>
-					<h1 className=' text-3xl sm:text-6xl my-10 text-left font-bold bg-gradient-to-r pl-0 sm:pl-20 from-purple-700 via-orange-400 to-purple-700 bg-clip-text text-transparent'>
+					<h1 className=' text-3xl md:text-6xl my-10 text-left font-bold bg-gradient-to-r pl-0 md:pl-20 from-purple-700 via-orange-400 to-purple-700 bg-clip-text text-transparent'>
 						Contact
 					</h1>
 				</div>
@@ -36,15 +36,7 @@ const Contact = () => {
 					Send
 				</button>
 			</form>
-			<div className='flex flex-col items-center gap-5 mt-10 md:mt-20'>
-				<h2 className='text-primary-blue font-bold'>Follow us:</h2>
-				<div className='flex gap-3'>
-					<SocialIcon Icon={FacebookIcon} />
-					<SocialIcon Icon={TwitterIcon} />
-					<SocialIcon Icon={LinkedInIcon} />
-					<SocialIcon Icon={InstagramIcon} />
-				</div>
-			</div>
+			
 			{/* <form className='flex flex-col items-center gap-5 px-4 mt-10 md:mt-20'>
 				<input
 					type='text'
