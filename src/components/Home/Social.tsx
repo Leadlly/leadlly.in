@@ -27,8 +27,8 @@ const Social = (props: Props) => {
 				</div>
 			</div>
 
-			<h2 className='text-blue-500 text-sm font-medium pt-5 pb-10 text-center'>
-				All rights reserved to Leadlly edusolutin pvt. lmt.
+			<h2 className='text-blue-500 text-xs font-medium pt-5 pb-10 text-center'>
+				All rights reserved to Leadlly edusolutions pvt. ltd.
 			</h2>
 		</>
 	);
