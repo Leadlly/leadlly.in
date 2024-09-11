@@ -1,4 +1,5 @@
 import Contact from '@/components/Home/Contact';
+import DownloadSection from '@/components/Home/Download';
 import GrowthMeter from '@/components/Home/GrowthMeter';
 import Hero from '@/components/Home/Hero';
 import Mentor from '@/components/Home/Mentor';
@@ -23,6 +24,7 @@ export default function GridBackgroundDemo() {
 				<Testimonals />
 				{/* <PricingSection />
 				<Contact /> */}
+				<DownloadSection/>
 				<Social />
 			</div>
 		</>
