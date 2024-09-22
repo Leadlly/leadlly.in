@@ -39,7 +39,7 @@ const TermsAndConditions: React.FC = () => {
         By using our Service, you agree to subscribe to newsletters, marketing
         or promotional materials and other information we may send. However, you
         may opt out of receiving any, or all, of these communications from us by
-        following the unsubscribe link or by emailing at support@leadlly.in.
+        following the unsubscribe link or by emailing at support@leadlly.in
       </p>
 
       <h2 className="text-2xl font-semibold mt-6 mb-2">3. Purchases</h2>

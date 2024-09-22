@@ -482,7 +482,7 @@ const PrivacyPolicy: React.FC = () => {
         Leadlly Edusolutions. To initiate the deletion process, please send an
         email to{" "}
         <a
-          href="mailto:support@gmail.com"
+          href="mailto:support@leadlly.in"
           className="text-primary-blue underline"
         >
           support@gmail.com
