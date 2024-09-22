@@ -29,11 +29,11 @@ const Hero = (props: Props) => {
 				delay={0.2}
 			>
 				<Link
-					href={'https://education.leadlly.in/'}
+					 href={'#download-section'}
 					className='inline-flex px-4 animate-shimmer gap-2 h-10 md:h-12 items-center justify-center rounded-3xl border border-blue-500 bg-[linear-gradient(110deg,#8B4CF4,45%,#B078F9,55%,#8B4CF4)] bg-[length:200%_100%]  md:px-12 	 text-white transition-colors focus:outline-none font-semibold focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50'
 				>
-					Sign Up
-					{/* Download <Download className='w-4 h-4 md:w-5 md:h-5' /> */}
+					Download 
+					<Download className='w-4 h-4 md:w-5 md:h-5' /> 
 				</Link>
 			</Reveal>
 			<div className='mt-20 md:mt-10 flex flex-col md:flex-row items-center'>
