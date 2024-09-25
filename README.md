@@ -30,7 +30,6 @@ This repository hosts the **Leadlly** landing page, built to inform users about 
 
 - **Next.js**: A React-based framework for building fast and scalable web applications.
 - **Tailwind CSS**: For easy and flexible styling.
-- **Ionic/Capacitor**: For a hybrid mobile app experience.
 - **TypeScript**: Ensures reliable and maintainable code.
 - **Vercel**: Hosting platform for seamless deployment.
 
