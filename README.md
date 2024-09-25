@@ -35,7 +35,7 @@ This repository hosts the **Leadlly** landing page, built to inform users about 
 
 ## Contribution
 
-We welcome contributions for Hacktoberfest! Please refer to our [Contribution Guidelines](CONTRIBUTION.md) for more details on how to get involved.
+We welcome your contributions! Please refer to our [Contribution Guidelines](CONTRIBUTION.md) for more details on how to get involved.
 
 ### Issues:
 
