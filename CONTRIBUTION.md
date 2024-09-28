@@ -46,3 +46,12 @@ Pull requests will be reviewed, and feedback will be provided as soon as possibl
 - **Be Respectful**: Always be courteous and respectful when interacting with other contributors and maintainers.
 - **Collaborate**: Help others by reviewing code, suggesting improvements, or answering questions.
 - **Keep Learning**: Open source is a great way to learn and improve your skills, so ask questions and engage with the community.
+- **Contribution Process**: 
+  - To indicate you're working on an issue, comment "I am working on this issue." Our team will verify your activity. If there is no response, the issue may be reassigned.
+  - Please do not claim an issue that is already assigned to someone else.
+
+### 📞 Contact
+
+For any further questions or support, reach out to us at:
+- **Email**: [support@leadlly.in](mailto:support@leadlly.in)
+- **Website**: [Leadlly.in](https://leadlly.in)
