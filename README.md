@@ -37,10 +37,20 @@ This repository hosts the **Leadlly** landing page, built to inform users about 
 
 We welcome your contributions! Please refer to our [Contribution Guidelines](CONTRIBUTION.md) for more details on how to get involved.
 
-### Issues:
+## 🐛 Reporting Issues
 
-If you encounter any issues or have ideas for improvement, please check the [issues tab](https://github.com/leadlly/leadlly.in/issues) or open a new issue.
+If you encounter any issues while using the platform, please feel free to open an issue on the repository. Provide as much detail as possible to help us address the problem quickly.
 
-### License
+## 🛡️ Security
 
-This project is open-source and available under the [MIT License](LICENSE).
+If you find any security vulnerabilities, please report them privately to [business@leadlly.in](mailto:business@leadlly.in). We take security issues seriously and will address them promptly.
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [`LICENSE`](./LICENSE) file for more details.
+
+## 📞 Contact
+
+For any further questions or support, reach out to us at:
+- **Email**: [support@leadlly.in](mailto:support@leadlly.in)
+- **Website**: [Leadlly.in](https://leadlly.in)
