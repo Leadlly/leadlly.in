@@ -37,5 +37,12 @@ Pull requests will be reviewed, and feedback will be provided as soon as possibl
 
 ### Hacktoberfest Participation:
 
-- Make sure to label your pull requests with "Hacktoberfest" to ensure they count toward Hacktoberfest.
-- Contribute only meaningful PRs that solve an issue or enhance functionality.
+- Contributions should be meaningful and address an issue or feature request.
+- Avoid creating spam or low-quality pull requests, as these will not be accepted.
+- Tag your pull requests with "Hacktoberfest" to ensure they count toward Hacktoberfest.
+
+### Contribution Guidelines:
+
+- **Be Respectful**: Always be courteous and respectful when interacting with other contributors and maintainers.
+- **Collaborate**: Help others by reviewing code, suggesting improvements, or answering questions.
+- **Keep Learning**: Open source is a great way to learn and improve your skills, so ask questions and engage with the community.
