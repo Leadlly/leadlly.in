@@ -7,9 +7,10 @@ type Props = {
   text: string;
   additionalStyles?: string;
   isInView: boolean;
+  onClick?: () => void; // Paf57
 };
 
-const FloatButton: React.FC<Props> = ({ text, additionalStyles, isInView }) => {
+const FloatButton: React.FC<Props> = ({ text, additionalStyles, isInView, onClick }) => { // Paf57
   const [scope, animate] = useAnimate();
   useEffect(() => {
     const animateButton = async () => {
@@ -54,6 +55,7 @@ const FloatButton: React.FC<Props> = ({ text, additionalStyles, isInView }) => {
         <motion.button
           className={`bg-[#bec1e3]/20 size-[60px] overflow-hidden backdrop-blur-lg text-slate-700 font-medium p-2 rounded-full shadow-lg ${additionalStyles}`}
           style={{ scale: 0 }}
+          onClick={onClick} // P68e3
         >
           <span className="opacity-0 buttonText text-xl -translate-x-10">
             {text}
