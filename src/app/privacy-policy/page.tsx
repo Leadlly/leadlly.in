@@ -4,7 +4,7 @@ import React from "react";
 const PrivacyPolicy: React.FC = () => {
   const handleRequestDeletion = () => {
     window.location.href =
-      "mailto:support@gmail.com?subject=Data Deletion Request&body=Dear Leadlly Edusolutions Support Team,%0D%0A%0D%0AI would like to request the deletion of all my personal data held by Leadlly Edusolutions as per your Privacy Policy.%0D%0A%0D%0APlease confirm the deletion process and notify me once it has been completed.%0D%0A%0D%0AThank you.%0D%0A%0D%0ARegards,%0D%0A[Your Name]";
+      "mailto:support@leadlly.in?subject=Data Deletion Request&body=Dear Leadlly Edusolutions Support Team,%0D%0A%0D%0AI would like to request the deletion of all my personal data held by Leadlly Edusolutions as per your Privacy Policy.%0D%0A%0D%0APlease confirm the deletion process and notify me once it has been completed.%0D%0A%0D%0AThank you.%0D%0A%0D%0ARegards,%0D%0A[Your Name]";
   };
 
   return (
@@ -485,7 +485,7 @@ const PrivacyPolicy: React.FC = () => {
           href="mailto:support@leadlly.in"
           className="text-primary-blue underline"
         >
-          support@gmail.com
+          support@leadlly.in
         </a>{" "}
         with the subject line "<b>Data Deletion Request</b>".
       </p>
