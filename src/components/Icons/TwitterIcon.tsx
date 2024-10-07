@@ -5,7 +5,7 @@ const TwitterIcon = ({ className }: { className?: string }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      enable-background="new 0 0 72 72"
+      enableBackground="new 0 0 72 72"
       viewBox="0 0 72 72"
       className={cn("w-5 h-5 fill-none stroke-2", className)}
       id="twitterx"
