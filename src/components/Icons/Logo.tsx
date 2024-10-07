@@ -28,8 +28,8 @@ const Logo = ({ className }: Props) => {
           y2="36.6235"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#6298D5" />
-          <stop offset="1" stop-color="#5900D9" />
+          <stop stopColor="#6298D5" />
+          <stop offset="1" stopColor="#5900D9" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_6545_11416"
@@ -39,9 +39,9 @@ const Logo = ({ className }: Props) => {
           y2="33.0916"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#6298D5" />
-          <stop offset="1" stop-color="#6204ED" />
-          <stop offset="1" stop-color="#5900D9" />
+          <stop stopColor="#6298D5" />
+          <stop offset="1" stopColor="#6204ED" />
+          <stop offset="1" stopColor="#5900D9" />
         </linearGradient>
       </defs>
     </svg>
