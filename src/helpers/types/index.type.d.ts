@@ -1,6 +1,4 @@
-
-
-export interface Points{
-	icon: ReactNode;
-	label: string;
+export interface Points {
+  icon: ReactNode;
+  label: string;
 }

@@ -1,9 +1,9 @@
-'use client';
-import { Download, Fullscreen } from 'lucide-react';
-import Marquee from './Marquee';
-import Reveal from '../shared/Reveal';
-import Image from 'next/image';
-import Link from 'next/link';
+"use client";
+import { Download, Fullscreen } from "lucide-react";
+import Marquee from "./Marquee";
+import Reveal from "../shared/Reveal";
+import Image from "next/image";
+import Link from "next/link";
 
 type Props = {};
 const Hero = (props: Props) => {
@@ -53,24 +53,27 @@ const Hero = (props: Props) => {
 						autoPlay
 						className='w-full md:w-auto'
 					></video> */}
-					<Image
-						alt='rotate'
-						width={1181}
-						className='w-full h-full'
-						height={'429'}
-						src={'/assets/images/rotate.png'}
-					/>
-				</div>
-			</div>
-			<Marquee />
-			<div className='flex flex-col md:flex-row justify-start w-full' id='explore'>
-				<div className='w-full md:w-auto'>
-					<h1 className='text-4xl md:text-6xl ml-4 md:ml-20 my-5 text-left font-bold bg-gradient-to-r from-purple-700 via-orange-400 to-purple-700 bg-clip-text text-transparent'>
-						Let's explore
-					</h1>
-				</div>
-			</div>
-		</div>
-	);
+          <Image
+            alt="rotate"
+            width={1181}
+            className="w-full h-full"
+            height={"429"}
+            src={"/assets/images/rotate.png"}
+          />
+        </div>
+      </div>
+      <Marquee />
+      <div
+        className="flex flex-col md:flex-row justify-start w-full"
+        id="explore"
+      >
+        <div className="w-full md:w-auto">
+          <h1 className="text-4xl md:text-6xl ml-4 md:ml-20 my-5 text-left font-bold bg-gradient-to-r from-purple-700 via-orange-400 to-purple-700 bg-clip-text text-transparent">
+            Let's explore
+          </h1>
+        </div>
+      </div>
+    </div>
+  );
 };
 export default Hero;

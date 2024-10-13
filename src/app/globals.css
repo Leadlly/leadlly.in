@@ -69,20 +69,19 @@
 }
 
 .MarqueeGradient {
-	mask-image: linear-gradient(
-		to right,
-		rgba(0, 0, 0, 0),
-		rgba(0, 0, 0, 1) 20%,
-		rgba(0, 0, 0, 1) 80%,
-		rgba(0, 0, 0, 0)
-	);
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
 }
 
 .gridGradient {
-	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='80' height='80' fill='none' stroke='rgb(227 214 245 / 0.25)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e"),
-		linear-gradient(to right, #fef5eb, #ece4fb);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='80' height='80' fill='none' stroke='rgb(227 214 245 / 0.25)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e"),
+    linear-gradient(to right, #fef5eb, #ece4fb);
 }
 html {
   scroll-behavior: smooth;
-	
 }

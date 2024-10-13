@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Leadlly: Your Personalized Learning Partner
 
-## Getting Started
+Welcome to **Leadlly**, an innovative EdTech platform designed to transform the way students learn, study, and achieve their academic goals. This repository contains the code for **Leadlly's landing page**, the public-facing website where users can learn more about the platform's offerings.
 
-First, run the development server:
+## About Leadlly
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Leadlly is a cutting-edge platform that combines advanced technology with personalized learning plans, mentorship, and assessment tools to help students maximize their academic potential. Whether you're preparing for school exams or competitive exams like JEE and NEET, Leadlly provides the tools and support you need to succeed.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Key Features:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Intelligent Revision Planner**: Tailored study plans based on exam patterns, subject difficulty, and personal learning styles.
+- **Comprehensive Tracker**: Track progress, identify strengths and weaknesses, and receive actionable insights for improvement.
+- **Dedicated Mentorship**: Connect with subject experts for personalized guidance and motivation.
+- **Interactive Quizzes and Practice Tests**: Regular assessments to gauge knowledge and highlight areas for further study.
+- **Error Book**: Track and analyze mistakes to prevent recurring errors.
+- **Workshops and Study Groups**: Collaborate with peers and learn from experienced educators.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## How Leadlly Works:
 
-## Learn More
+1. **Assessment**: Evaluate a student's learning style, strengths, and areas for improvement.
+2. **Personalized Plan**: Automatically generate a customized study plan based on the assessment.
+3. **Tracking and Progress**: Provide real-time feedback on progress and offer insights for better performance.
+4. **Mentorship and Support**: Personalized guidance from mentors to help students stay motivated and focused.
 
-To learn more about Next.js, take a look at the following resources:
+## Repository Information
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This repository hosts the **Leadlly** landing page, built to inform users about the platform's key features and benefits.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Tech Stack:
 
-## Deploy on Vercel
+- **Next.js**: A React-based framework for building fast and scalable web applications.
+- **Tailwind CSS**: For easy and flexible styling.
+- **TypeScript**: Ensures reliable and maintainable code.
+- **Vercel**: Hosting platform for seamless deployment.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contribution
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+We welcome your contributions! Please refer to our [Contribution Guidelines](CONTRIBUTION.md) for more details on how to get involved.
+
+## 🐛 Reporting Issues
+
+If you encounter any issues while using the platform, please feel free to open an issue on the repository. Provide as much detail as possible to help us address the problem quickly.
+
+## 🛡️ Security
+
+If you find any security vulnerabilities, please report them privately to [business@leadlly.in](mailto:business@leadlly.in). We take security issues seriously and will address them promptly.
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [`LICENSE`](./LICENSE) file for more details.
+
+## 📞 Contact
+
+For any further questions or support, reach out to us at:
+- **Email**: [support@leadlly.in](mailto:support@leadlly.in)
+- **Website**: [Leadlly.in](https://leadlly.in)
