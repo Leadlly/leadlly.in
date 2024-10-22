@@ -20,8 +20,7 @@ const NavBar = (props: Props) => {
       initial={{ opacity: 0.5, y: "-70px" }}
       animate={{ opacity: 1, y: "0" }}
       transition={{ duration: 0.3, ease: "linear" }}
-      className="backdrop-blur-lg border-b fixed w-full z-50 border-b-[#bfa0c5] flex justify-between px-4 md:px-20 py-3 items-center"
-    >
+      className="backdrop-blur-lg border-b fixed w-full z-50 border-b-[#bfa0c5] flex justify-between px-4 md:px-20 py-3 items-center">
       <Link href={"/"}>
         <Logo className="w-8 h-8 md:w-12 md:h-12" />
       </Link>
@@ -34,12 +33,12 @@ const NavBar = (props: Props) => {
           </Link>
           <Link href="#mentor">Mentor</Link>
           <Link href="#testimonial">Testimonials</Link>
-          <Link
+          {/* <Link
             href={"https://education.leadlly.in/"}
             className="bg-blue-700 text-white py-1 px-2 md:px-4 rounded-lg border"
           >
             Sign Up
-          </Link>
+          </Link> */}
         </div>
         <div className="flex md:hidden">
           <MobileMenu />
