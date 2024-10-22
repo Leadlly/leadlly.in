@@ -50,7 +50,9 @@ const DownloadSection: React.FC = () => {
             className="flex flex-col sm:flex-row items-center sm:justify-center gap-6">
             <motion.a
               download={true}
-              href={"/assets/leadlly_1.0.0.apk.zip"}
+              href={
+                "https://leadlly-general.s3.ap-south-1.amazonaws.com/leadlly_1.0.0.apk"
+              }
               className={cn(
                 "flex-1 inline-flex items-center justify-center px-6 py-4 font-semibold rounded-full transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
                 "bg-[#E8DAEE] text-primary border-2 border-[#D0B5F9] hover:bg-[#D0B5F9] hover:text-white max-w-xs"
