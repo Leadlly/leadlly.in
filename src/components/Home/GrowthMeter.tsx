@@ -4,14 +4,24 @@ import { GrowthMeterPoints } from "@/helpers/constants";
 import IconWithLabel from "../shared/IconWIthLabel";
 import Reveal from "../shared/Reveal";
 import RevealImage from "../shared/RevealImage";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useInView } from "framer-motion";
 import FloatButton from "../shared/FloatButton";
+import Modal from "../shared/Modal";
 
 type Props = {};
 const GrowthMeter = (props: Props) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.4 });
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleButtonClick = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <section ref={ref}>
@@ -79,10 +89,20 @@ const GrowthMeter = (props: Props) => {
           />
         ))}
       </div>
-      {/* <FloatButton
-				isInView={isInView}
-				text='Explore growth meter'
-			/> */}
+      <FloatButton
+        isInView={isInView}
+        text='Explore growth meter'
+        onClick={handleButtonClick}
+      />
+      {isModalOpen && (
+        <Modal onClose={handleCloseModal}>
+          <div className="p-4">
+            <h2 className="text-2xl font-bold mb-4">Growth Meter Details</h2>
+            <p>Here you can display graphs and insights about the user's progress.</p>
+            {/* Add your graphs and insights components here */}
+          </div>
+        </Modal>
+      )}
     </section>
   );
 };
