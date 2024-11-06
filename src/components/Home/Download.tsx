@@ -58,32 +58,41 @@ const DownloadSection: React.FC = () => {
                 "bg-[#E8DAEE] text-primary border-2 border-[#D0B5F9] hover:bg-[#D0B5F9] hover:text-white max-w-xs"
               )}
               target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 10px 20px rgba(0, 0, 0, 0.1)",
-              }}
-              whileTap={{ scale: 0.95 }}>
+              rel="noopener noreferrer">
               <PlayCircle className="w-6 h-6 mr-2" />
               Download on Google Play
             </motion.a>
-            {/* <motion.a
-              href=""
-              className={cn(
-                "flex-1 inline-flex items-center justify-center px-6 py-4 font-semibold rounded-full transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
-                "bg-[#FEFBFF] text-primary border-2 border-black/30 hover:bg-[#F4E8FF] hover:border-primary max-w-xs"
-              )}
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 10px 20px rgba(0, 0, 0, 0.1)",
-              }}
-              whileTap={{ scale: 0.95 }}>
-              <AppleLogo />
-              <span className="ml-2">Download for iOS</span>
-            </motion.a> */}
           </motion.div>
+        </div>
+
+        {/* PDF Guide Section */}
+        <div className="mt-20 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mb-12">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-purple-700 via-orange-400 to-purple-700 bg-clip-text text-transparent">
+              App Guide
+            </h2>
+            <p className="text-muted-foreground text-lg mt-4">
+              Learn how to use our app with this detailed guide
+            </p>
+          </motion.div>
+          <div className="flex justify-center items-center px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="w-full max-w-3xl rounded-lg overflow-hidden border border-[#D0B5F9] shadow-lg transform hover:scale-105 transition duration-300">
+              <iframe
+                src="https://leadlly-general.s3.ap-south-1.amazonaws.com/Roadmap+to+Effective+Learning+~+Leadlly.pdf"
+                width="100%"
+                height="500"
+                className="rounded-lg border-none">
+              </iframe>
+            </motion.div>
+          </div>
         </div>
       </div>
     </div>
