@@ -84,13 +84,15 @@ const DownloadSection: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="w-full max-w-3xl rounded-lg overflow-hidden border border-[#D0B5F9] shadow-lg transform hover:scale-105 transition duration-300">
-              <iframe
-                src="https://leadlly-general.s3.ap-south-1.amazonaws.com/Roadmap+to+Effective+Learning+~+Leadlly.pdf"
-                width="100%"
-                height="500"
-                className="rounded-lg border-none">
-              </iframe>
+>
+           <div className="mobile-frame">
+                <iframe
+                  src="https://leadlly-general.s3.ap-south-1.amazonaws.com/Roadmap+to+Effective+Learning+~+Leadlly.pdf"
+                  width="100%"
+                  height="100%"
+                  className="rounded-lg border-none">
+                </iframe>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -100,3 +102,49 @@ const DownloadSection: React.FC = () => {
 };
 
 export default DownloadSection;
+
+// CSS for mobile frame
+const styles = `
+.mobile-frame {
+  position: relative;
+  width: 375px; /* Width of a typical mobile device */
+  height: 667px; /* Height of a typical mobile device */
+  border: 16px solid #333; /* Outer border to simulate a phone frame */
+  border-radius: 36px; /* Rounded corners for the phone frame */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  overflow: hidden;
+  background-color: #fff; /* Background color for the phone */
+}
+
+.mobile-frame:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 5px;
+  background-color: #333;
+  border-radius: 10px;
+}
+
+.mobile-frame:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  border-radius: 50%;
+}
+`;
+
+// Add the styles to the document
+const styleSheet = document.createElement("style");
+styleSheet.type = "text/css";
+styleSheet.innerText = styles;
+document.head.appendChild(styleSheet);
