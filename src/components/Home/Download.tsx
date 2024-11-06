@@ -21,7 +21,7 @@ const DownloadSection: React.FC = () => {
   const downloadSectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // CSS for mobile frame
+    // CSS for mobile frame and hiding app guide on small screens
     const styles = `
       .mobile-frame {
         position: relative;
@@ -56,6 +56,14 @@ const DownloadSection: React.FC = () => {
         height: 40px;
         background-color: #333;
         border-radius: 50%;
+      }
+      @media (max-width: 600px) {
+        .app-guide-section {
+          display: none;
+        }
+        .download-buttons {
+          flex-direction: column;
+        }
       }
     `;
 
@@ -96,7 +104,7 @@ const DownloadSection: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex flex-col sm:flex-row items-center sm:justify-center gap-6">
+            className="flex flex-col sm:flex-row items-center sm:justify-center gap-6 download-buttons">
             <motion.a
               download={true}
               href={
@@ -111,11 +119,29 @@ const DownloadSection: React.FC = () => {
               <PlayCircle className="w-6 h-6 mr-2" />
               Download on Google Play
             </motion.a>
+            <motion.a
+              href={
+                "https://leadlly-general.s3.ap-south-1.amazonaws.com/Roadmap+to+Effective+Learning+~+Leadlly.pdf"
+              }
+              className={cn(
+                "flex-1 inline-flex items-center justify-center px-6 py-4 font-semibold rounded-full transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+                "bg-[#FEFBFF] text-primary border-2 border-black/30 hover:bg-[#F4E8FF] hover:border-primary max-w-xs"
+              )}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 10px 20px rgba(0, 0, 0, 0.1)",
+              }}
+              whileTap={{ scale: 0.95 }}>
+              <Download className="w-6 h-6 mr-2" />
+              App Guide PDF
+            </motion.a>
           </motion.div>
         </div>
 
         {/* PDF Guide Section */}
-        <div className="mt-20 text-center">
+        <div className="mt-20 text-center app-guide-section">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
