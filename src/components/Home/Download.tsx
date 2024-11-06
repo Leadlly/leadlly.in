@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Download, PlayCircle } from "lucide-react";
 import { cn } from "@/utils/cn";
@@ -19,6 +19,55 @@ const AppleLogo = () => (
 
 const DownloadSection: React.FC = () => {
   const downloadSectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // CSS for mobile frame
+    const styles = `
+      .mobile-frame {
+        position: relative;
+        width: 375px;
+        height: 667px;
+        border: 10px solid #333;
+        border-radius: 36px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        background-color: #fff;
+      }
+      .mobile-frame:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 5px;
+        background-color: #333;
+        border-radius: 10px;
+      }
+      .mobile-frame:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 40px;
+        background-color: #333;
+        border-radius: 50%;
+      }
+    `;
+
+    const styleSheet = document.createElement("style");
+    styleSheet.type = "text/css";
+    styleSheet.innerText = styles;
+    document.head.appendChild(styleSheet);
+
+    return () => {
+      document.head.removeChild(styleSheet);
+    };
+  }, []);
 
   const scrollToDownloadSection = () => {
     downloadSectionRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -84,15 +133,13 @@ const DownloadSection: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
->
-           <div className="mobile-frame">
-                <iframe
-                  src="https://leadlly-general.s3.ap-south-1.amazonaws.com/Roadmap+to+Effective+Learning+~+Leadlly.pdf"
-                  width="100%"
-                  height="100%"
-                  className="rounded-lg border-none">
-                </iframe>
-              </div>
+              className="mobile-frame">
+              <iframe
+                src="https://leadlly-general.s3.ap-south-1.amazonaws.com/Roadmap+to+Effective+Learning+~+Leadlly.pdf"
+                width="100%"
+                height="100%"
+                className="rounded-lg border-none">
+              </iframe>
             </motion.div>
           </div>
         </div>
@@ -102,49 +149,3 @@ const DownloadSection: React.FC = () => {
 };
 
 export default DownloadSection;
-
-// CSS for mobile frame
-const styles = `
-.mobile-frame {
-  position: relative;
-  width: 375px; /* Width of a typical mobile device */
-  height: 667px; /* Height of a typical mobile device */
-  border: 16px solid #333; /* Outer border to simulate a phone frame */
-  border-radius: 36px; /* Rounded corners for the phone frame */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-  overflow: hidden;
-  background-color: #fff; /* Background color for the phone */
-}
-
-.mobile-frame:before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 5px;
-  background-color: #333;
-  border-radius: 10px;
-}
-
-.mobile-frame:after {
-  content: '';
-  display: block;
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40px;
-  height: 40px;
-  background-color: #333;
-  border-radius: 50%;
-}
-`;
-
-// Add the styles to the document
-const styleSheet = document.createElement("style");
-styleSheet.type = "text/css";
-styleSheet.innerText = styles;
-document.head.appendChild(styleSheet);
