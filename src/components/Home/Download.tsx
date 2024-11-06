@@ -65,7 +65,7 @@ const DownloadSection: React.FC = () => {
               }}
               whileTap={{ scale: 0.95 }}>
               <PlayCircle className="w-6 h-6 mr-2" />
-              Download for Android
+              Download on Google Play
             </motion.a>
             {/* <motion.a
               href=""
