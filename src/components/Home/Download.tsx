@@ -4,6 +4,7 @@ import React, { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Download, PlayCircle } from "lucide-react";
 import { cn } from "@/utils/cn";
+import Mobile from "./Mobile";
 
 const AppleLogo = () => (
   <svg
@@ -20,63 +21,7 @@ const AppleLogo = () => (
 const DownloadSection: React.FC = () => {
   const downloadSectionRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    // CSS for mobile frame and hiding app guide on small screens
-    const styles = `
-      .mobile-frame {
-        position: relative;
-        width: 375px;
-        height: 667px;
-        border: 10px solid #333;
-        border-radius: 36px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-        overflow: hidden;
-        background-color: #fff;
-      }
-      .mobile-frame:before {
-        content: '';
-        display: block;
-        position: absolute;
-        top: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 60px;
-        height: 5px;
-        background-color: #333;
-        border-radius: 10px;
-      }
-      .mobile-frame:after {
-        content: '';
-        display: block;
-        position: absolute;
-        bottom: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 40px;
-        height: 40px;
-        background-color: #333;
-        border-radius: 50%;
-      }
-      @media (max-width: 600px) {
-        .app-guide-section {
-          display: none;
-        }
-        .download-buttons {
-          flex-direction: column;
-        }
-      }
-    `;
-
-    const styleSheet = document.createElement("style");
-    styleSheet.type = "text/css";
-    styleSheet.innerText = styles;
-    document.head.appendChild(styleSheet);
-
-    return () => {
-      document.head.removeChild(styleSheet);
-    };
-  }, []);
-
+ 
   const scrollToDownloadSection = () => {
     downloadSectionRef.current?.scrollIntoView({ behavior: "smooth" });
   };
@@ -155,18 +100,7 @@ const DownloadSection: React.FC = () => {
             </p>
           </motion.div>
           <div className="flex justify-center items-center px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="mobile-frame">
-              <iframe
-                src="https://leadlly-general.s3.ap-south-1.amazonaws.com/Roadmap+to+Effective+Learning+~+Leadlly.pdf"
-                width="100%"
-                height="100%"
-                className="rounded-lg border-none">
-              </iframe>
-            </motion.div>
+          <Mobile/>
           </div>
         </div>
       </div>
