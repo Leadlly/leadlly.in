@@ -28,7 +28,7 @@ const HeroSection = () => {
 						Demo Video
 					</button>
 					<button className='text-purple-600 hover:bg-purple-50 transition-colors px-4 md:px-6 py-2 rounded-full font-medium border-2 border-purple-600 flex items-center justify-center text-base sm:text-lg w-full sm:w-auto'>
-						View More
+					Download App
 						<span className='ml-2'>›</span>
 					</button>
 				</div>

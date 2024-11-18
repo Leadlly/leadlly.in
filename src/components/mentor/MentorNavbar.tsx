@@ -51,7 +51,7 @@ const MentorNavbar = (props: Props) => {
 						</div>
 						<Link
 							href={'https://mentor.leadlly.in/'}
-							className='bg-blue-700 text-white py-3 px-4 md:px-6 rounded-3xl border flex items-center'
+							className='bg-purple-600 text-white py-3 px-4 md:px-6 rounded-3xl border flex items-center'
 						>
 							Login in
 							<ArrowUpRight />

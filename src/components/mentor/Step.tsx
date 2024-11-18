@@ -13,8 +13,16 @@ const Step = ({
 }: StepProps) => {
 	return (
 		<div className={`flex w-full ${number % 2 === 0 ? '' : 'flex-row-reverse'}`}>
-			<div className={`flex flex-col flex-1 ${number % 2 === 0 ? '' : '-translate-x-2 sm:-translate-x-3'}`}>
-				<div className={`flex items-start gap-4 sm:gap-8 ${number % 2 === 0 ? 'flex-row-reverse' : ''}`}>
+			<div
+				className={`flex flex-col flex-1 ${
+					number % 2 === 0 ? '' : '-translate-x-2 sm:-translate-x-3'
+				}`}
+			>
+				<div
+					className={`flex items-start gap-4 sm:gap-8 ${
+						number % 2 === 0 ? 'flex-row-reverse' : ''
+					}`}
+				>
 					<div className='h-full flex flex-col items-center justify-start'>
 						<div className='w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-[#7e3af2]' />
 						{!(number == 6) && <div className='w-0.5 h-full bg-[#7e3af2] mt-2' />}
@@ -29,7 +37,7 @@ const Step = ({
 								className='text-4xl sm:text-6xl md:text-8xl font-bold relative z-10'
 								style={{
 									fontFamily: 'Inter, sans-serif',
-									color: '#fff',
+									color: '#F2EAF6',
 									WebkitTextStroke: 'calc(1em / 16) transparent',
 									letterSpacing: 'calc(1em / 8)',
 									padding: 'calc(1em / 32)',

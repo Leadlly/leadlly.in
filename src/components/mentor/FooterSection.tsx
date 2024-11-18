@@ -21,16 +21,16 @@ export default function FooterSection() {
 						Join the Leadlly internship to mentor peers, make a meaningful impact, and grow your
 						skills while enhancing your resume!
 					</p>
-					<Link href="/mentor/apply">
+					<Link href='https://mentor.leadlly.in/'>
 						<button className='rounded-md bg-orange-400 px-4 sm:px-5 lg:px-6 py-2 sm:py-2.5 lg:py-3 text-sm sm:text-base font-semibold text-white hover:bg-orange-500 transition-colors'>
 							Apply Here
 						</button>
 					</Link>
 				</div>
 			</section>
-
-			{/* Download Section */}
-			<section className='bg-white px-2 py-8 sm:py-12 lg:py-16 md:px-6 w-full'>
+			{/* 
+			Download Section
+			<section className=' px-2 py-8 sm:py-12 lg:py-16 md:px-6 w-full'>
 				<div className='md:container  md:mx-auto w-full'>
 					<div className='mb-8 sm:mb-12 lg:mb-16 flex flex-col lg:flex-row gap-6 sm:gap-8'>
 						<div className='flex-1'>
@@ -70,90 +70,9 @@ export default function FooterSection() {
 						</div>
 					</div>
 
-					<footer className='grid gap-8 md:grid-cols-4 lg:grid-cols-4'>
-						<div className='md:col-span-2'>
-							<Link href="/">
-								<FullIcon className='mb-4 sm:mb-5 w-32 sm:w-40' />
-							</Link>
-							<p className='mb-4 text-gray-600 text-sm sm:text-base w-full sm:w-80'>
-								We are on a mission to help aspirants in managing all the studies without stressing
-								over it :)
-							</p>
-							<div className='mb-4 flex gap-4 items-center'>
-								<Link
-									href='https://www.instagram.com/leadlly.in'
-									className='text-gray-400 transition-colors hover:text-gray-600'
-								>
-									<InstagramIcon className="w-6 h-6 sm:w-7 sm:h-7" />
-								</Link>
-								<Link
-									href='https://www.linkedin.com/company/leadlly-edu/'
-									className='text-gray-400 transition-colors hover:text-gray-600'
-								>
-									<LinkedInIcon className="w-5 h-5 sm:w-6 sm:h-6" />
-								</Link>
-								<Link
-									href='https://twitter.com/leadlly_ed'
-									className='text-gray-400 transition-colors hover:text-gray-600'
-								>
-									<TwitterIcon className="w-5 h-5 sm:w-6 sm:h-6" />
-								</Link>
-							</div>
-							<div className='space-y-2'>
-								<h3 className='font-semibold text-sm sm:text-base'>Reach out to us</h3>
-								<p className='text-xs sm:text-sm text-gray-600'>
-									Get your questions answered about learning with LEADLLY.
-								</p>
-								<p className='text-xs sm:text-sm text-gray-600'>Call On</p>
-								<p className='text-xs sm:text-sm font-semibold'>+91 1234567890</p>
-							</div>
-						</div>
-
-						<div>
-							<h3 className='mb-3 sm:mb-4 text-base sm:text-lg font-semibold text-purple-600'>Company</h3>
-							<ul className='space-y-2'>
-								{[
-									{ name: 'About Us', href: '/about' },
-									{ name: 'Teach at Leadlly', href: '/teach' },
-									{ name: 'Contact Us', href: '/contact' }
-								].map((item) => (
-									<li key={item.name}>
-										<Link
-											href={item.href}
-											className='text-sm sm:text-base text-gray-600 hover:text-gray-900'
-										>
-											{item.name}
-										</Link>
-									</li>
-								))}
-							</ul>
-						</div>
-
-						<div>
-							<h3 className='mb-3 sm:mb-4 text-base sm:text-lg font-semibold text-purple-600'>Legal</h3>
-							<ul className='space-y-2'>
-								{[
-									{ name: 'Refund Policy', href: '/refund-policy' },
-									{ name: 'Privacy policy', href: '/privacy-policy' },
-									{ name: 'Terms & Conditions', href: '/terms' }
-								].map((item) => (
-									<li key={item.name}>
-										<Link
-											href={item.href}
-											className='text-sm sm:text-base text-gray-600 hover:text-gray-900'
-										>
-											{item.name}
-										</Link>
-									</li>
-								))}
-							</ul>
-						</div>
-					</footer>
 				</div>
-				<div className='mt-4 pt-4 border-t border-gray-200 text-center'>
-					<p className='text-xs sm:text-sm text-gray-600'>All Copyright are reserved to Leadlly.in</p>
-				</div>
-			</section>
+			
+			</section> */}
 		</div>
 	);
 }
