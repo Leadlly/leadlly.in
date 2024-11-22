@@ -1,10 +1,9 @@
 ---
 name: Bug Fix Pull Request
 about: Submit a pull request to fix a bug in the project
-title: ''
-labels: 'bug'
-assignees: ''
-
+title: ""
+labels: "bug"
+assignees: ""
 ---
 
 **Issue Number**
@@ -15,15 +14,17 @@ A brief description of the bug and how the changes in this pull request resolve 
 
 **Video and Screenshot References**
 Please include any videos or screenshots that demonstrate the bug and the fix:
-- **Before (Bug):** 
+
+- **Before (Bug):**
   - [Insert picture link or drag here]
   - [Insert video link or drag here]
-- **After (Fix):** 
+- **After (Fix):**
   - [Insert picture link or drag here]
   - [Insert video link or drag here]
 
 **Steps to Reproduce**
 Provide clear steps to reproduce the bug, so reviewers can verify the fix:
+
 1. Go to '...'
 2. Click on '...'
 3. Scroll to '...'
@@ -34,11 +35,13 @@ A description of what you expected to happen before the bug occurred.
 
 **Testing Steps**
 Steps to verify that the bug fix works as expected:
+
 1. Go to '...'
 2. Click on '...'
 3. Ensure the bug is no longer present.
 
 **Checklist**
+
 - [ ] I have thoroughly tested the fix.
 - [ ] I have attached video and picture references.
 - [ ] The related issue number is attached.
