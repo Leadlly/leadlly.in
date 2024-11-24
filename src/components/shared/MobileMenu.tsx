@@ -12,11 +12,15 @@ import {
 } from "@/components/ui/sheet";
 import Menu from "../Icons/Menu";
 
-const menuItems = [
-  { name: "Explore", href: "#explore" },
-  { name: "Mentor", href: "#mentor" },
-  { name: "Testimonial", href: "#testimonial" },
-];
+interface MenuItem {
+  name: string;
+  href: string;
+}
+
+interface MobileMenuProps {
+  menuItems: MenuItem[];
+  signUpLink?: string;
+}
 
 const itemVariants = {
   hidden: { opacity: 0, x: -30 },
@@ -28,7 +32,7 @@ const sheetVariants = {
   visible: { opacity: 1, y: 0 },
 };
 
-const MobileMenu = () => {
+const MobileMenu = ({ menuItems, signUpLink }: MobileMenuProps) => {
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -57,20 +61,22 @@ const MobileMenu = () => {
               <SheetClose>{item.name}</SheetClose>
             </motion.a>
           ))}
-          <motion.a
-            initial="hidden"
-            href={"https://education.leadlly.in/"}
-            animate="visible"
-            transition={{
-              delay: menuItems.length * 0.2,
-              type: "spring",
-              stiffness: 50,
-            }}
-            variants={itemVariants}
-            className="block mx-auto mt-16 px-6 py-2 bg-primary-blue text-white rounded-full"
-          >
-            Sign Up
-          </motion.a>
+          {signUpLink && (
+            <motion.a
+              initial="hidden"
+              href={signUpLink}
+              animate="visible"
+              transition={{
+                delay: menuItems.length * 0.2,
+                type: "spring",
+                stiffness: 50,
+              }}
+              variants={itemVariants}
+              className="block mx-auto mt-16 px-6 py-2 bg-primary-blue text-white rounded-full"
+            >
+              Sign Up
+            </motion.a>
+          )}
         </motion.div>
       </SheetContent>
     </Sheet>
