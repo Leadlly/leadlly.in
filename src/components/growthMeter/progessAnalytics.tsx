@@ -36,7 +36,7 @@ const ProgressSlideButton = ({
 }: any) => {
 	return (
 		<motion.button
-			className="m-4 mx-6 p-2 px-4 rounded-lg"
+			className="m-4 md:mx-6 p-2 px-4 rounded-lg"
 			initial={{ color: "inherit" }}
 			animate={{
 				backgroundColor:

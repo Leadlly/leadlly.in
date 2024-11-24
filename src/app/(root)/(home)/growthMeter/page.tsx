@@ -74,7 +74,7 @@ export default function Page() {
 							levels
 						</p>
 					</Reveal>
-					<div className="flex justify-center my-8">
+					<div className="md:flex md:justify-center my-8">
 						<Card
 							image={"/assets/images/growthMeter/level.png"}
 							imgAlt={"level up card"}
