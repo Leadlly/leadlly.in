@@ -15,13 +15,13 @@ const GrowthMeter = (props: Props) => {
 
   return (
     <section ref={ref}>
-      <div className="text-primary-blue text-[27px] md:text-6xl font-bold mx-10 md:mx-40 my-10 md:my-20">
+      <div className="text-4xl md:text-6xl ml-4 md:ml-20 my-5 text-left font-bold bg-gradient-to-r from-purple-700 via-orange-400 to-purple-700 bg-clip-text text-transparent">
         <Reveal>
-          <h1>Stay motivated.</h1>
+          <h1 className="text-4xl md:text-6xl ml-4 md:ml-20 my-5 text-left font-bold bg-gradient-to-r from-purple-700 via-orange-400 to-purple-700 bg-clip-text text-transparent">
+Track it, chart it, <br/>
+Celebrate it.</h1>
         </Reveal>
-        <Reveal>
-          <h1>Visualize your progress.</h1>
-        </Reveal>
+        
       </div>
 
       {/* Display for tab and desktop */}
@@ -47,6 +47,78 @@ const GrowthMeter = (props: Props) => {
           imagePosition="right"
         />
       </div>
+
+
+<div className=" mt-20 mb-8 ml-20 flex justify-center">
+  <img src="/assets/growth1.svg" alt="" />
+</div>
+
+<div className="ml-40  -mb-20 space-y-5">
+  <img src="/assets/Heading1.svg" alt="" />
+</div>
+
+
+<div className="hidden md:block mb-40">
+        <RevealImage
+          rightItem={
+            <Image
+           
+              alt="growthMeter"
+              height={498}
+              width={300}
+              src={"/assets/growth4.svg"}
+              className="z-10 ml-10"
+            />
+          }
+          leftItem={
+           <Image
+           alt=""
+           height={600}
+           width={600}
+           src={"/assets/growth3.svg"}
+           className="mr-20"/>
+
+           
+          }
+          delay={0.2}
+          motionDivClass="flex items-center justify-evenly"
+          imagePosition="right"
+        />
+      </div>
+
+<div className="flex justify-center mb-40">
+  <Reveal>
+    <img className="ml-20" src="/assets/growth5.svg" alt="" />
+  </Reveal>
+</div>
+
+<div className="flex  flex-row justify-evenly mx-10 ">
+<div className="w-1/2 ml-80 mb-4  ">
+   <img className="ml-20"src="/assets/Level.svg" alt="" />
+    </div>
+<div className="w-1/2 mr-80 mb-4 ">
+  <img className="ml-10 mb-4" src="/assets/points.svg" alt="" />
+  </div>
+</div>
+
+
+
+
+<div className="flex  flex-row justify-evenly mx-10 ">
+<div className="w-1/2 ml-80 mb-4  ">
+<Reveal>
+<img className="ml-40"src="/assets/LevelUp.svg" alt="" />
+   </Reveal>
+    </div>
+<div className="w-1/2 mr-40 mb-4 ml-10">
+<Reveal>
+<img className="ml-10 mb-4" src="/assets/points2.svg" alt="" />
+  </Reveal>
+  </div>
+</div>
+
+
+
 
       {/* Display for mobile */}
       <div className="block md:hidden px-10">
