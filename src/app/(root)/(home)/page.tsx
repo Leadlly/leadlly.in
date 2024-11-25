@@ -12,23 +12,21 @@ import Footer from "@/components/shared/Footer";
 import NavBar from "@/components/shared/NavBar";
 
 export default function GridBackgroundDemo() {
-  return (
-    <>
-      <div className="gridGradient">
-        {" "}
-        <NavBar />
-        <Hero />
-        <Planner />
-        <Tracker />
-        <GrowthMeter />
-        <Mentor />
-        <Testimonals />
-        {/* <PricingSection />
+	return (
+		<>
+			<div className="gridGradient">
+				<NavBar />
+				<Hero />
+				<Planner />
+				<Tracker />
+				<GrowthMeter />
+				<Mentor />
+				<Testimonals />
+				{/* <PricingSection />
 				<Contact /> */}
-        <DownloadSection />
-        {/* <Social /> */}
-        <Footer />
-      </div>
-    </>
-  );
+				<DownloadSection />
+				<Social />
+			</div>
+		</>
+	);
 }
