@@ -34,15 +34,22 @@ const NavBar = (props: Props) => {
           </Link>
           <Link href="#mentor">Mentor</Link>
           <Link href="#testimonial">Testimonials</Link>
-          <Link
+          {/* <Link
             href={"https://education.leadlly.in/"}
             className="bg-blue-700 text-white py-1 px-2 md:px-4 rounded-lg border"
           >
             Sign Up
-          </Link>
+          </Link> */}
         </div>
         <div className="flex md:hidden">
-          <MobileMenu />
+          <MobileMenu
+            signUpLink="https://education.leadlly.in"
+            menuItems={[
+              { name: "Explore", href: "#explore" },
+              { name: "Mentor", href: "#mentor" },
+              { name: "Testimonial", href: "#testimonial" },
+            ]}
+          />
         </div>
       </div>
     </motion.nav>
