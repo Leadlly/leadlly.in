@@ -13,10 +13,10 @@ const FullPageCard = ({
 		<motion.div
 			initial={{ y: 60 }}
 			animate={{ y: 0 }}
-			transition={{ duration: 0.5 }}
-			className="fixed h-5/6 w-full bottom-0 left-0 z-50 rounded-t-3xl overflow-scroll"
+			transition={{ duration: 0.25 }}
+			className="fixed h-screen w-full bottom-0 left-0 z-50 rounded-t-3xl overflow-scroll"
 		>
-			<div className="flex justify-end sticky w-full top-0 left-0 rounded-t-3xl z-10 py-7 px-10 bg-white/20 backdrop-blur-lg shadow-md">
+			<div className="flex justify-end fixed p-7 px-14 w-full top-0 left-0 rounded-t-3xl z-10">
 				<button
 					onClick={() => {
 						setVisibility(false);

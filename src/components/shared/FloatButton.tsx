@@ -65,8 +65,10 @@ const FloatButton: React.FC<Props> = ({
 				ref={scope}
 			>
 				<motion.button
-					className={`bg-[#bec1e3]/20 size-[60px] overflow-hidden backdrop-blur-lg text-slate-700 font-medium p-2 rounded-full shadow-lg ${additionalStyles}`}
-					style={{ scale: 0 }}
+					className={`bg-[#bec1e3]/20 size-[60px] overflow-hidden backdrop-blur-lg text-slate-700 font-medium p-2 rounded-full shadow-2xl hover:border-4 ${additionalStyles}`}
+					style={{
+						scale: 0,
+					}}
 					onClick={onClick}
 				>
 					<span className="opacity-0 buttonText text-xl -translate-x-10">
