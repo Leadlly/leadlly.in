@@ -1,19 +1,22 @@
 "use client";
 import Image from "next/image";
 import { GrowthMeterPoints } from "@/helpers/constants";
-import IconWithLabel from "../shared/IconWIthLabel";
-import Reveal from "../shared/Reveal";
-import RevealImage from "../shared/RevealImage";
-import { useRef } from "react";
+import IconWithLabel from "@/components/shared/IconWIthLabel";
+import Reveal from "@/components/shared/Reveal";
+import RevealImage from "@/components/shared/RevealImage";
+import { useRef, useState } from "react";
 import { useInView } from "framer-motion";
-import FloatButton from "../shared/FloatButton";
+import FloatButton from "@/components/shared/FloatButton";
+import FullPageCard from "@/components/shared/FullPageCard";
 
-import Link from "next/link";
+import Main from "@/components/growthMeter/Main";
 
 type Props = {};
 const GrowthMeter = (props: Props) => {
 	const ref = useRef(null);
 	const isInView = useInView(ref, { amount: 0.4 });
+
+	const [showDetail, setShowDetail] = useState(false);
 
 	return (
 		<section ref={ref}>
@@ -70,7 +73,6 @@ const GrowthMeter = (props: Props) => {
 					</Reveal>
 				</div>
 			</div>
-
 			<div className="grid grid-cols-1 md:grid-cols-2  gap-y-8 px-14 sm:px-48  md:p-48 md:py-24 py-14">
 				{GrowthMeterPoints.map((item, index) => (
 					<IconWithLabel
@@ -82,12 +84,19 @@ const GrowthMeter = (props: Props) => {
 				))}
 			</div>
 
-			<Link href="/growthMeter">
-				<FloatButton
-					isInView={isInView}
-					text="Explore growth meter"
-				/>
-			</Link>
+			<FloatButton
+				isInView={isInView}
+				text="Explore growth meter"
+				onClick={() => {
+					setShowDetail(true);
+				}}
+			/>
+
+			{showDetail && (
+				<FullPageCard setVisibility={setShowDetail}>
+					<Main />
+				</FullPageCard>
+			)}
 		</section>
 	);
 };

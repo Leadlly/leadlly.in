@@ -5,7 +5,7 @@ import Reveal from "@/components/shared/Reveal";
 import ProgessAnalytics from "@/components/growthMeter/progessAnalytics";
 import Card from "@/components/growthMeter/Card";
 
-export default function Page() {
+export default function Main() {
 	return (
 		<div className="gridGradient min-h-screen p-10 md:p-28">
 			<div className="max-w-[1400px] mx-auto">
