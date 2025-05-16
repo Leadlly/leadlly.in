@@ -9,6 +9,8 @@ import axios from "axios";
 import { toast } from "sonner";
 import { createReferralCode, fetchReferralCode } from "@/actions";
 import { getCookie } from "@/actions/cookie_actions";
+import { FaCopy, FaShare, FaWhatsapp, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { IoMdMore } from "react-icons/io";
 
 export default function ReferralsPage() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -16,6 +18,7 @@ export default function ReferralsPage() {
   const [customCode, setCustomCode] = useState("");
   const [isCustomizing, setIsCustomizing] = useState(false);
   const [customCodeError, setCustomCodeError] = useState("");
+  const [showShareOptions, setShowShareOptions] = useState(false);
   const [referralStats, setReferralStats] = useState({
     totalReferrals: 0,
     pendingReferrals: 0,
@@ -30,7 +33,6 @@ export default function ReferralsPage() {
     const checkLoginStatus = async () => {
       try {
         // Check if token exists in cookies
-
         const token = await getCookie("token");
         console.log(document.cookie)
         setIsLoggedIn(!!token);
@@ -46,6 +48,33 @@ export default function ReferralsPage() {
     
     checkLoginStatus();
   }, []);
+
+  // Close share options when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      // Don't close if clicking on the share button itself
+      const shareButton = document.getElementById('share-button');
+      if (shareButton && shareButton.contains(e.target as Node)) {
+        return;
+      }
+      
+      // Don't close if clicking inside the dropdown
+      const dropdown = document.getElementById('share-dropdown');
+      if (dropdown && dropdown.contains(e.target as Node)) {
+        return;
+      }
+      
+      setShowShareOptions(false);
+    };
+    
+    if (showShareOptions) {
+      document.addEventListener('click', handleClickOutside);
+    }
+    
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [showShareOptions]);
 
   // Fetch referral data from API
   const fetchReferralData = async () => {
@@ -161,6 +190,46 @@ export default function ReferralsPage() {
     }
   };
 
+  const toggleShareOptions = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    console.log(showShareOptions, "Share button clicked");
+    setShowShareOptions(!showShareOptions);
+  };
+
+  const shareMessage = `🚀 Start planning your future with Leadlly and get exclusive discounts! Use my referral code: ${referralCode} and unlock premium learning resources. Join me on this learning journey! 🎓✨ #Leadlly #PersonalizedLearning`;
+
+  const shareViaWhatsApp = () => {
+    const url = `https://wa.me/?text=${encodeURIComponent(shareMessage)}`;
+    window.open(url, '_blank');
+  };
+
+  const shareViaInstagram = () => {
+    // Instagram doesn't support direct sharing via URL, so we'll copy to clipboard
+    navigator.clipboard.writeText(shareMessage);
+    toast.success("Message copied! Open Instagram to share", {
+      description: "Instagram doesn't support direct sharing. Paste the copied message in your Instagram."
+    });
+  };
+
+  const shareViaLinkedIn = () => {
+    const url = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent("https://leadlly.in")}&summary=${encodeURIComponent(shareMessage)}`;
+    window.open(url, '_blank');
+  };
+
+  const shareViaOthers = () => {
+    if (navigator.share) {
+      navigator.share({
+        title: 'Join Leadlly with my referral code',
+        text: shareMessage,
+        url: 'https://leadlly.in',
+      })
+      .catch((error) => console.log('Error sharing', error));
+    } else {
+      navigator.clipboard.writeText(shareMessage);
+      toast.success("Message copied to clipboard!");
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-purple-50">
       <div className="container mx-auto px-4 py-12 md:py-20">
@@ -267,14 +336,77 @@ export default function ReferralsPage() {
                         </div>
                         <button
                           onClick={copyReferralCode}
-                          className="bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-r-lg disabled:bg-purple-400"
+                          className="bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 disabled:bg-purple-400 flex items-center justify-center"
                           disabled={isLoading || !referralCode}
+                          title="Copy code"
                         >
-                          Copy
+                          <FaCopy className="text-lg" />
                         </button>
+                        <div className="relative">
+                          <button
+                            id="share-button"
+                            onClick={toggleShareOptions}
+                            className="bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-r-lg disabled:bg-purple-400 flex items-center justify-center"
+                            disabled={isLoading || !referralCode}
+                            title="Share code"
+                          >
+                            <FaShare className="text-lg" />
+                          </button>
+                          
+                          
+                        </div>
                       </div>
                     </Reveal>
                   )}
+                  {showShareOptions && (
+                            <div 
+                              id="share-dropdown"
+                              className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-10 overflow-hidden"
+                            >
+                              <div className="py-1">
+                                <button 
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    shareViaWhatsApp();
+                                  }}
+                                  className="flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-purple-50"
+                                >
+                                  <FaWhatsapp className="mr-3 text-green-500 text-lg" />
+                                  WhatsApp
+                                </button>
+                                <button 
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    shareViaInstagram();
+                                  }}
+                                  className="flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-purple-50"
+                                >
+                                  <FaInstagram className="mr-3 text-pink-500 text-lg" />
+                                  Instagram
+                                </button>
+                                <button 
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    shareViaLinkedIn();
+                                  }}
+                                  className="flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-purple-50"
+                                >
+                                  <FaLinkedin className="mr-3 text-blue-500 text-lg" />
+                                  LinkedIn
+                                </button>
+                                <button 
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    shareViaOthers();
+                                  }}
+                                  className="flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-purple-50"
+                                >
+                                  <IoMdMore className="mr-3 text-gray-500 text-lg" />
+                                  More Options
+                                </button>
+                              </div>
+                            </div>
+                          )}
                 </div>
                 
                 <div className="grid grid-cols-2 gap-4 mb-8">
