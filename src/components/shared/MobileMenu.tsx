@@ -72,9 +72,9 @@ const MobileMenu = ({ menuItems, signUpLink }: MobileMenuProps) => {
                 stiffness: 50,
               }}
               variants={itemVariants}
-              className="block mx-auto mt-16 px-6 py-2 bg-primary-blue text-white rounded-full"
+              className="block mx-auto mt-16 px-6 py-2 bg-[linear-gradient(110deg,#8B4CF4,45%,#B078F9,55%,#8B4CF4)] bg-[length:200%_100%] text-white rounded-full border border-blue-500 font-semibold transition-colors hover:opacity-90"
             >
-              Sign Up
+              Sign In
             </motion.a>
           )}
         </motion.div>

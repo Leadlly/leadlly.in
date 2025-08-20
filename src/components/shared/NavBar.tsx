@@ -34,12 +34,14 @@ const NavBar = (props: Props) => {
           </Link>
           <Link href="#mentor">Mentor</Link>
           <Link href="#testimonial">Testimonials</Link>
-          {/* <Link
-            href={"https://education.leadlly.in/"}
-            className="bg-blue-700 text-white py-1 px-2 md:px-4 rounded-lg border"
+          <Link
+            href="https://education.leadlly.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center px-4 py-2 rounded-full border border-blue-500 bg-[linear-gradient(110deg,#8B4CF4,45%,#B078F9,55%,#8B4CF4)] bg-[length:200%_100%] text-white font-semibold transition-colors hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2"
           >
-            Sign Up
-          </Link> */}
+            Sign In
+          </Link>
         </div>
         <div className="flex md:hidden">
           <MobileMenu
