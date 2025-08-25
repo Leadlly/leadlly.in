@@ -16,6 +16,7 @@ import DiscussProblem from "@/components/Icons/Mentor/DiscussProblem";
 import PersonalizedGuidance from "@/components/Icons/Mentor/PersonalizedGuidance";
 import ValuableInsights from "@/components/Icons/Mentor/ValuableInsights";
 
+
 export const PlannerPoints: Points[] = [
   { icon: DailyTask, label: "Daily task accomplishment." },
   { icon: DailyEvaluation, label: "Daily evaluation." },
