@@ -60,13 +60,13 @@ const Hero = (props: Props) => {
 						autoPlay
 						className='w-full md:w-auto'
 					></video> */}
-          <Image
-            alt="rotate"
-            width={1181}
-            className="w-full h-full"
-            height={"429"}
-            src={"/assets/images/rotate.png"}
-          />
+<Image
+alt="Rotating study plan visualization"
+width={1181}
+className="w-full h-full"
+height={"429"}
+src={"/assets/images/rotate.png"}
+/>
         </div>
       </div>
       <Marquee />
