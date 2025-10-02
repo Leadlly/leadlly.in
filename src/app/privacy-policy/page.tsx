@@ -3,10 +3,14 @@ import Footer from "@/components/shared/Footer";
 import React from "react";
 
 const PrivacyPolicy: React.FC = () => {
-  const handleRequestDeletion = () => {
-    window.location.href =
-      "mailto:support@leadlly.in?subject=Data Deletion Request&body=Dear Leadlly Edusolutions Support Team,%0D%0A%0D%0AI would like to request the deletion of all my personal data held by Leadlly Edusolutions as per your Privacy Policy.%0D%0A%0D%0APlease confirm the deletion process and notify me once it has been completed.%0D%0A%0D%0AThank you.%0D%0A%0D%0ARegards,%0D%0A[Your Name]";
-  };
+const handleRequestDeletion = () => {
+// Implement a form within the privacy policy page that allows users to:
+// 1. Enter their name and email address.
+// 2. Add a custom message to the data deletion request.
+// 3. Receive a confirmation message upon submission.
+// This form should then send the data deletion request to the support team via an API call.
+alert("This feature is under development. Please contact support@leadlly.in to request data deletion.");
+};
 
   return (
     <>
