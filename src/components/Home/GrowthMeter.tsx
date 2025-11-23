@@ -41,12 +41,12 @@ const GrowthMeter = (props: Props) => {
 							className="z-10"
 						/>
 					}
-					leftItem={
-						<p className="text-[#5B437D] font-semibold text-xl w-full md:w-96 text-right">
-							Watch your self-study soar with the Growth Meter -
-							see daily, weekly, and monthly progress take flight!
-						</p>
-					}
+leftItem={
+<p className="text-[#4A356B] font-semibold text-xl w-full md:w-96 text-right">
+Watch your self-study soar with the Growth Meter -
+see daily, weekly, and monthly progress take flight!
+</p>
+}
 					delay={0.2}
 					motionDivClass="flex items-center justify-evenly"
 					imagePosition="right"
