@@ -54,9 +54,7 @@ const DownloadSection: React.FC = () => {
           >
             <motion.a
               download={true}
-              href={
-                "https://play.google.com/store/apps/details?id=com.leadlly.app"
-              }
+href={process.env.NEXT_PUBLIC_APP_GUIDE_PDF_URL || "https://leadlly-general.s3.ap-south-1.amazonaws.com/Roadmap+to+Effective+Learning+~+Leadlly.pdf"}
               className={cn(
                 "flex-1 inline-flex items-center justify-center px-6 py-4 font-semibold rounded-full transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
                 "bg-[#E8DAEE] text-primary border-2 border-[#D0B5F9] hover:bg-[#D0B5F9] hover:text-white max-w-xs",
