@@ -1,5 +1,5 @@
 import Link from "next/link";
-import FullIcon from "../Icons/FullIcon";
+```
 import InstagramIcon from "../Icons/InstagramIcon";
 import LinkedInIcon from "../Icons/LinkedInIcon";
 import TwitterIcon from "../Icons/TwitterIcon";
