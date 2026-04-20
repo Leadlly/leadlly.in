@@ -18,7 +18,7 @@ const Hero = (props: Props) => {
         </Reveal>
       </h1>
       <Reveal motionDivClass="flex justify-center">
-        <p className="text-xs md:text-xl bg-gradient-to-r font-medium from-[#8B4CF4] via-[#FEB25E] to-[#8344F7] w-[90%] md:w-[60%] text-center bg-clip-text text-transparent">
+        <p className="text-xs md:text-xl bg-linear-to-r font-medium from-[#8B4CF4] via-[#FEB25E] to-[#8344F7] w-[90%] md:w-[60%] text-center bg-clip-text text-transparent">
           We equip students with personalized learning tools and supportive
           mentors to conquer academic challenges and thrive in competitive
           exams.
@@ -28,7 +28,7 @@ const Hero = (props: Props) => {
         <Reveal width="100%" motionDivClass="sm:flex sm:justify-end text-center" delay={0.2}>
           <Link
             href={"#download-section"}
-            className="inline-flex px-4 animate-shimmer gap-2 h-10 md:h-12 items-center justify-center rounded-3xl border border-blue-500 bg-[linear-gradient(110deg,#8B4CF4,45%,#B078F9,55%,#8B4CF4)] bg-[length:200%_100%]  md:px-8 text-white transition-colors focus:outline-none font-semibold focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
+            className="inline-flex px-4 animate-shimmer gap-2 h-10 md:h-12 items-center justify-center rounded-3xl border border-blue-500 bg-[linear-gradient(110deg,#8B4CF4,45%,#B078F9,55%,#8B4CF4)] bg-size-[200%_100%]  md:px-8 text-white transition-colors focus:outline-hidden font-semibold focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
           >
             Download App
             <Download className="w-4 h-4 md:w-5 md:h-5" />
@@ -37,7 +37,7 @@ const Hero = (props: Props) => {
         <Reveal width="100%" motionDivClass="sm:flex sm:justify-start text-center" delay={0.4}>
           <Link
             href={"/mentor"}
-            className="inline-flex px-4 gap-2 h-10 md:h-12 items-center justify-center rounded-3xl border border-blue-500 bg-white text-blue-500 hover:bg-blue-50 md:px-10 transition-colors focus:outline-none font-semibold focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
+            className="inline-flex px-4 gap-2 h-10 md:h-12 items-center justify-center rounded-3xl border border-blue-500 bg-white text-blue-500 hover:bg-blue-50 md:px-10 transition-colors focus:outline-hidden font-semibold focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
           >
             Join as Mentor
           </Link>
@@ -52,7 +52,7 @@ const Hero = (props: Props) => {
             </p>
           </Reveal>
         </div>
-        <div className="relative md:translate-x-48 flex-grow w-full md:w-auto">
+        <div className="relative md:translate-x-48 grow w-full md:w-auto">
           {/* <video
 						src='/assets/videos/comp.webm'
 						loop
@@ -75,7 +75,7 @@ const Hero = (props: Props) => {
         id="explore"
       >
         <div className="w-full md:w-auto">
-          <h1 className="text-4xl md:text-6xl ml-4 md:ml-20 my-5 text-left font-bold bg-gradient-to-r from-purple-700 via-orange-400 to-purple-700 bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-6xl ml-4 md:ml-20 my-5 text-left font-bold bg-linear-to-r from-purple-700 via-orange-400 to-purple-700 bg-clip-text text-transparent">
             Let's explore
           </h1>
         </div>

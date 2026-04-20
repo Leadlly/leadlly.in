@@ -36,7 +36,7 @@ const DownloadSection: React.FC = () => {
           className="text-center mb-12"
         >
           <div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl mt-10 mb-2 text-center font-bold bg-gradient-to-r from-purple-700 via-orange-400 to-purple-700 bg-clip-text text-transparent">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl mt-10 mb-2 text-center font-bold bg-linear-to-r from-purple-700 via-orange-400 to-purple-700 bg-clip-text text-transparent">
               Download Our App
             </h1>
           </div>
@@ -58,7 +58,7 @@ const DownloadSection: React.FC = () => {
                 "https://play.google.com/store/apps/details?id=com.leadlly.app"
               }
               className={cn(
-                "flex-1 inline-flex items-center justify-center px-6 py-4 font-semibold rounded-full transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+                "flex-1 inline-flex items-center justify-center px-6 py-4 font-semibold rounded-full transition duration-300 ease-in-out focus:outline-hidden focus:ring-2 focus:ring-ring focus:ring-offset-2",
                 "bg-[#E8DAEE] text-primary border-2 border-[#D0B5F9] hover:bg-[#D0B5F9] hover:text-white max-w-xs",
               )}
               target="_blank"
@@ -72,7 +72,7 @@ const DownloadSection: React.FC = () => {
                 "https://leadlly-general.s3.ap-south-1.amazonaws.com/Roadmap+to+Effective+Learning+~+Leadlly.pdf"
               }
               className={cn(
-                "flex-1 inline-flex items-center justify-center px-6 py-4 font-semibold rounded-full transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+                "flex-1 inline-flex items-center justify-center px-6 py-4 font-semibold rounded-full transition duration-300 ease-in-out focus:outline-hidden focus:ring-2 focus:ring-ring focus:ring-offset-2",
                 "bg-[#FEFBFF] text-primary border-2 border-black/30 hover:bg-[#F4E8FF] hover:border-primary max-w-xs",
               )}
               target="_blank"
@@ -97,7 +97,7 @@ const DownloadSection: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="mb-12"
           >
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-purple-700 via-orange-400 to-purple-700 bg-clip-text text-transparent">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold bg-linear-to-r from-purple-700 via-orange-400 to-purple-700 bg-clip-text text-transparent">
               App Guide
             </h2>
             <p className="text-muted-foreground text-lg mt-4">

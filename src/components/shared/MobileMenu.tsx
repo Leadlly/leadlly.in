@@ -40,7 +40,7 @@ const MobileMenu = ({ menuItems, signUpLink }: MobileMenuProps) => {
           <Menu className="cursor-pointer size-5" />
         </button>
       </SheetTrigger>
-      <SheetContent className="min-w-[100vw] pt-20 bg-[#F1E9F6]">
+      <SheetContent className="min-w-screen pt-20 bg-[#F1E9F6]">
         <motion.div
           initial="hidden"
           animate="visible"
@@ -72,7 +72,7 @@ const MobileMenu = ({ menuItems, signUpLink }: MobileMenuProps) => {
                 stiffness: 50,
               }}
               variants={itemVariants}
-              className="block mx-auto mt-16 px-6 py-2 bg-[linear-gradient(110deg,#8B4CF4,45%,#B078F9,55%,#8B4CF4)] bg-[length:200%_100%] text-white rounded-full border border-blue-500 font-semibold transition-colors hover:opacity-90"
+              className="block mx-auto mt-16 px-6 py-2 bg-[linear-gradient(110deg,#8B4CF4,45%,#B078F9,55%,#8B4CF4)] bg-size-[200%_100%] text-white rounded-full border border-blue-500 font-semibold transition-colors hover:opacity-90"
             >
               Sign In
             </motion.a>

@@ -38,7 +38,7 @@ const NavBar = (props: Props) => {
             href="https://education.leadlly.in"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-4 py-2 rounded-full border border-blue-500 bg-[linear-gradient(110deg,#8B4CF4,45%,#B078F9,55%,#8B4CF4)] bg-[length:200%_100%] text-white font-semibold transition-colors hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2"
+            className="inline-flex items-center justify-center px-4 py-2 rounded-full border border-blue-500 bg-[linear-gradient(110deg,#8B4CF4,45%,#B078F9,55%,#8B4CF4)] bg-size-[200%_100%] text-white font-semibold transition-colors hover:opacity-90 focus:outline-hidden focus:ring-2 focus:ring-slate-400 focus:ring-offset-2"
           >
             Sign In
           </Link>

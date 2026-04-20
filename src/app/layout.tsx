@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Montserrat, Inter } from "next/font/google";
 import "./globals.css";
+import { cn } from "@/lib/utils";
+
+const inter = Inter({subsets:['latin'],variable:'--font-sans'});
+
 
 // Import Montserrat font
 const montserrat = Montserrat({
@@ -20,7 +24,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
+		<html lang="en" className={cn("font-sans", inter.variable)}>
 			{/* Apply the Montserrat font */}
 			<body className={montserrat.className}>{children}</body>
 		</html>

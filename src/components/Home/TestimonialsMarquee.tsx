@@ -114,7 +114,7 @@ const MarqueeMotionDiv = ({
           </div>
 
           <div className="text-center">
-            <p className="font-medium text-sm md:text-base text-left line-clamp-[7]">
+            <p className="font-medium text-sm md:text-base text-left line-clamp-7">
               {testimonial.text}
             </p>
           </div>

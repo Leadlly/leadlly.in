@@ -47,7 +47,7 @@ const MarqueeMotionDiv = ({ items }: { items: any[] }) => {
       {items.map((item, index) => (
         <div
           key={index}
-          className="flex flex-grow items-center gap-3 md:gap-5 pr-14 md:pr-20"
+          className="flex grow items-center gap-3 md:gap-5 pr-14 md:pr-20"
         >
           <div className="size-5">
             <item.icon className="size-full stroke-[#2B2B2B]" />
