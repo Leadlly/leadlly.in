@@ -5,7 +5,7 @@ import {
 	useAnimation,
 	useInView,
 } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, type JSX } from "react";
 
 type Props = {
 	children: JSX.Element;
