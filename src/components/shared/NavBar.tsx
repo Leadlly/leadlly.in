@@ -50,6 +50,8 @@ const NavBar = () => {
             Login / Signup
           </Link>
         </nav>
+
+        <MobileMenu menuItems={NavLinks} />
       </motion.div>
     </header>
   );

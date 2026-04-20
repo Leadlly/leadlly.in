@@ -15,7 +15,7 @@ import Menu from "../Icons/Menu";
 import { Button } from "../ui/button";
 
 interface MenuItem {
-  name: string;
+  label: string;
   href: string;
 }
 
@@ -54,7 +54,7 @@ const MobileMenu = ({ menuItems, signUpLink }: MobileMenuProps) => {
         >
           {menuItems.map((item, index) => (
             <motion.a
-              key={item.name}
+              key={item.href}
               href={item.href}
               initial="hidden"
               animate="visible"
@@ -62,7 +62,7 @@ const MobileMenu = ({ menuItems, signUpLink }: MobileMenuProps) => {
               variants={itemVariants}
               className="mb-8 block text-center text-xl font-semibold text-black/50 hover:text-black focus:text-black"
             >
-              <SheetClose>{item.name}</SheetClose>
+              <SheetClose>{item.label}</SheetClose>
             </motion.a>
           ))}
           {signUpLink && (
