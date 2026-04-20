@@ -1,6 +1,10 @@
-"use  client";
-import { AnimatePresence, motion, useAnimation, useInView } from "motion/react";
+"use client";
+
 import { useEffect, useRef, type JSX } from "react";
+
+import { motion, useAnimation, useInView } from "motion/react";
+
+import { cn } from "@/lib/utils";
 
 type Props = {
   children: JSX.Element;
@@ -15,15 +19,17 @@ const Reveal = ({
   motionDivClass,
 }: Props) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false });
+  const isInView = useInView(ref, { once: true });
   const controls = useAnimation();
+
   useEffect(() => {
     if (isInView) {
       controls.start("visible");
     } else {
       controls.start("hidden");
     }
-  }, [isInView]);
+  }, [isInView, controls]);
+
   return (
     <div
       ref={ref}
@@ -46,7 +52,7 @@ const Reveal = ({
           },
         }}
         initial="hidden"
-        className={motionDivClass}
+        className={cn(motionDivClass)}
         animate={controls}
         transition={{ duration: 0.6, delay: delay ?? 0 }}
       >

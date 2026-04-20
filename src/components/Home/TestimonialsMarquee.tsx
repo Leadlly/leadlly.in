@@ -1,7 +1,10 @@
 "use client";
+
 import React, { useEffect } from "react";
-import { motion, type TargetAndTransition, useAnimation } from "motion/react";
-import { cn } from "@/utils/cn";
+
+import { motion, useAnimation, type TargetAndTransition } from "motion/react";
+
+import { cn } from "@/lib/utils";
 
 type Testimonial = {
   name: string;

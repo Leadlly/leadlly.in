@@ -1,86 +1,65 @@
-"use client";
-import { Download, Fullscreen } from "lucide-react";
-import Marquee from "./Marquee";
-import Reveal from "../shared/Reveal";
 import Image from "next/image";
 import Link from "next/link";
 
-type Props = {};
-const Hero = (props: Props) => {
+import { ChevronRight } from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react";
+import * as motion from "motion/react-client";
+
+import { cn } from "@/lib/utils";
+import Reveal from "../shared/Reveal";
+import { buttonVariants } from "../ui/button";
+
+const Hero = () => {
   return (
-    <div className="flex flex-col relative justify-center items-center gap-10 overflow-x-hidden px-4 md:px-10">
-      <h1 className="text-4xl md:text-7xl mt-20 md:mt-44 leading-tight font-bold flex flex-col text-center text-primary-blue gap-5">
-        <Reveal>
-          <span>Optimize your</span>
-        </Reveal>
-        <Reveal width="100%">
-          <span className="text-center">self studies</span>
-        </Reveal>
-      </h1>
-      <Reveal motionDivClass="flex justify-center">
-        <p className="text-xs md:text-xl bg-linear-to-r font-medium from-[#8B4CF4] via-[#FEB25E] to-[#8344F7] w-[90%] md:w-[60%] text-center bg-clip-text text-transparent">
-          We equip students with personalized learning tools and supportive
-          mentors to conquer academic challenges and thrive in competitive
-          exams.
-        </p>
-      </Reveal>
-      <div className="sm:flex gap-4 justify-center items-center w-full">
-        <Reveal width="100%" motionDivClass="sm:flex sm:justify-end text-center" delay={0.2}>
-          <Link
-            href={"#download-section"}
-            className="inline-flex px-4 animate-shimmer gap-2 h-10 md:h-12 items-center justify-center rounded-3xl border border-blue-500 bg-[linear-gradient(110deg,#8B4CF4,45%,#B078F9,55%,#8B4CF4)] bg-size-[200%_100%]  md:px-8 text-white transition-colors focus:outline-hidden font-semibold focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
-          >
-            Download App
-            <Download className="w-4 h-4 md:w-5 md:h-5" />
-          </Link>
-        </Reveal>
-        <Reveal width="100%" motionDivClass="sm:flex sm:justify-start text-center" delay={0.4}>
-          <Link
-            href={"/mentor"}
-            className="inline-flex px-4 gap-2 h-10 md:h-12 items-center justify-center rounded-3xl border border-blue-500 bg-white text-blue-500 hover:bg-blue-50 md:px-10 transition-colors focus:outline-hidden font-semibold focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
-          >
-            Join as Mentor
-          </Link>
-        </Reveal>
-      </div>
-      <div className="mt-20 md:mt-10 flex flex-col md:flex-row items-center">
-        <div className="w-full md:w-2/3 xl:w-1/3 mb-10 md:mb-0">
-          <Reveal motionDivClass="">
-            <p className="text-[#5B437D] font-semibold text-xs ml-5  max-md:max-w-60 md:text-xl text-left lg:ml-20">
-              Say goodbye to one-size-fits-all! We tailor study plans and
-              resources to your individual learning style and goals.
+    <section className="relative pt-36 px-3">
+      <div className="border border-ring rounded-5xl p-16 container mx-auto w-full h-auto md:h-[636px]  bg-[url(/assets/images/hero-bg.svg)] bg-no-repeat bg-size-[auto_300px] md:bg-size-[auto_493px] bg-left flex flex-col md:flex-row items-center justify-between gap-5">
+        <div className="flex-1 flex flex-col items-start gap-7">
+          <Reveal>
+            <h1 className="text-5xl md:text-[64px] font-medium text-foreground leading-tight">
+              There&apos;s a better way to study.
+            </h1>
+          </Reveal>
+          <Reveal delay={0.2}>
+            <p className="text-xl md:text-2xl text-foreground">
+              Leadlly personalizes your preparation based on how you study. Your
+              pace, consistency, and accuracy.
             </p>
           </Reveal>
+
+          <Reveal delay={0.4}>
+            <Link
+              href={"#"}
+              className={cn(
+                buttonVariants({ size: "lg" }),
+                "h-16 gap-4 pl-5 text-base md:text-lg font-medium",
+              )}
+            >
+              <span>Find your better way</span>
+              <span className="size-10 bg-white flex items-center justify-center rounded-full">
+                <HugeiconsIcon
+                  icon={ChevronRight}
+                  className="text-foreground size-5"
+                />
+              </span>
+            </Link>
+          </Reveal>
         </div>
-        <div className="relative md:translate-x-48 grow w-full md:w-auto">
-          {/* <video
-						src='/assets/videos/comp.webm'
-						loop
-						muted
-						autoPlay
-						className='w-full md:w-auto'
-					></video> */}
+
+        <motion.div
+          initial={{ opacity: 0, filter: "blur(10px)" }}
+          animate={{ opacity: 1, filter: "blur(0px)" }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="relative flex-1 h-full"
+        >
           <Image
-            alt="rotate"
-            width={1181}
-            className="w-full h-full"
-            height={"429"}
-            src={"/assets/images/rotate.png"}
+            src="/assets/images/hero-illustration.svg"
+            alt="hero-illustration"
+            fill
+            className="object-contain"
           />
-        </div>
+        </motion.div>
       </div>
-      <Marquee />
-      <div
-        className="flex flex-col md:flex-row justify-start w-full"
-        id="explore"
-      >
-        <div className="w-full md:w-auto">
-          <h1 className="text-4xl md:text-6xl ml-4 md:ml-20 my-5 text-left font-bold bg-linear-to-r from-purple-700 via-orange-400 to-purple-700 bg-clip-text text-transparent">
-            Let's explore
-          </h1>
-        </div>
-      </div>
-    </div>
+    </section>
   );
 };
 export default Hero;

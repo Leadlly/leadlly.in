@@ -1,12 +1,3 @@
-import DailyEvaluation from "@/components/Icons/Planner/DailyEvaluation";
-import DailyTask from "@/components/Icons/Planner/DailyTask";
-import Efficiency from "@/components/Icons/Planner/Efficiency";
-import ZeroProcrastination from "@/components/Icons/Planner/ZeroProcrastination";
-import { Points } from "../types/index.type";
-import RevisionFrequency from "@/components/Icons/Tracker/RevisionFrequency";
-import KnowledgeGap from "@/components/Icons/Tracker/KnowledgeGap";
-import Tracking from "@/components/Icons/Tracker/Tracking";
-import TrackEfficiency from "@/components/Icons/Tracker/Efficiency";
 import DailyMotivation from "@/components/Icons/GrowthMeter/DailyMotivation";
 import GamifyLearning from "@/components/Icons/GrowthMeter/GamifyLearning";
 import HealthyCompetetion from "@/components/Icons/GrowthMeter/HealthyCompetetion";
@@ -15,6 +6,22 @@ import ConnectAnytime from "@/components/Icons/Mentor/ConnectAnytime";
 import DiscussProblem from "@/components/Icons/Mentor/DiscussProblem";
 import PersonalizedGuidance from "@/components/Icons/Mentor/PersonalizedGuidance";
 import ValuableInsights from "@/components/Icons/Mentor/ValuableInsights";
+import DailyEvaluation from "@/components/Icons/Planner/DailyEvaluation";
+import DailyTask from "@/components/Icons/Planner/DailyTask";
+import Efficiency from "@/components/Icons/Planner/Efficiency";
+import ZeroProcrastination from "@/components/Icons/Planner/ZeroProcrastination";
+import TrackEfficiency from "@/components/Icons/Tracker/Efficiency";
+import KnowledgeGap from "@/components/Icons/Tracker/KnowledgeGap";
+import RevisionFrequency from "@/components/Icons/Tracker/RevisionFrequency";
+import Tracking from "@/components/Icons/Tracker/Tracking";
+import { Points } from "../types/index.type";
+
+export const NavLinks = [
+  { label: "Plans", href: "#plans" },
+  { label: "Reviews", href: "#reviews" },
+  { label: "FAQs", href: "#faqs" },
+  { label: "Become a mentor", href: "#become-a-mentor" },
+];
 
 export const PlannerPoints: Points[] = [
   { icon: DailyTask, label: "Daily task accomplishment." },

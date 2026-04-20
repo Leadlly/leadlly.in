@@ -1,9 +1,11 @@
 "use client";
 
-import React, { useRef, useEffect } from "react";
-import { motion } from "motion/react";
+import React, { useEffect, useRef } from "react";
+
 import { Download, PlayCircle } from "lucide-react";
-import { cn } from "@/utils/cn";
+import { motion } from "motion/react";
+
+import { cn } from "@/lib/utils";
 import Mobile from "./Mobile";
 
 const AppleLogo = () => (

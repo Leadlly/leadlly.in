@@ -1,8 +1,12 @@
 "use client";
-import { cn } from "@/utils/cn";
-import { CircleCheck } from "lucide-react";
+
 import React from "react";
+
+import { CircleCheck } from "lucide-react";
+
+import { cn } from "@/lib/utils";
 import Reveal from "./Reveal";
+
 interface PricingCardProps {
   title: string;
   price: number;

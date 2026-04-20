@@ -1,7 +1,6 @@
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils";
 
-type Props = { className?: string };
-const Logo = ({ className }: Props) => {
+const Logo = ({ className, ...props }: React.ComponentProps<"svg">) => {
   return (
     <svg
       width="39"
@@ -10,6 +9,7 @@ const Logo = ({ className }: Props) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={cn("size-7", className)}
+      {...props}
     >
       <path
         d="M5 9.27701C5 7.46717 6.46717 6 8.27701 6C16.5567 6 23.2687 12.712 23.2687 20.9917V33.1324H13.2945C8.71356 33.1324 5 29.4188 5 24.8379V9.27701Z"

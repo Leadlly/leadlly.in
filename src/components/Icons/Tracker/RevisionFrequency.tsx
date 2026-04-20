@@ -1,4 +1,4 @@
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils";
 
 const RevisionFrequency = ({ className }: { className?: string }) => {
   return (

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+
 import {
   Sheet,
   SheetClose,
@@ -11,6 +12,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import Menu from "../Icons/Menu";
+import { Button } from "../ui/button";
 
 interface MenuItem {
   name: string;
@@ -35,11 +37,13 @@ const sheetVariants = {
 const MobileMenu = ({ menuItems, signUpLink }: MobileMenuProps) => {
   return (
     <Sheet>
-      <SheetTrigger asChild>
-        <button className="flex justify-center items-baseline">
-          <Menu className="cursor-pointer size-5" />
-        </button>
-      </SheetTrigger>
+      <SheetTrigger
+        render={
+          <Button variant={"ghost"} size={"icon-lg"}>
+            <Menu />
+          </Button>
+        }
+      />
       <SheetContent className="min-w-screen pt-20 bg-[#F1E9F6]">
         <motion.div
           initial="hidden"

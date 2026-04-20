@@ -1,5 +1,6 @@
-import { cn } from "@/utils/cn";
 import React from "react";
+
+import { cn } from "@/lib/utils";
 
 const GamifyLearning = ({ className }: { className?: string }) => {
   return (
