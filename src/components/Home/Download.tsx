@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Download, PlayCircle } from "lucide-react";
 import { cn } from "@/utils/cn";
 import Mobile from "./Mobile";

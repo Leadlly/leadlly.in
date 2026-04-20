@@ -1,7 +1,7 @@
 "use client";
 import { ArrowUpRight, ChevronDown, Menu } from "lucide-react";
 import Logo from "../Icons/Logo";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Link from "next/link";
 import {
   Sheet,

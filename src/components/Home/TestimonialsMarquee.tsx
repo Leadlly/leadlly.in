@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
-import { AnimationControls, motion, useAnimation } from "framer-motion";
+import { motion, type TargetAndTransition, useAnimation } from "motion/react";
 import { cn } from "@/utils/cn";
 
 type Testimonial = {
@@ -71,7 +71,7 @@ const MarqueeMotionDiv = ({
   controls,
 }: {
   testimonials: Testimonial[];
-  controls: AnimationControls;
+  controls: TargetAndTransition;
 }) => {
   return (
     <motion.div

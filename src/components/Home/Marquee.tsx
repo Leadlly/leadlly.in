@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import TrackerIcon from "../Icons/TrackerIcon";
 import DashboardIcon from "../Icons/DashboardIcon";
 import PlannerIcon from "../Icons/PlannerIcon";

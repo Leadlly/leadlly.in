@@ -6,7 +6,7 @@ import Reveal from "../shared/Reveal";
 import RevealImage from "../shared/RevealImage";
 import FloatButton from "../shared/FloatButton";
 import { useRef } from "react";
-import { useInView } from "framer-motion";
+import { useInView } from "motion/react";
 
 type Props = {};
 const Mentor = (props: Props) => {

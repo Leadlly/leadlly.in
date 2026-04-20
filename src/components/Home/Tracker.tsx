@@ -5,7 +5,7 @@ import IconWithLabel from "../shared/IconWIthLabel";
 import Reveal from "../shared/Reveal";
 import RevealImage from "../shared/RevealImage";
 import { useRef } from "react";
-import { useInView } from "framer-motion";
+import { useInView } from "motion/react";
 import FloatButton from "../shared/FloatButton";
 
 type Props = {};
