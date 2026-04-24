@@ -11,7 +11,7 @@ const montserrat = Montserrat({
 
 const museoModerno = MuseoModerno({
   subsets: ["latin"],
-  variable: "--font-sans-serif",
+  variable: "--font-serif",
 });
 
 export const metadata: Metadata = {
@@ -27,7 +27,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      {/* Apply the Montserrat font */}
       <body
         className={`${montserrat.variable} ${museoModerno.variable} antialiased custom-scroll`}
       >

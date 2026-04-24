@@ -1,87 +1,56 @@
-"use client";
 import Image from "next/image";
-import IconWithLabel from "../shared/IconWIthLabel";
-import { PlannerPoints } from "@/helpers/constants";
+import Link from "next/link";
+
+import { ChevronRight } from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react";
+import * as motion from "motion/react-client";
+
+import { cn } from "@/lib/utils";
+import Container from "../shared/Container";
+import LinkButton from "../shared/LinkButton";
 import Reveal from "../shared/Reveal";
-import RevealImage from "../shared/RevealImage";
-import FloatButton from "../shared/FloatButton";
-import { useRef } from "react";
-import { useInView } from "motion/react";
+import SectionContainer from "../shared/SectionContainer";
+import { buttonVariants } from "../ui/button";
 
-type Props = {};
-
-const Planner = (props: Props) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.4 });
-
+const Planner = () => {
   return (
-    <section ref={ref} id="planner">
-      <div className="text-primary-blue max-md:w-40 text-[27px] md:text-6xl font-bold mx-10 md:mx-40 my-10 md:my-20">
-        <Reveal>
-          <h1>Planner.</h1>
-        </Reveal>
-        <Reveal>
-          <h1>Personalized for you.</h1>
-        </Reveal>
-      </div>
+    <SectionContainer id="planner" className="mt-20 md:mt-28">
+      <Container className="flex flex-col md:flex-row items-center gap-5 p-0 md:p-0 h-[500px] md:h-[273px]">
+        <motion.div
+          initial={{ opacity: 0, filter: "blur(10px)" }}
+          animate={{ opacity: 1, filter: "blur(0px)" }}
+          transition={{ duration: 0.5, ease: "easeIn" }}
+          className="relative flex-1 w-full h-[450px]"
+        >
+          <Image
+            src={"/assets/illustrations/svg_3.svg"}
+            alt="Leadlly Planner"
+            fill
+            className="object-contain"
+          />
+        </motion.div>
 
-      <div className="hidden md:block">
-        <RevealImage
-          rightItem={
-            <Image
-              alt="planner"
-              height={312}
-              width={616}
-              src={"/assets/images/planner.png"}
-              className="z-10"
-            />
-          }
-          leftItem={
-            <p className="text-[#5B437D] font-semibold text-xl w-full md:w-96 text-right">
-              Ditch generic study plans and level up your revision with
-              Leadlly's intelligent Revision Planner!
-            </p>
-          }
-          delay={0.2}
-          motionDivClass="flex items-center justify-evenly"
-          imagePosition="right"
-        />
-      </div>
-
-      <div className="block md:hidden px-10">
-        <div className="flex flex-col items-center">
+        <div className="flex-1 p-5 md:p-8 flex flex-col items-center md:items-start gap-5">
           <Reveal>
-            <Image
-              alt="planner"
-              height={312}
-              width={616}
-              src={"/assets/images/planner.png"}
-              className="z-10"
-            />
+            <p className="text-xl md:text-2xl text-foreground text-center md:text-left">
+              Missed revisions, broken routines, and inconsistent days slowly
+              add up making you feel behind even when you’re working hard. It’s
+              frustrating and exhausting.
+            </p>
           </Reveal>
-          <Reveal>
-            <p className="text-[#5B437D] font-semibold text-[11px] md:text-xl text-center mt-10">
-              Ditch generic study plans and level up your revision with
-              Leadlly's intelligent Revision Planner!
-            </p>
+
+          <Reveal delay={0.2}>
+            <LinkButton
+              href="/#"
+              className="h-11 md:h-14 pl-5"
+              iconContainerClassName="md:size-10 size-7"
+            >
+              Start Planning now
+            </LinkButton>
           </Reveal>
         </div>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2  gap-y-8 px-14 sm:px-48  md:p-48 md:py-24 py-14">
-        {PlannerPoints.map((item, index) => (
-          <IconWithLabel
-            key={index}
-            icon={<item.icon className="size-full " />}
-            label={item.label}
-            delay={(index + 1) * 0.15}
-          />
-        ))}
-      </div>
-      {/* <FloatButton
-				isInView={isInView}
-				text='Dive into planner'
-			/> */}
-    </section>
+      </Container>
+    </SectionContainer>
   );
 };
 

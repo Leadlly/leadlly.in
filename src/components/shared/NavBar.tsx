@@ -16,7 +16,7 @@ const NavBar = () => {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="container mx-auto w-full bg-background shadow-lg rounded-full h-20 flex items-center justify-between px-5 md:px-10"
+        className="max-w-[1440px] w-full mx-auto bg-background shadow-lg rounded-full h-20 flex items-center justify-between px-5 md:px-10"
       >
         <div>
           <Logo className="md:hidden" />
@@ -51,7 +51,9 @@ const NavBar = () => {
           </Link>
         </nav>
 
-        <MobileMenu menuItems={NavLinks} />
+        <div className="flex md:hidden">
+          <MobileMenu menuItems={NavLinks} />
+        </div>
       </motion.div>
     </header>
   );

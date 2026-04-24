@@ -1,6 +1,7 @@
 import DownloadSection from "@/components/Home/Download";
 import GrowthMeter from "@/components/Home/GrowthMeter";
 import Hero from "@/components/Home/Hero";
+import MarqueeList from "@/components/Home/Marquee";
 import Mentor from "@/components/Home/Mentor";
 import Planner from "@/components/Home/Planner";
 import Social from "@/components/Home/Social";
@@ -14,6 +15,7 @@ export default function GridBackgroundDemo() {
       <NavBar />
       <Hero />
       <Planner />
+      <MarqueeList />
       <Tracker />
       <GrowthMeter />
       <Mentor />
