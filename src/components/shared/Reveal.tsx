@@ -11,12 +11,14 @@ type Props = {
   width?: "fit-content" | "100%";
   delay?: number;
   motionDivClass?: string;
+  className?: string;
 };
 const Reveal = ({
   children,
   width = "fit-content",
   delay,
   motionDivClass,
+  className,
 }: Props) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -39,6 +41,7 @@ const Reveal = ({
         overflow: "hidden",
         paddingBottom: "5px",
       }}
+      className={cn(className)}
     >
       <motion.div
         variants={{
