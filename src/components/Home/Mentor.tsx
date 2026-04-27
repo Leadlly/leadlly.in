@@ -39,7 +39,7 @@ const items = [
   {
     title: "Error Book",
     description:
-      "At Leadlly, we believe that the right mentorship can make all the difference. Our team of dedicated mentors, hailing from top-tier institutions, is here to provide you with personalized guidance and support.",
+      "The Error Book is a structured reflection system where students log mistakes from tests and practice, categorize the root cause, and define corrective action.",
     image: "/assets/illustrations/mockup_5.svg",
   },
 ];
