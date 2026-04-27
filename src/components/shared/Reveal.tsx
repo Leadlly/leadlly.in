@@ -1,67 +1,42 @@
 "use client";
 
-import { useEffect, useRef, type JSX } from "react";
+import { useEffect } from "react";
 
-import { motion, useAnimation, useInView } from "motion/react";
+import { motion, useAnimate, useInView } from "motion/react";
 
 import { cn } from "@/lib/utils";
 
 type Props = {
-  children: JSX.Element;
-  width?: "fit-content" | "100%";
+  children: React.ReactNode;
   delay?: number;
-  motionDivClass?: string;
   className?: string;
 };
-const Reveal = ({
-  children,
-  width = "fit-content",
-  delay,
-  motionDivClass,
-  className,
-}: Props) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-  const controls = useAnimation();
+
+const Reveal = ({ children, delay, className }: Props) => {
+  const [scope, animate] = useAnimate();
+  const isInView = useInView(scope, { once: true });
 
   useEffect(() => {
     if (isInView) {
-      controls.start("visible");
-    } else {
-      controls.start("hidden");
+      animate(
+        scope.current,
+        {
+          opacity: 1,
+          y: 0,
+        },
+        { duration: 0.6, delay: delay ?? 0 },
+      );
     }
-  }, [isInView, controls]);
+  }, [isInView, animate, delay, scope]);
 
   return (
-    <div
-      ref={ref}
-      style={{
-        position: "relative",
-        width,
-        overflow: "hidden",
-        paddingBottom: "5px",
-      }}
-      className={cn(className)}
+    <motion.div
+      ref={scope}
+      initial={{ opacity: 0, y: 80 }}
+      className={cn("relative overflow-hidden pb-1.5 w-fit", className)}
     >
-      <motion.div
-        variants={{
-          hidden: {
-            opacity: 0,
-            y: 80,
-          },
-          visible: {
-            opacity: 1,
-            y: 0,
-          },
-        }}
-        initial="hidden"
-        className={cn(motionDivClass)}
-        animate={controls}
-        transition={{ duration: 0.6, delay: delay ?? 0 }}
-      >
-        {children}
-      </motion.div>
-    </div>
+      {children}
+    </motion.div>
   );
 };
 export default Reveal;

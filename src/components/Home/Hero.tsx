@@ -1,16 +1,8 @@
-import Image from "next/image";
-import Link from "next/link";
-
-import { ChevronRight } from "@hugeicons/core-free-icons";
-import { HugeiconsIcon } from "@hugeicons/react";
-import * as motion from "motion/react-client";
-
-import { cn } from "@/lib/utils";
 import Container from "../shared/Container";
+import ImageAnimation from "../shared/ImageAnimation";
 import LinkButton from "../shared/LinkButton";
 import Reveal from "../shared/Reveal";
 import SectionContainer from "../shared/SectionContainer";
-import { buttonVariants } from "../ui/button";
 
 const Hero = () => {
   return (
@@ -36,19 +28,11 @@ const Hero = () => {
           </Reveal>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, filter: "blur(10px)" }}
-          animate={{ opacity: 1, filter: "blur(0px)" }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="relative flex-1 h-full w-full"
-        >
-          <Image
-            src="/assets/illustrations/svg_5.svg"
-            alt="hero-illustration"
-            fill
-            className="object-contain"
-          />
-        </motion.div>
+        <ImageAnimation
+          src="/assets/illustrations/svg_5.svg"
+          alt="hero-illustration"
+          className="flex-1 h-full w-full"
+        />
       </Container>
     </SectionContainer>
   );

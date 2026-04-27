@@ -164,21 +164,17 @@ const Tracker = () => {
 
             {/* Right - Featured card (SVG stepped shape) */}
             <div className="w-full md:max-w-lg">
-              <Reveal
-                delay={0.25}
-                className="relative w-full"
-                motionDivClass="w-full"
-              >
+              <Reveal delay={0.25} className="relative w-full">
                 <TopCard />
               </Reveal>
             </div>
           </div>
 
           {/* Bottom cards - staggered descending cascade */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 place-items-center gap-4 md:gap-5">
             {featureCards.map((card, index) => (
               <div key={card.title}>
-                <Reveal delay={0.4 + index * 0.1} width="100%">
+                <Reveal delay={0.4 + index * 0.1}>
                   <BottomCard
                     title={card.title}
                     description={card.description}
