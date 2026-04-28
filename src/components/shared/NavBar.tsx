@@ -11,7 +11,7 @@ import MobileMenu from "./MobileMenu";
 
 const NavBar = () => {
   return (
-    <header className="fixed top-0 z-50 w-full h-28 flex items-center justify-center px-3">
+    <header className="fixed top-0 z-30 w-full h-28 flex items-center justify-center px-3">
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}

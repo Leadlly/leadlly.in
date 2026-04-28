@@ -15,31 +15,31 @@ const items = [
   {
     title: "Mentorship",
     description:
-      "At Leadlly, we believe that the right mentorship can make all the difference. Our team of dedicated mentors, hailing from top-tier institutions, is here to provide you with personalized guidance and support.",
+      "Not random advice - real guidance based on your data. Your mentor tracks your progress and helps you stay consistent, accountable, and on track.",
     image: "/assets/illustrations/mockup_1.svg",
   },
   {
     title: "Personalized Curriculum",
     description:
-      "At Leadlly, we believe that the right mentorship can make all the difference. Our team of dedicated mentors, hailing from top-tier institutions, is here to provide you with personalized guidance and support.",
+      "Your plan, your pace. A study strategy built around how you learn - not a one-size-fits-all schedule.",
     image: "/assets/illustrations/mockup_2.svg",
   },
   {
     title: "Adaptive Quizzes",
     description:
-      "At Leadlly, we believe that the right mentorship can make all the difference. Our team of dedicated mentors, hailing from top-tier institutions, is here to provide you with personalized guidance and support.",
+      "Practice smarter, not harder. Quizzes adapt to your performance - focusing on weak areas and improving accuracy.",
     image: "/assets/illustrations/mockup_3.svg",
   },
   {
     title: "Daily Task Planning",
     description:
-      "At Leadlly, we believe that the right mentorship can make all the difference. Our team of dedicated mentors, hailing from top-tier institutions, is here to provide you with personalized guidance and support.",
+      "Know exactly what to do, every day. Simple daily tasks that keep you consistent and eliminate confusion.",
     image: "/assets/illustrations/mockup_4.svg",
   },
   {
     title: "Error Book",
     description:
-      "The Error Book is a structured reflection system where students log mistakes from tests and practice, categorize the root cause, and define corrective action.",
+      "Turn mistakes into your strength. Track, revisit, and fix errors - so you don't repeat them.",
     image: "/assets/illustrations/mockup_5.svg",
   },
 ];
