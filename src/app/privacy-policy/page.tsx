@@ -1,16 +1,14 @@
-"use client";
-import Footer from "@/components/shared/Footer";
-import React from "react";
+import Link from "next/link";
 
-const PrivacyPolicy: React.FC = () => {
-  const handleRequestDeletion = () => {
-    window.location.href =
-      "mailto:support@leadlly.in?subject=Data Deletion Request&body=Dear Leadlly Edusolutions Support Team,%0D%0A%0D%0AI would like to request the deletion of all my personal data held by Leadlly Edusolutions as per your Privacy Policy.%0D%0A%0D%0APlease confirm the deletion process and notify me once it has been completed.%0D%0A%0D%0AThank you.%0D%0A%0D%0ARegards,%0D%0A[Your Name]";
-  };
+import Container from "@/components/shared/Container";
+import SectionContainer from "@/components/shared/SectionContainer";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
+const PrivacyPolicy = () => {
   return (
-    <>
-      <div className="max-w-4xl mx-auto py-10 px-5">
+    <SectionContainer className="pt-20">
+      <Container>
         <h1 className="text-3xl font-bold text-[#8B4CF4] mb-6">
           Privacy Policy
         </h1>
@@ -353,7 +351,7 @@ const PrivacyPolicy: React.FC = () => {
 
         {/* Section 14 - Children's Privacy */}
         <h2 className="text-2xl font-semibold mt-6 mb-4">
-          14. Children's Privacy
+          14. Children&apos;s Privacy
         </h2>
         <p className="text-gray-700 mb-4">
           Our Service does not address anyone under the age of 18 (“Children”).
@@ -504,7 +502,7 @@ const PrivacyPolicy: React.FC = () => {
           >
             support@leadlly.in
           </a>{" "}
-          with the subject line "<b>Data Deletion Request</b>".
+          with the subject line <b>{"Data Deletion Request"}</b>.
         </p>
 
         <p className="text-gray-700 mb-4">
@@ -517,15 +515,16 @@ const PrivacyPolicy: React.FC = () => {
           <li>A statement requesting the deletion of your personal data</li>
         </ul>
 
-        <button
-          onClick={handleRequestDeletion}
-          className="bg-[#8B4CF4] text-white py-2 px-4 rounded-md hover:bg-primary-blue-dark transition duration-300"
+        <Link
+          href={
+            "mailto:support@leadlly.in?subject=Data Deletion Request&body=Dear Leadlly Edusolutions Support Team,%0D%0A%0D%0AI would like to request the deletion of all my personal data held by Leadlly Edusolutions as per your Privacy Policy.%0D%0A%0D%0APlease confirm the deletion process and notify me once it has been completed.%0D%0A%0D%0AThank you.%0D%0A%0D%0ARegards,%0D%0A[Your Name]"
+          }
+          className={cn(buttonVariants({ size: "xl" }))}
         >
           Request Data Deletion
-        </button>
-      </div>
-      <Footer />
-    </>
+        </Link>
+      </Container>
+    </SectionContainer>
   );
 };
 

@@ -7,7 +7,7 @@ import SectionContainer from "../shared/SectionContainer";
 const Hero = () => {
   return (
     <SectionContainer className="relative pt-36">
-      <Container className="h-screen md:h-[636px] bg-[url(/assets/images/hero-bg.svg)] bg-no-repeat bg-size-[auto_300px] md:bg-size-[auto_493px] bg-left flex flex-col md:flex-row items-center justify-between gap-5">
+      <Container className="h-screen md:h-[636px] bg-[url(/assets/images/hero-bg.svg)] bg-no-repeat bg-size-[auto_300px] md:bg-size-[auto_493px] bg-left flex flex-col md:flex-row items-center justify-between gap-5  border border-ring rounded-5xl">
         <div className="flex-1 flex flex-col items-start gap-7">
           <Reveal>
             <h1 className="text-5xl md:text-[64px] font-medium text-foreground leading-tight">

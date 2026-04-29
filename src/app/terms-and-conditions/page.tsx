@@ -1,10 +1,13 @@
-import Footer from "@/components/shared/Footer";
 import React from "react";
+
+import Container from "@/components/shared/Container";
+import Footer from "@/components/shared/Footer";
+import SectionContainer from "@/components/shared/SectionContainer";
 
 const TermsAndConditions: React.FC = () => {
   return (
-    <>
-      <div className="max-w-4xl mx-auto py-10 px-5">
+    <SectionContainer className="pt-20">
+      <Container>
         <h1 className="text-3xl font-bold text-[#8B4CF4] mb-6">
           Terms and Conditions
         </h1>
@@ -135,8 +138,8 @@ const TermsAndConditions: React.FC = () => {
           private limited and its licensee and licensors, and their employees,
           contractors, agents, officers, and directors, from and against any and
           all claims, damages, obligations, losses, liabilities, costs or debt,
-          and expenses (including but not limited to attorney's fees) arising
-          from:
+          and expenses (including but not limited to attorney&apos;s fees)
+          arising from:
         </p>
         <ul className="list-disc list-inside mb-4">
           <li>Your use of and access to the Service.</li>
@@ -193,7 +196,7 @@ const TermsAndConditions: React.FC = () => {
         <p className="text-gray-700 mb-4">
           We reserve the right, at our sole discretion, to modify or replace
           these Terms at any time. If a revision is material, we will provide at
-          least 30 days' notice prior to any new terms taking effect.
+          least 30 days notice prior to any new terms taking effect.
         </p>
         <p className="text-gray-700 mb-4">
           What constitutes a material change will be determined at our sole
@@ -388,9 +391,9 @@ const TermsAndConditions: React.FC = () => {
           THAT YOU HAVE READ THESE TERMS OF SERVICE AND AGREE TO BE BOUND BY
           THEM.
         </p>
-      </div>
+      </Container>
       <Footer />
-    </>
+    </SectionContainer>
   );
 };
 

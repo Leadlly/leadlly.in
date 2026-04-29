@@ -7,7 +7,7 @@ import SectionContainer from "../shared/SectionContainer";
 const Planner = () => {
   return (
     <SectionContainer id="planner" className="mt-20 md:mt-28">
-      <Container className="flex flex-col md:flex-row items-center gap-5 p-0 md:p-0 h-[500px] md:h-[273px]">
+      <Container className="flex flex-col md:flex-row items-center gap-5 p-0 md:p-0 h-[500px] md:h-[273px] border border-ring rounded-5xl">
         <ImageAnimation
           src={"/assets/illustrations/svg_3.svg"}
           alt="Leadlly Planner"
