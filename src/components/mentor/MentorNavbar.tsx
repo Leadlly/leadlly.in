@@ -55,9 +55,9 @@ const MentorNavbar = (props: Props) => {
             <MobileMenu
               signUpLink="https://mentor.leadlly.in/"
               menuItems={[
-                { name: "Guidance", href: "#guidance" },
-                { name: "Our Courses", href: "#courses" },
-                { name: "Resources", href: "#resources" },
+                { label: "Guidance", href: "#guidance" },
+                { label: "Our Courses", href: "#courses" },
+                { label: "Resources", href: "#resources" },
               ]}
             />
           </div>

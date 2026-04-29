@@ -25,7 +25,8 @@ const Planner = () => {
 
           <Reveal delay={0.2}>
             <LinkButton
-              href="/#"
+              href="https://play.google.com/store/apps/details?id=com.leadlly.app"
+              target="_blank"
               className="h-11 md:h-14 pl-5"
               iconContainerClassName="md:size-10 size-7"
             >

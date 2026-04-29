@@ -42,17 +42,27 @@ const NavBar = () => {
             ))}
           </ul>
 
-          <Link
+          {/* <Link
             href={"https://education.leadlly.in/login"}
             target="_blank"
             className={cn(buttonVariants({ size: "xl" }), "rounded-full")}
           >
             Login / Signup
+          </Link> */}
+          <Link
+            href={"https://play.google.com/store/apps/details?id=com.leadlly.app"}
+            target="_blank"
+            className={cn(buttonVariants({ size: "xl" }), "rounded-full")}
+          >
+            Download
           </Link>
         </nav>
 
         <div className="flex md:hidden">
-          <MobileMenu menuItems={NavLinks} />
+          <MobileMenu
+            menuItems={NavLinks}
+            signUpLink="https://play.google.com/store/apps/details?id=com.leadlly.app"
+          />
         </div>
       </motion.div>
     </header>
