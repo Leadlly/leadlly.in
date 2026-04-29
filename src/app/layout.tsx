@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat, MuseoModerno } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next"
 
 import "./globals.css";
 
@@ -31,6 +32,7 @@ export default function RootLayout({
         className={`${montserrat.variable} ${museoModerno.variable} antialiased custom-scroll`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
