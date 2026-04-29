@@ -1,8 +1,12 @@
 "use client";
-import { cn } from "@/utils/cn";
-import { CircleCheck } from "lucide-react";
+
 import React from "react";
+
+import { CircleCheck } from "lucide-react";
+
+import { cn } from "@/lib/utils";
 import Reveal from "./Reveal";
+
 interface PricingCardProps {
   title: string;
   price: number;
@@ -17,7 +21,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
   isHighlighted,
 }) => {
   return (
-    <Reveal delay={isHighlighted ? 0.1 : 0.4} motionDivClass="rounded-[20px]">
+    <Reveal delay={isHighlighted ? 0.1 : 0.4}>
       <div
         className={cn("border p-10 min-w-[300px] rounded-[20px]", {
           "bg-white shadow-xl": isHighlighted,

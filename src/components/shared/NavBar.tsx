@@ -1,60 +1,71 @@
-"use client";
-import { ChevronDown, Menu } from "lucide-react";
-import Logo from "../Icons/Logo";
-import { motion } from "framer-motion";
 import Link from "next/link";
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+
+import * as motion from "motion/react-client";
+
+import { NavLinks } from "@/helpers/constants";
+import { cn } from "@/lib/utils";
+import Logo from "../Icons/Logo";
+import LogoFull from "../Icons/LogoFull";
+import { buttonVariants } from "../ui/button";
 import MobileMenu from "./MobileMenu";
 
-type Props = {};
-const NavBar = (props: Props) => {
+const NavBar = () => {
   return (
-    <motion.nav
-      initial={{ opacity: 0.5, y: "-70px" }}
-      animate={{ opacity: 1, y: "0" }}
-      transition={{ duration: 0.3, ease: "linear" }}
-      className="backdrop-blur-lg border-b fixed w-full z-50 border-b-[#bfa0c5] flex justify-between px-4 md:px-20 py-3 items-center"
-    >
-      <Link href={"/"}>
-        <Logo className="w-8 h-8 md:w-12 md:h-12" />
-      </Link>
-
-      <div className="flex justify-center items-center">
-        <div className="hidden gap-3 md:gap-7 font-medium md:flex items-center">
-          <Link href="#explore" className="flex items-center gap-1 md:gap-2">
-            <span>Explore</span>{" "}
-            <ChevronDown className="w-4 h-4 md:w-5 md:h-5" />
-          </Link>
-          <Link href="#mentor">Mentor</Link>
-          <Link href="#testimonial">Testimonials</Link>
-          <Link
-            href="https://education.leadlly.in"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-4 py-2 rounded-full border border-blue-500 bg-[linear-gradient(110deg,#8B4CF4,45%,#B078F9,55%,#8B4CF4)] bg-[length:200%_100%] text-white font-semibold transition-colors hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2"
-          >
-            Sign In
-          </Link>
+    <header className="fixed top-0 z-30 w-full h-28 flex items-center justify-center px-3">
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="max-w-[1440px] w-full mx-auto bg-background shadow-lg rounded-full h-20 flex items-center justify-between px-5 md:px-10"
+      >
+        <div>
+          <Logo className="md:hidden" />
+          <LogoFull className="hidden md:flex" />
         </div>
+
+        <nav className="hidden md:flex items-center gap-6">
+          <ul className="flex items-center gap-6">
+            {NavLinks.map((link, index) => (
+              <motion.li
+                key={link.label}
+                initial={{ opacity: 0, y: 10, filter: "blur(10px)" }}
+                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                transition={{ duration: 0.5, delay: index * 0.25 }}
+              >
+                <Link
+                  href={link.href}
+                  className="text-foreground hover:text-primary transition-colors text-sm font-medium"
+                >
+                  {link.label}
+                </Link>
+              </motion.li>
+            ))}
+          </ul>
+
+          {/* <Link
+            href={"https://education.leadlly.in/login"}
+            target="_blank"
+            className={cn(buttonVariants({ size: "xl" }), "rounded-full")}
+          >
+            Login / Signup
+          </Link> */}
+          <Link
+            href={"https://play.google.com/store/apps/details?id=com.leadlly.app"}
+            target="_blank"
+            className={cn(buttonVariants({ size: "xl" }), "rounded-full")}
+          >
+            Download
+          </Link>
+        </nav>
+
         <div className="flex md:hidden">
           <MobileMenu
-            signUpLink="https://education.leadlly.in"
-            menuItems={[
-              { name: "Explore", href: "#explore" },
-              { name: "Mentor", href: "#mentor" },
-              { name: "Testimonial", href: "#testimonial" },
-            ]}
+            menuItems={NavLinks}
+            signUpLink="https://play.google.com/store/apps/details?id=com.leadlly.app"
           />
         </div>
-      </div>
-    </motion.nav>
+      </motion.div>
+    </header>
   );
 };
 export default NavBar;

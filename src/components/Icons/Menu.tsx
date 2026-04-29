@@ -1,4 +1,4 @@
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils";
 
 type Props = { className?: string };
 const Menu = ({ className }: Props) => {

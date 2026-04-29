@@ -11,7 +11,7 @@ const HeroSection = () => {
           Get Hired !
         </h2>
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6">
-          <span className="bg-gradient-to-r from-purple-600/80 via-amber-400 to-purple-600/80 bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-purple-600/80 via-amber-400 to-purple-600/80 bg-clip-text text-transparent">
             As Mentor
           </span>
           <span className="text-purple-600 block md:inline md:ml-2 font-medium text-3xl sm:text-4xl lg:text-5xl">

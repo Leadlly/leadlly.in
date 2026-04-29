@@ -1,7 +1,10 @@
 "use client";
+
 import React, { useEffect } from "react";
-import { AnimationControls, motion, useAnimation } from "framer-motion";
-import { cn } from "@/utils/cn";
+
+import { motion, useAnimation, type TargetAndTransition } from "motion/react";
+
+import { cn } from "@/lib/utils";
 
 type Testimonial = {
   name: string;
@@ -71,7 +74,7 @@ const MarqueeMotionDiv = ({
   controls,
 }: {
   testimonials: Testimonial[];
-  controls: AnimationControls;
+  controls: TargetAndTransition;
 }) => {
   return (
     <motion.div
@@ -114,7 +117,7 @@ const MarqueeMotionDiv = ({
           </div>
 
           <div className="text-center">
-            <p className="font-medium text-sm md:text-base text-left line-clamp-[7]">
+            <p className="font-medium text-sm md:text-base text-left line-clamp-7">
               {testimonial.text}
             </p>
           </div>

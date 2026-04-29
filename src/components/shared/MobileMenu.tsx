@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
+
 import {
   Sheet,
   SheetClose,
@@ -11,9 +12,10 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import Menu from "../Icons/Menu";
+import { Button } from "../ui/button";
 
 interface MenuItem {
-  name: string;
+  label: string;
   href: string;
 }
 
@@ -35,12 +37,14 @@ const sheetVariants = {
 const MobileMenu = ({ menuItems, signUpLink }: MobileMenuProps) => {
   return (
     <Sheet>
-      <SheetTrigger asChild>
-        <button className="flex justify-center items-baseline">
-          <Menu className="cursor-pointer size-5" />
-        </button>
-      </SheetTrigger>
-      <SheetContent className="min-w-[100vw] pt-20 bg-[#F1E9F6]">
+      <SheetTrigger
+        render={
+          <Button variant={"ghost"} size={"icon-lg"}>
+            <Menu />
+          </Button>
+        }
+      />
+      <SheetContent className="min-w-screen pt-20 bg-[#F1E9F6]">
         <motion.div
           initial="hidden"
           animate="visible"
@@ -50,7 +54,7 @@ const MobileMenu = ({ menuItems, signUpLink }: MobileMenuProps) => {
         >
           {menuItems.map((item, index) => (
             <motion.a
-              key={item.name}
+              key={item.href}
               href={item.href}
               initial="hidden"
               animate="visible"
@@ -58,7 +62,7 @@ const MobileMenu = ({ menuItems, signUpLink }: MobileMenuProps) => {
               variants={itemVariants}
               className="mb-8 block text-center text-xl font-semibold text-black/50 hover:text-black focus:text-black"
             >
-              <SheetClose>{item.name}</SheetClose>
+              <SheetClose>{item.label}</SheetClose>
             </motion.a>
           ))}
           {signUpLink && (
@@ -72,9 +76,9 @@ const MobileMenu = ({ menuItems, signUpLink }: MobileMenuProps) => {
                 stiffness: 50,
               }}
               variants={itemVariants}
-              className="block mx-auto mt-16 px-6 py-2 bg-[linear-gradient(110deg,#8B4CF4,45%,#B078F9,55%,#8B4CF4)] bg-[length:200%_100%] text-white rounded-full border border-blue-500 font-semibold transition-colors hover:opacity-90"
+              className="block mx-auto mt-16 px-6 py-2 bg-[linear-gradient(110deg,#8B4CF4,45%,#B078F9,55%,#8B4CF4)] bg-size-[200%_100%] text-white rounded-full border border-blue-500 font-semibold transition-colors hover:opacity-90"
             >
-              Sign In
+              Download
             </motion.a>
           )}
         </motion.div>

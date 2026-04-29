@@ -3,7 +3,7 @@ import Reveal from "../shared/Reveal";
 
 const Card = ({ image, imgAlt, width, height, text }: any) => {
 	return (
-		<div className="flex-shrink-0 flex flex-col items-center">
+		<div className="shrink-0 flex flex-col items-center">
 			<Image
 				src={image}
 				alt={imgAlt}

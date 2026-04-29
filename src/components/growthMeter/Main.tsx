@@ -11,7 +11,7 @@ export default function Main() {
 			<div className="max-w-[1400px] mx-auto">
 				<div className="flex flex-col">
 					<Reveal>
-						<h1 className="inline-block text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#7D3EFF] via-[#FFB35C] to-[#7D3EFF]">
+						<h1 className="inline-block text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-linear-to-r from-[#7D3EFF] via-[#FFB35C] to-[#7D3EFF]">
 							<span>Track it, chart it,</span>
 							<span className="block mt-3">Celebrate it.</span>
 						</h1>
@@ -39,7 +39,7 @@ export default function Main() {
 
 				<div className="my-20 md:my-40">
 					<Reveal>
-						<h1 className=" inline-block text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#7D3EFF] via-[#FFB35C] to-[#7D3EFF]">
+						<h1 className=" inline-block text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-linear-to-r from-[#7D3EFF] via-[#FFB35C] to-[#7D3EFF]">
 							<span>Visualize your progress</span>
 							<span className="md:block my-3">
 								and stay motivated
