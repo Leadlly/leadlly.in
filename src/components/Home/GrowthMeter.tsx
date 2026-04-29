@@ -50,7 +50,7 @@ const GrowthMeter = () => {
               </ul>
 
               <Reveal delay={0.7} className="z-10">
-                <LinkButton href="#" className="pl-5">
+                <LinkButton href="https://play.google.com/store/apps/details?id=com.leadlly.app" target="_blank" className="pl-5">
                   Start Planning Now
                 </LinkButton>
               </Reveal>

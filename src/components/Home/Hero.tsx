@@ -22,7 +22,7 @@ const Hero = () => {
           </Reveal>
 
           <Reveal delay={0.4}>
-            <LinkButton href="#" className="pl-5">
+            <LinkButton href="#download-section" className="pl-5">
               Find your better way
             </LinkButton>
           </Reveal>

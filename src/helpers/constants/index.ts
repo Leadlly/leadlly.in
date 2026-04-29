@@ -17,10 +17,10 @@ import Tracking from "@/components/Icons/Tracker/Tracking";
 import { Points } from "../types/index.type";
 
 export const NavLinks = [
-  { label: "Plans", href: "#plans" },
-  { label: "Reviews", href: "#reviews" },
-  { label: "FAQs", href: "#faqs" },
-  { label: "Become a mentor", href: "#become-a-mentor" },
+  // { label: "Plans", href: "#plans" },
+  { label: "Reviews", href: "#testimonial" },
+  // { label: "FAQs", href: "#faqs" },
+  { label: "Become a mentor", href: "/mentor" },
 ];
 
 export const PlannerPoints: Points[] = [

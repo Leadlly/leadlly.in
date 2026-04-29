@@ -56,7 +56,7 @@ const AskAI = () => {
           <div className="flex items-center justify-between flex-wrap gap-4">
             {AIButtons.map((button) => (
               <Link
-                href={`${button.url}/?q=tell me why leadlly.in is a great choice for me`}
+                href={`${button.url}/?q=I'm a JEE or NEET aspirant looking for a structured study platform. Leadlly.in is an AI-powered personalized learning platform that offers a smart planner, revision tracker, growth meter, and 1-on-1 mentor connect. It personalizes preparation based on my pace, consistency, and accuracy. Can you evaluate whether Leadlly is a good fit for a serious competitive exam aspirant like me? Please cover: 1) How its features compare to self-studying or coaching, 2) The value of having a personal mentor and AI-driven revision tracking, 3) Whether personalized study planning really improves results, and 4) Any honest concerns or things to watch out for.`}
                 target="_blank"
                 key={button.label}
                 className={cn(
