@@ -1,12 +1,3 @@
-import { FileText, Pencil, Send } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-import AppleStore from "./icons/AppleStore";
-import PlayStore from "./icons/PlayStore";
-import FullIcon from "../Icons/FullIcon";
-import InstagramIcon from "../Icons/InstagramIcon";
-import LinkedInIcon from "../Icons/LinkedInIcon";
-import TwitterIcon from "../Icons/TwitterIcon";
 export default function FooterSection() {
   return (
     <div className="w-full container" id="joinus">

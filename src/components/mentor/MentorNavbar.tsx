@@ -1,20 +1,14 @@
 "use client";
-import { ArrowUpRight, ChevronDown, Menu } from "lucide-react";
-import Logo from "../Icons/Logo";
-import { motion } from "motion/react";
+
 import Link from "next/link";
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+
+import { ArrowUpRight } from "lucide-react";
+import { motion } from "motion/react";
+
+import Logo from "../Icons/Logo";
 import MobileMenu from "../shared/MobileMenu";
 
-type Props = {};
-const MentorNavbar = (props: Props) => {
+const MentorNavbar = () => {
   return (
     <div className="px-4 md:px-20 fixed w-full z-50 ">
       <motion.nav

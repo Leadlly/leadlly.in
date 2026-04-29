@@ -5,8 +5,7 @@ import MentorNavbar from "@/components/mentor/MentorNavbar";
 import PerksSection from "@/components/mentor/PerksSection";
 import Footer from "@/components/shared/Footer";
 
-type Props = {};
-const page = (props: Props) => {
+const page = () => {
   return (
     <div className="gridGradient">
       <MentorNavbar />

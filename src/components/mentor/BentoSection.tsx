@@ -1,10 +1,12 @@
 import React from "react";
 import Image from "next/image";
+
 import { Check } from "lucide-react";
+
 import { cn } from "@/lib/utils";
 import BentoCalendarImg from "../../../public/assets/images/BentoCalender.svg";
-import BentoMentorImg from "../../../public/assets/images/BentoMonitor.svg";
 import BentoClockImg from "../../../public/assets/images/BentoClock.svg";
+import BentoMentorImg from "../../../public/assets/images/BentoMonitor.svg";
 
 interface CheckListProps {
   items: string[];
@@ -31,7 +33,7 @@ interface BentoCardProps {
   subtitle: string;
   items: string[];
   className?: string;
-  image?: any;
+  image?: string;
 }
 
 const BentoCard = ({
@@ -139,7 +141,7 @@ const BentoSection = () => {
     >
       <div className="text-center mb-8 sm:mb-10 lg:mb-12">
         <h2 className="text-blue-600 font-medium text-xl sm:text-2xl lg:text-3xl mb-2 sm:mb-3 lg:mb-4">
-          What You'll do
+          What You&apos;ll do
         </h2>
         <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold">
           <span className="bg-linear-to-r from-purple-600/80 via-amber-400 to-purple-600/80 bg-clip-text text-transparent">

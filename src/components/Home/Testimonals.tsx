@@ -1,21 +1,30 @@
+import Container from "../shared/Container";
+import SectionContainer from "../shared/SectionContainer";
+import WaveLines from "../ui/wavy-line";
 import TestimonialsMarquee from "./TestimonialsMarquee";
 
-type Props = {};
-const Testimonials = (props: Props) => {
+const Testimonials = () => {
   return (
-    <section className="px-4 md:px-10 lg:px-20" id="testimonial">
-      <div className="flex justify-start w-full">
-        <div>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl my-10 text-left font-bold bg-linear-to-r from-purple-700 via-orange-400 to-purple-700 bg-clip-text text-transparent">
-            Testimonials
-          </h1>
+    <SectionContainer id="testimonial" className="bg-foreground">
+      <Container>
+        <div className="flex flex-col items-center justify-center w-full">
+          <div className="flex flex-col items-center w-full gap-4">
+            <h1 className="text-3xl md:text-5xl lg:text-7xl text-center font-medium tracking-[-6%] text-background">
+              Student Stories
+            </h1>
+            <p className="text-lg md:text-xl lg:text-2xl tracking-[-3%] text-center text-background">
+              Real students, Real growth, Real results
+            </p>
+          </div>
+          <div className="w-full opacity-50">
+            <WaveLines />
+          </div>
         </div>
-        <div></div>
-      </div>
-      <div className="overflow-x-hidden">
-        <TestimonialsMarquee />
-      </div>
-    </section>
+        <div className="overflow-x-hidden">
+          <TestimonialsMarquee />
+        </div>
+      </Container>
+    </SectionContainer>
   );
 };
 export default Testimonials;

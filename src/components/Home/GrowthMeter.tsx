@@ -49,17 +49,19 @@ const GrowthMeter = () => {
                 ))}
               </ul>
 
-              <Reveal delay={0.7} className="z-10">
-                <LinkButton href="https://play.google.com/store/apps/details?id=com.leadlly.app" target="_blank" className="pl-5">
-                  Start Planning Now
-                </LinkButton>
-              </Reveal>
+              <LinkButton
+                href="https://play.google.com/store/apps/details?id=com.leadlly.app"
+                target="_blank"
+                className="pl-5"
+              >
+                Start Planning Now
+              </LinkButton>
             </div>
           </Reveal>
         </div>
       </Container>
 
-      <Container className="p-0 md:p-0  overflow-hidden rounded-[84px] bg-background relative z-10">
+      <Container className="p-0 md:p-0  overflow-hidden rounded-[84px] bg-background relative z-10  border border-ring">
         <div className="bg-primary/15 grid grid-cols-1 md:grid-cols-3 gap-5 place-items-center px-8 md:px-16 py-5">
           <div className="flex flex-col items-start gap-4 md:col-span-2">
             <h4 className="text-3xl md:text-[40px] font-medium tracking-[-4%]">
