@@ -3,9 +3,6 @@ import { Montserrat, MuseoModerno } from "next/font/google";
 
 import "./globals.css";
 
-import Footer from "@/components/shared/Footer";
-import NavBar from "@/components/shared/NavBar";
-
 // Import Montserrat font
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -33,9 +30,7 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} ${museoModerno.variable} antialiased custom-scroll`}
       >
-        <NavBar />
         {children}
-        <Footer />
       </body>
     </html>
   );

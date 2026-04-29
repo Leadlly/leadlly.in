@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
+
 import HeroImg from "../../../public/assets/images/mentor.svg";
-import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -29,12 +29,12 @@ const HeroSection = () => {
             <span className="mr-2">▶</span>
             App Coming Soon
           </button>
-		  <a href={'https://mentor.leadlly.in'} target="_blank">
-          <button className="text-purple-600 hover:bg-purple-50 transition-colors px-4 md:px-6 py-2 rounded-full font-medium border-2 border-purple-600 flex items-center justify-center text-base sm:text-lg w-full sm:w-auto">
-            Login
-            <span className="ml-2">›</span>
-          </button>
-		  </a>
+          <a href={"https://mentor.leadlly.in"} target="_blank">
+            <button className="text-purple-600 hover:bg-purple-50 transition-colors px-4 md:px-6 py-2 rounded-full font-medium border-2 border-purple-600 flex items-center justify-center text-base sm:text-lg w-full sm:w-auto">
+              Login
+              <span className="ml-2">›</span>
+            </button>
+          </a>
         </div>
       </div>
       <div className="w-full md:w-1/2 mt-12 md:mt-0 flex justify-center">
@@ -50,7 +50,7 @@ const HeroSection = () => {
       <div className="absoluted">
         <div className="absolute top-20 md:top-40 right-[10%] md:right-[20%] w-[30px] md:w-[46px]">
           <Image
-            src={require("../../../public/assets/images/mentorHero/book.svg")}
+            src={"/assets/images/mentorHero/book.svg"}
             alt="Book Icon"
             width={46}
             height={48}
@@ -59,7 +59,7 @@ const HeroSection = () => {
         </div>
         <div className="absolute bottom-24 md:bottom-48 right-[35%] md:right-[45%] w-[60px] md:w-[102px]">
           <Image
-            src={require("../../../public/assets/images/mentorHero/curve.svg")}
+            src={"/assets/images/mentorHero/curve.svg"}
             alt="Curve Icon"
             width={102}
             height={52}
@@ -68,7 +68,7 @@ const HeroSection = () => {
         </div>
         <div className="absolute top-20 md:top-40 left-[40%] md:left-[50%] w-[40px] md:w-[73px]">
           <Image
-            src={require("../../../public/assets/images/mentorHero/plane.svg")}
+            src={"/assets/images/mentorHero/plane.svg"}
             alt="Plane Icon"
             width={73}
             height={61}
@@ -77,7 +77,7 @@ const HeroSection = () => {
         </div>
         <div className="absolute bottom-20 md:bottom-40 right-5 md:right-10 w-[20px] md:w-[34px]">
           <Image
-            src={require("../../../public/assets/images/mentorHero/star.svg")}
+            src={"/assets/images/mentorHero/star.svg"}
             alt="Star Icon"
             width={34}
             height={30}

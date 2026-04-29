@@ -1,7 +1,6 @@
 import Step from "./Step";
 
-type Props = {};
-const PerksSection = (props: Props) => {
+const PerksSection = () => {
   const steps = [
     {
       number: 1,
