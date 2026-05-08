@@ -48,7 +48,7 @@ const Mentor = () => {
   const [activeIndex, setActiveIndex] = useState(items[0]);
 
   return (
-    <SectionContainer className="bg-foreground min-h-dvh md:-mt-20 pt-20">
+    <SectionContainer className="bg-foreground min-h-dvh -mt-20 pt-36 md:pt-20">
       <Container className="border-none md:py-28 flex flex-col lg:flex-row items-center justify-between gap-10 min-h-full">
         <div className="flex-1">
           <ul className="flex flex-wrap lg:flex-nowrap lg:flex-col items-start gap-6">
