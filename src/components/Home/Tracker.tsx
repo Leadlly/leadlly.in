@@ -176,12 +176,11 @@ const TopCard = ({
   card: ICard;
   setCurrentCard: (card: ICard | null) => void;
 }) => (
-  <motion.div layoutId={`card-${card.title}`}>
-    <svg
-      viewBox="0 0 582 310"
-      className="relative w-full h-[275px]"
-      fill="none"
-    >
+  <motion.div
+    layoutId={`card-${card.title}`}
+    className="relative w-full max-w-[582px] mx-auto"
+  >
+    <svg viewBox="0 0 582 310" className="w-full h-auto" fill="none">
       <defs>
         <clipPath id="topCardClip" clipPathUnits="userSpaceOnUse">
           <path d="M 242,0 L 542,0 A 40,40 0 0,1 582,40 L 582,146 A 40,40 0 0,1 542,186 L 502,186 A 40,40 0 0,0 462,226 L 462,266 A 40,40 0 0,1 422,306 L 40,306 A 40,40 0 0,1 0,266 L 0,195 A 40,40 0 0,1 40,155 L 165,155 A 40,40 0 0,0 205,115 L 205,40 A 40,40 0 0,1 242,0 Z" />
@@ -195,37 +194,59 @@ const TopCard = ({
         clipPath="url(#topCardClip)"
         className="fill-primary"
       />
-
-      {/* Speech bubble content — upper-right region */}
-      <foreignObject x="220" y="10" width="60%" height="280">
-        <div className="p-4 text-primary-foreground font-medium text-base leading-relaxed text-wrap whitespace-normal">
-          <p>{card.description}</p>
-        </div>
-      </foreignObject>
-
-      {/* Title + arrow — lower-left region */}
-      <foreignObject x="10" y="180" width="420" height="100">
-        <div className="p-5 flex flex-col justify-between h-full">
-          <h3 className="text-[22px] max-w-2xs w-full font-bold text-primary-foreground leading-snug">
-            {card.title}
-          </h3>
-        </div>
-      </foreignObject>
-
-      <foreignObject x="475" y="200" width="100" height="100">
-        <Button
-          variant={"default"}
-          size={"icon-lg"}
-          className="size-24 rounded-full border border-background group/btn-card-1"
-          onClick={() => setCurrentCard(card)}
-        >
-          <HugeiconsIcon
-            icon={ArrowDownRightIcon}
-            className="text-primary-foreground size-10 group-hover/btn-card-1:translate-y-1 group-hover/btn-card-1:translate-x-1 transition-all duration-300"
-          />
-        </Button>
-      </foreignObject>
     </svg>
+
+    {/* Speech bubble content — upper-right region */}
+    <div
+      className="absolute p-4 flex items-start pointer-events-none"
+      style={{
+        left: `${(220 / 582) * 100}%`,
+        top: `${(10 / 310) * 100}%`,
+        width: `${(362 / 582) * 100}%`,
+        height: `${(280 / 310) * 100}%`,
+      }}
+    >
+      <p className="text-primary-foreground font-medium text-xs sm:text-sm md:text-base leading-relaxed">
+        {card.description}
+      </p>
+    </div>
+
+    {/* Title + arrow — lower-left region */}
+    <div
+      className="absolute p-3 sm:p-5 flex flex-col justify-between pointer-events-none"
+      style={{
+        left: `${(10 / 582) * 100}%`,
+        top: `${(180 / 310) * 100}%`,
+        width: `${(420 / 582) * 100}%`,
+        height: `${(100 / 310) * 100}%`,
+      }}
+    >
+      <h3 className="text-sm sm:text-lg md:text-[22px] max-w-2xs w-full font-bold text-primary-foreground leading-snug">
+        {card.title}
+      </h3>
+    </div>
+
+    <div
+      className="absolute flex items-center justify-center"
+      style={{
+        left: `${(475 / 582) * 100}%`,
+        top: `${(200 / 310) * 100}%`,
+        width: `${(100 / 582) * 100}%`,
+        height: `${(100 / 310) * 100}%`,
+      }}
+    >
+      <Button
+        variant={"default"}
+        size={"icon-lg"}
+        className="size-16 rounded-full border border-background group/btn-card-1"
+        onClick={() => setCurrentCard(card)}
+      >
+        <HugeiconsIcon
+          icon={ArrowDownRightIcon}
+          className="text-primary-foreground size-8 group-hover/btn-card-1:translate-y-1 group-hover/btn-card-1:translate-x-1 transition-all duration-300"
+        />
+      </Button>
+    </div>
   </motion.div>
 );
 
@@ -245,8 +266,11 @@ const BottomCard = ({
   clipId: string;
   setCurrentCard: (card: ICard | null) => void;
 }) => (
-  <motion.div layoutId={`card-${card.title}`}>
-    <svg viewBox="0 0 410 330" className="w-full h-[310px]" fill="none">
+  <motion.div
+    layoutId={`card-${card.title}`}
+    className="relative w-full max-w-[582px] mx-auto"
+  >
+    <svg viewBox="0 0 410 330" className="w-full h-auto" fill="none">
       <defs>
         <clipPath id={clipId} clipPathUnits="userSpaceOnUse">
           <path d="M 40,0 L 370,0 A 40,40 0,0,1 410,40 L 410,162 A 40,40 0,0,1 370,202 L 345,202 A 40,40 0,0,0 305,242 L 305,290 A 40,40 0,0,1 265,330 L 40,330 A 40,40 0,0,1 0,290 L 0,40 A 40,40 0,0,1 40,0 Z" />
@@ -260,33 +284,47 @@ const BottomCard = ({
         clipPath={`url(#${clipId})`}
         className="fill-primary"
       />
-
-      {/* Title + description — main body region */}
-      <foreignObject x="0" y="0" width="410" height="220">
-        <div className="p-6 flex flex-col gap-2 h-full">
-          <h3 className="text-lg md:text-2xl font-semibold text-primary-foreground leading-snug">
-            {card.title}
-          </h3>
-          <p className="text-sm md:text-base text-primary-foreground font-medium leading-relaxed">
-            {card.description}
-          </p>
-        </div>
-      </foreignObject>
-
-      {/* Arrow — tab region (bottom-right) */}
-      <foreignObject x="320" y="220" width="100" height="100">
-        <Button
-          size={"icon-lg"}
-          className="size-20 rounded-full border border-background group/btn-card cursor-pointer"
-          onClick={() => setCurrentCard(card)}
-        >
-          <HugeiconsIcon
-            icon={ArrowDownRightIcon}
-            className="text-primary-foreground size-10  group-hover/btn-card:translate-y-1 group-hover/btn-card:translate-x-1 transition-all duration-300"
-          />
-        </Button>
-      </foreignObject>
     </svg>
+
+    {/* Title + description — main body region */}
+    <div
+      className="absolute flex flex-col gap-1 sm:gap-2 p-6 pointer-events-none"
+      style={{
+        left: "0%",
+        top: "0%",
+        width: "100%",
+        height: `${(220 / 330) * 100}%`,
+      }}
+    >
+      <h3 className="text-base sm:text-lg md:text-2xl font-semibold text-primary-foreground leading-snug">
+        {card.title}
+      </h3>
+      <p className="text-xs sm:text-sm md:text-base text-primary-foreground font-medium leading-relaxed">
+        {card.description}
+      </p>
+    </div>
+
+    {/* Arrow — tab region (bottom-right) */}
+    <div
+      className="absolute flex items-center justify-center"
+      style={{
+        left: `${(310 / 410) * 100}%`,
+        top: `${(220 / 350) * 100}%`,
+        width: `${(100 / 410) * 100}%`,
+        height: `${(100 / 330) * 100}%`,
+      }}
+    >
+      <Button
+        size={"icon-lg"}
+        className="size-16 rounded-full border border-background group/btn-card cursor-pointer"
+        onClick={() => setCurrentCard(card)}
+      >
+        <HugeiconsIcon
+          icon={ArrowDownRightIcon}
+          className="text-primary-foreground size-8 group-hover/btn-card:translate-y-1 group-hover/btn-card:translate-x-1 transition-all duration-300"
+        />
+      </Button>
+    </div>
   </motion.div>
 );
 
@@ -313,7 +351,7 @@ const Tracker = () => {
                 <h2 className="text-3xl sm:text-4xl md:text-[56px] font-medium text-background leading-tight tracking-tight">
                   You don&apos;t lack potential,
                   <br />
-                  You lack a system that helps you execute.
+                  You lack execution.
                 </h2>
               </Reveal>
               <Reveal delay={0.15}>
@@ -335,10 +373,10 @@ const Tracker = () => {
           </div>
 
           {/* Bottom cards - staggered descending cascade */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 place-items-center gap-4 md:gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 place-items-center gap-4 md:gap-5 w-full">
             {featureCards.slice(1).map((card, index) => (
-              <div key={card.title}>
-                <Reveal delay={0.4 + index * 0.1}>
+              <div key={card.title} className="w-full">
+                <Reveal delay={0.4 + index * 0.1} className="w-full">
                   <BottomCard
                     card={card}
                     clipId={`bottomCardClip-${index}`}

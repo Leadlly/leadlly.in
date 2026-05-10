@@ -23,7 +23,7 @@ const items = [
 const WhyLeadlly = () => {
   return (
     <SectionContainer>
-      <Container className="flex flex-col gap-6 border-none">
+      <Container className="flex flex-col gap-6 border-none py-10">
         <Reveal>
           <h2 className="font-semibold text-2xl md:text-3xl lg:text-5xl">
             What Makes <span className="text-primary">Leadlly</span> Different ?

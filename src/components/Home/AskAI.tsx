@@ -35,7 +35,7 @@ const AIButtons = [
 const AskAI = () => {
   return (
     <SectionContainer className="px-0 bg-primary/20 rounded-t-5xl">
-      <Container className="md:p-0 border-none rounded-b-none grid grid-cols-1 md:grid-cols-3 place-items-center">
+      <Container className="md:p-0 border-none rounded-b-none grid grid-cols-1 md:grid-cols-3 place-items-center py-10">
         <ImageAnimation
           src="/assets/illustrations/svg_1.svg"
           alt=""
