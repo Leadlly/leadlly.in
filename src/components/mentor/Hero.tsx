@@ -7,14 +7,14 @@ const HeroSection = () => {
   return (
     <div className="container mx-auto md:px-14 flex flex-col md:flex-row items-center justify-between pt-12 md:pt-24 lg:pt-48  pb-32 relative">
       <div className="w-full md:w-1/2 lg:max-w-2xl">
-        <h2 className="text-purple-600 text-xl sm:text-2xl md:text-3xl lg:text-5xl font-medium mb-2">
+        <h2 className="text-brand-purple text-xl sm:text-2xl md:text-3xl lg:text-5xl font-medium mb-2">
           Get Hired !
         </h2>
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6">
-          <span className="bg-linear-to-r from-purple-600/80 via-amber-400 to-purple-600/80 bg-clip-text text-transparent">
+          <span className="use-gradient">
             As Mentor
           </span>
-          <span className="text-purple-600 block md:inline md:ml-2 font-medium text-3xl sm:text-4xl lg:text-5xl">
+          <span className="text-brand-purple  block md:inline md:ml-2 font-medium text-3xl sm:text-4xl lg:text-5xl">
             in Leadlly
           </span>
         </h1>
@@ -25,12 +25,12 @@ const HeroSection = () => {
           support.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
-          <button className="bg-orange-400 hover:bg-orange-500 transition-colors text-white px-4 md:px-6 py-2 rounded-full flex items-center justify-center text-base sm:text-lg w-full sm:w-auto">
+          <button className="bg-black hover:bg-gray-700 transition-colors text-white px-4 md:px-6 py-2 rounded-full flex items-center justify-center text-base sm:text-lg w-full sm:w-auto">
             <span className="mr-2">▶</span>
             App Coming Soon
           </button>
           <a href={"https://mentor.leadlly.in"} target="_blank">
-            <button className="text-purple-600 hover:bg-purple-50 transition-colors px-4 md:px-6 py-2 rounded-full font-medium border-2 border-purple-600 flex items-center justify-center text-base sm:text-lg w-full sm:w-auto">
+            <button className="text-brand-purple  hover:bg-purple-50 transition-colors px-4 md:px-6 py-2 rounded-full font-medium border-2 border-purple-600 flex items-center justify-center text-base sm:text-lg w-full sm:w-auto">
               Login
               <span className="ml-2">›</span>
             </button>

@@ -54,7 +54,7 @@ const BentoCard = ({
         <h3 className="text-lg sm:text-xl font-semibold mb-1 sm:mb-2">
           {title}
         </h3>
-        <p className="text-purple-600 mb-4 sm:mb-6 font-semibold text-sm sm:text-base">
+        <p className="text-brand-purple mb-4 sm:mb-6 font-semibold text-sm sm:text-base">
           {subtitle}
         </p>
       </div>
@@ -140,11 +140,11 @@ const BentoSection = () => {
       className="container mx-auto px-4 py-8 sm:py-12 lg:py-16 my-6 sm:my-8 lg:my-10"
     >
       <div className="text-center mb-8 sm:mb-10 lg:mb-12">
-        <h2 className="text-blue-600 font-medium text-xl sm:text-2xl lg:text-3xl mb-2 sm:mb-3 lg:mb-4">
+        <h2 className="text-brand-purple font-medium text-xl sm:text-2xl lg:text-3xl mb-2 sm:mb-3 lg:mb-4">
           What You&apos;ll do
         </h2>
         <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold">
-          <span className="bg-linear-to-r from-purple-600/80 via-amber-400 to-purple-600/80 bg-clip-text text-transparent">
+          <span className="use-gradient bg-clip-text text-transparent">
             As Mentor
           </span>
         </h1>

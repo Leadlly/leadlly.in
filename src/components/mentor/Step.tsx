@@ -50,13 +50,13 @@ const Step = ({
                   backgroundClip: "text",
                   WebkitBackgroundClip: "text",
                   backgroundImage:
-                    "linear-gradient(173.29deg, #FFB35D 19.66%, #9654F4 79.35%)",
+                    "linear-gradient(173.29deg, rgb(177 131 245) 19.66%, oklch(0.4735 0.2068 293.0625) 79.35%)",
                 }}
               >
                 {number.toString().padStart(2, "0")}
               </span>
             </div>
-            <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-[#7e3af2]">
+            <h3 className="text-brand-purple text-lg sm:text-xl md:text-2xl font-semibold text-[#7e3af2]">
               {title}
             </h3>
             <p className="font-semibold text-sm sm:text-base md:text-lg">

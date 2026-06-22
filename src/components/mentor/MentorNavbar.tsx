@@ -28,18 +28,18 @@ const MentorNavbar = () => {
                 href="#guidance"
                 className="flex items-center gap-1 md:gap-2 text-blue-600"
               >
-                <span>Guidance</span>
+                <span className="text-brand-purple">Guidance</span>
               </Link>
-              <Link href="#perks" className="text-blue-600">
+              <Link href="#perks" className="text-brand-purple">
                 Perks
               </Link>
-              <Link href="#joinus" className="text-blue-600">
+              <Link href="#joinus" className="text-brand-purple">
                 Join Us
               </Link>
             </div>
             <Link
               href={"https://mentor.leadlly.in/"}
-              className="bg-purple-600 text-white py-3 px-4 md:px-6 rounded-3xl border flex items-center"
+              className="text-white py-3 px-4 md:px-6 rounded-3xl border flex items-center" style={{background:"oklch(0.4735 0.2068 293.0625)"}}
             >
               Login
               <ArrowUpRight />
