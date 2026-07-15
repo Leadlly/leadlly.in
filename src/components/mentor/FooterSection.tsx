@@ -3,7 +3,7 @@ export default function FooterSection() {
     <div className="w-full container" id="joinus">
       {/* Mentor Section */}
       <section className="relative overflow-hidden bg-[url(/assets/images/mentorbg.png)] bg-cover bg-center px-0 py-8 sm:py-12 lg:py-16 text-white md:px-6 rounded-xl sm:rounded-2xl lg:rounded-3xl  sm:mx-6 lg:mx-10">
-        <div className="absolute inset-0 bg-purple-900/30"></div>
+        <div className="absolute inset-0" style={{background:"oklch(0.4735 0.2068 293.0625)"}}></div>
         <div className="container mx-auto max-w-4xl text-center relative z-10">
           <h2 className="mb-2 sm:mb-3 lg:mb-4 text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight md:text-5xl">
             Join Our Team as a Mentor
@@ -13,7 +13,7 @@ export default function FooterSection() {
             impact, and grow your skills while enhancing your resume!
           </p>
           <a href="https://forms.gle/G3VVxpJ4uWKFbfYv6" target="_blank">
-            <button className="rounded-md bg-orange-400 px-4 sm:px-5 lg:px-6 py-2 sm:py-2.5 lg:py-3 text-sm sm:text-base font-semibold text-white hover:bg-orange-500 transition-colors">
+            <button className="rounded-md bg-black px-4 sm:px-5 lg:px-6 py-2 sm:py-2.5 lg:py-3 text-sm sm:text-base font-semibold text-white hover:bg-orange-500 transition-colors">
               Apply Here
             </button>
           </a>

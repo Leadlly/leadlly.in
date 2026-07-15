@@ -14,7 +14,7 @@ export default function Footer() {
       <footer className="w-full max-w-7xl mx-auto">
         <div className="grid gap-8 md:grid-cols-3 lg:grid-cols-4">
           <div>
-            <h3 className="mb-3 sm:mb-4 text-base sm:text-lg font-semibold text-primary">
+            <h3 className="text-brand-purple mb-3 sm:mb-4 text-base sm:text-lg font-semibold text-primary">
               Company
             </h3>
             <ul className="space-y-2">
