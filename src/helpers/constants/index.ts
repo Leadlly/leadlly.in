@@ -21,7 +21,11 @@ export const NavLinks = [
   { label: "Reviews", href: "#testimonial" },
   // { label: "FAQs", href: "#faqs" },
   { label: "Become a mentor", href: "/mentor" },
+  { label: "Join Community", href: "/join-community" },
 ];
+
+export const WHATSAPP_COMMUNITY_URL =
+  "https://chat.whatsapp.com/BSSwdHEnwP11TnRKuZzl2Z";
 
 export const PlannerPoints: Points[] = [
   { icon: DailyTask, label: "Daily task accomplishment." },
