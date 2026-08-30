@@ -18,6 +18,7 @@ import {
   CohortEyebrow,
   CohortIcon,
   FramedIllustration,
+  cohortShell,
 } from "./ui";
 
 const MENTOR_HELP_ICONS: Record<
@@ -62,7 +63,7 @@ export default function CohortMentor() {
       className="overflow-hidden bg-[#f5f3f8] py-20 sm:py-28"
       id="mentor"
     >
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+      <div className={cohortShell}>
         <div className="mx-auto max-w-4xl text-center">
           <CohortEyebrow>A real person in your corner</CohortEyebrow>
           <CohortDisplay as="h2" className="mt-3 text-5xl sm:text-6xl">
@@ -80,7 +81,7 @@ export default function CohortMentor() {
             src="/assets/illustrations/svg_4.svg"
             alt="A Leadlly mentor supporting a student"
             tilt="left"
-            className="max-w-md"
+            className="max-w-lg"
           >
             <div className="mt-5 rounded-2xl bg-[#1a1a1a] p-4 text-white">
               <p className="text-xs font-extrabold uppercase tracking-[.16em] text-[#b998f3]">

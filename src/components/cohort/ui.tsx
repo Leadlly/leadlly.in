@@ -7,6 +7,9 @@ import { ArrowRight, type LucideIcon } from "lucide-react";
 import { COHORT_CHECKOUT_HREF } from "@/helpers/constants/cohort";
 import { cn } from "@/lib/utils";
 
+export const cohortShell =
+  "mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-16";
+
 export function CohortIcon({
   icon: Icon,
   className,

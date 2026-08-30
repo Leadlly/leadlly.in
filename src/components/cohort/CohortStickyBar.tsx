@@ -7,11 +7,12 @@ import {
   COHORT_PRICE,
   COHORT_SEATS_LEFT,
 } from "@/helpers/constants/cohort";
+import { cohortShell } from "./ui";
 
 export default function CohortStickyBar() {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-50 border-t border-white/10 bg-[#1a1a1a] px-3 py-3 text-white shadow-[0_-10px_30px_rgba(0,0,0,.18)] sm:px-6">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-3">
+    <div className="fixed inset-x-0 bottom-0 z-50 border-t border-white/10 bg-[#1a1a1a] py-3 text-white shadow-[0_-10px_30px_rgba(0,0,0,.18)]">
+      <div className={`${cohortShell} flex items-center justify-between gap-3`}>
         <div className="min-w-0">
           <p className="truncate text-xs font-extrabold sm:text-sm">
             <span className="text-[#b998f3]">

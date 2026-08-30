@@ -1,14 +1,7 @@
 import type { ReactNode } from "react";
 import Image from "next/image";
 
-import {
-  CalendarDays,
-  CircleCheck,
-  Coins,
-  Flame,
-  TrendingUp,
-  Video,
-} from "lucide-react";
+import { CalendarDays, CircleCheck, Flame, Video } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { CohortIcon } from "./ui";
@@ -32,104 +25,6 @@ function FloatCard({
     >
       {children}
     </div>
-  );
-}
-
-function AreaChartCard({ gradientId }: { gradientId: string }) {
-  return (
-    <FloatCard className="w-[168px]">
-      <p className="text-[10px] font-bold tracking-wide text-[#888] uppercase">
-        Weekly trend
-      </p>
-      <svg viewBox="0 0 140 56" className="mt-2 h-14 w-full">
-        <defs>
-          <linearGradient id={gradientId} x1="0" x2="0" y1="0" y2="1">
-            <stop offset="0%" stopColor="#7c3aed" stopOpacity="0.35" />
-            <stop offset="100%" stopColor="#7c3aed" stopOpacity="0" />
-          </linearGradient>
-        </defs>
-        <path
-          d="M0 42 C18 40 28 28 42 30 C58 32 68 18 84 16 C102 14 114 24 140 10 V56 H0 Z"
-          fill={`url(#${gradientId})`}
-        />
-        <path
-          d="M0 42 C18 40 28 28 42 30 C58 32 68 18 84 16 C102 14 114 24 140 10"
-          fill="none"
-          stroke="#6d28d9"
-          strokeWidth="2.5"
-        />
-      </svg>
-    </FloatCard>
-  );
-}
-
-function DonutCard() {
-  return (
-    <FloatCard className="flex w-[200px] items-center gap-3">
-      <div className="relative grid size-16 place-items-center">
-        <svg viewBox="0 0 36 36" className="size-16 -rotate-90">
-          <circle
-            cx="18"
-            cy="18"
-            r="14"
-            fill="none"
-            stroke="#efe8fa"
-            strokeWidth="4"
-          />
-          <circle
-            cx="18"
-            cy="18"
-            r="14"
-            fill="none"
-            stroke="#6d28d9"
-            strokeWidth="4"
-            strokeDasharray="70 30"
-            strokeLinecap="round"
-          />
-        </svg>
-        <span className="absolute text-sm font-extrabold text-primary">
-          79%
-        </span>
-      </div>
-      <div className="space-y-1 text-[10px] font-semibold text-[#666]">
-        <p>Revision 88%</p>
-        <p>Efficiency 80%</p>
-        <p>Questions 350</p>
-      </div>
-    </FloatCard>
-  );
-}
-
-function LineChartCard() {
-  return (
-    <FloatCard className="w-[150px]" float="cohort-float-delay">
-      <div className="mb-1 flex items-center justify-between">
-        <p className="text-[10px] font-bold text-[#888]">Accuracy</p>
-        <CohortIcon icon={TrendingUp} size={14} className="text-emerald-500" />
-      </div>
-      <svg viewBox="0 0 120 40" className="h-10 w-full">
-        <path
-          d="M4 8 L28 18 L52 12 L76 28 L116 22"
-          fill="none"
-          stroke="#a78bfa"
-          strokeWidth="2.5"
-          strokeLinecap="round"
-        />
-      </svg>
-    </FloatCard>
-  );
-}
-
-function PointsCard() {
-  return (
-    <FloatCard className="w-[150px]">
-      <CohortIcon icon={Coins} size={22} className="text-amber-500" />
-      <p className="mt-2 text-2xl font-extrabold tracking-tight">70 Points</p>
-      <p className="mt-1 inline-flex items-center gap-1 text-xs font-bold text-emerald-500">
-        <CohortIcon icon={TrendingUp} size={12} />
-        +30%
-      </p>
-    </FloatCard>
   );
 }
 
@@ -245,16 +140,24 @@ function VisualStage({
 }: {
   src: string;
   alt: string;
-  children: ReactNode;
+  children?: ReactNode;
 }) {
   return (
-    <div className="relative mx-auto w-full max-w-lg">
-      <div className="relative mx-auto h-[240px] w-full sm:h-[320px] lg:h-[360px]">
-        <Image src={src} alt={alt} fill className="object-contain" />
+    <div className="relative mx-auto w-full max-w-2xl">
+      <div className="relative mx-auto h-[260px] w-full sm:h-[340px] lg:h-[400px]">
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          sizes="(max-width: 1024px) 100vw, 560px"
+          className="object-contain"
+        />
       </div>
-      <div className="mt-4 flex flex-wrap justify-center gap-3 lg:mt-0 lg:contents">
-        {children}
-      </div>
+      {children ? (
+        <div className="mt-4 flex flex-wrap justify-center gap-3 lg:mt-0 lg:contents">
+          {children}
+        </div>
+      ) : null}
     </div>
   );
 }
@@ -271,39 +174,21 @@ export function FeatureVisual({
   if (visual === "planner") {
     return (
       <VisualStage src={image} alt={title}>
-        <div className="lg:absolute lg:top-6 lg:right-0">
+        <div className="lg:absolute lg:-bottom-2 lg:-left-2">
           <PlanCard />
-        </div>
-        <div className="lg:absolute lg:bottom-8 lg:left-4">
-          <PointsCard />
         </div>
       </VisualStage>
     );
   }
 
   if (visual === "tracker") {
-    return (
-      <VisualStage src={image} alt={title}>
-        <div className="lg:absolute lg:top-2 lg:left-0">
-          <AreaChartCard gradientId="tracker-area" />
-        </div>
-        <div className="lg:absolute lg:top-16 lg:right-0">
-          <DonutCard />
-        </div>
-        <div className="lg:absolute lg:bottom-6 lg:left-10">
-          <LineChartCard />
-        </div>
-      </VisualStage>
-    );
+    return <VisualStage src={image} alt={title} />;
   }
 
   if (visual === "chapter") {
     return (
       <VisualStage src={image} alt={title}>
-        <div className="lg:absolute lg:top-4 lg:right-2">
-          <PointsCard />
-        </div>
-        <div className="lg:absolute lg:bottom-6 lg:left-6">
+        <div className="lg:absolute lg:-bottom-3 lg:-left-2">
           <StreakCard />
         </div>
       </VisualStage>
@@ -313,11 +198,8 @@ export function FeatureVisual({
   if (visual === "quizzes") {
     return (
       <VisualStage src={image} alt={title}>
-        <div className="lg:absolute lg:top-4 lg:left-0">
+        <div className="lg:absolute lg:-top-3 lg:-left-2">
           <QuizCard />
-        </div>
-        <div className="lg:absolute lg:right-0 lg:bottom-8">
-          <StreakCard />
         </div>
       </VisualStage>
     );
@@ -326,14 +208,8 @@ export function FeatureVisual({
   if (visual === "errors") {
     return (
       <VisualStage src={image} alt={title}>
-        <div className="lg:absolute lg:top-2 lg:left-0">
-          <AreaChartCard gradientId="errors-area" />
-        </div>
-        <div className="lg:absolute lg:top-20 lg:right-0">
+        <div className="lg:absolute lg:top-6 lg:-right-2">
           <ErrorListCard />
-        </div>
-        <div className="lg:absolute lg:bottom-4 lg:left-8">
-          <LineChartCard />
         </div>
       </VisualStage>
     );
@@ -341,14 +217,14 @@ export function FeatureVisual({
 
   return (
     <VisualStage src={image} alt={title}>
-      <div className="lg:absolute lg:top-4 lg:right-0">
+      <div className="lg:absolute lg:-top-2 lg:-right-2">
         <MeetingCard
           date="30"
           title="Meeting on Exam Readiness"
           time="11:00am – 11:30am"
         />
       </div>
-      <div className="lg:absolute lg:bottom-6 lg:left-0">
+      <div className="lg:absolute lg:-bottom-2 lg:-left-2">
         <MeetingCard
           date="31"
           title="Meeting on Positive thinking"

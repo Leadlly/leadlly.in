@@ -2,7 +2,13 @@ import { Flag, Trophy } from "lucide-react";
 
 import { COHORT_STEPS } from "@/helpers/constants/cohort";
 import { cn } from "@/lib/utils";
-import { CohortCta, CohortDisplay, CohortEyebrow, CohortIcon } from "./ui";
+import {
+  CohortCta,
+  CohortDisplay,
+  CohortEyebrow,
+  CohortIcon,
+  cohortShell,
+} from "./ui";
 
 export default function CohortHowItWorks() {
   return (
@@ -10,7 +16,7 @@ export default function CohortHowItWorks() {
       className="overflow-hidden bg-[#211f26] py-20 text-white sm:py-28"
       id="how-it-works"
     >
-      <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+      <div className={cohortShell}>
         <div className="mb-14 md:flex md:items-end md:justify-between">
           <div>
             <CohortEyebrow className="text-[#b998f3]">
@@ -26,7 +32,7 @@ export default function CohortHowItWorks() {
           </p>
         </div>
 
-        <div className="mx-auto max-w-5xl space-y-6">
+        <div className="space-y-6">
           {COHORT_STEPS.map((step) => (
             <article
               key={step.label}

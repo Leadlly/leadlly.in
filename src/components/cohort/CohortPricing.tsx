@@ -5,12 +5,18 @@ import {
   COHORT_SEATS_LEFT,
   COHORT_SEATS_TOTAL,
 } from "@/helpers/constants/cohort";
-import { CohortCta, CohortDisplay, CohortEyebrow, CohortIcon } from "./ui";
+import {
+  CohortCta,
+  CohortDisplay,
+  CohortEyebrow,
+  CohortIcon,
+  cohortShell,
+} from "./ui";
 
 export default function CohortPricing() {
   return (
     <section className="bg-white py-20 sm:py-28" id="pricing">
-      <div className="mx-auto max-w-4xl px-5 sm:px-8">
+      <div className={cohortShell}>
         <div className="text-center">
           <CohortEyebrow>Simple. One-time. Full year.</CohortEyebrow>
           <CohortDisplay as="h2" className="mt-3 text-5xl sm:text-6xl">

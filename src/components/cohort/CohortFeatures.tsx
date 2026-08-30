@@ -3,12 +3,12 @@ import { Check } from "lucide-react";
 import { COHORT_PREP_FEATURES } from "@/helpers/constants/cohort";
 import { cn } from "@/lib/utils";
 import { FeatureVisual } from "./CohortFeatureVisuals";
-import { CohortCta, CohortDisplay, CohortEyebrow } from "./ui";
+import { CohortCta, CohortDisplay, CohortEyebrow, cohortShell } from "./ui";
 
 export default function CohortFeatures() {
   return (
     <section className="overflow-hidden bg-white py-20 sm:py-28" id="features">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+      <div className={cohortShell}>
         <div className="mx-auto mb-16 max-w-3xl text-center md:mb-24">
           <CohortEyebrow>Everything You Get With Cohort 1</CohortEyebrow>
           <CohortDisplay as="h2" className="mt-3 text-4xl sm:text-6xl">

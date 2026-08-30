@@ -124,7 +124,7 @@ export const COHORT_PREP_FEATURES = [
     ],
     footer:
       "A clear daily plan leads to better productivity and stronger discipline.",
-    image: "/assets/illustrations/svg_3.svg",
+    image: "/assets/images/planner.png",
     visual: "planner",
   },
   {
@@ -140,7 +140,7 @@ export const COHORT_PREP_FEATURES = [
     ],
     footer:
       "Tracking progress regularly helps students stay motivated and accountable.",
-    image: "/assets/illustrations/svg_6.svg",
+    image: "/assets/images/tracker.png",
     visual: "tracker",
   },
   {
@@ -156,7 +156,7 @@ export const COHORT_PREP_FEATURES = [
     ],
     footer:
       "With chapter tracking, students always know where they stand in the syllabus.",
-    image: "/assets/illustrations/svg_1.svg",
+    image: "/assets/images/rotate.png",
     visual: "chapter",
   },
   {
@@ -172,7 +172,7 @@ export const COHORT_PREP_FEATURES = [
     ],
     footer:
       "Frequent evaluation ensures that students continuously improve their performance.",
-    image: "/assets/illustrations/svg_8.svg",
+    image: "/assets/images/growthMeter.png",
     visual: "quizzes",
   },
   {
@@ -184,7 +184,7 @@ export const COHORT_PREP_FEATURES = [
     bullets: ["Practice questions", "Assignments", "Tests"],
     footer:
       "These mistakes are stored in a personal error book, allowing students to revisit and correct them regularly.",
-    image: "/assets/illustrations/svg_2.svg",
+    image: "/assets/images/growthMeter/dailyReport.png",
     visual: "errors",
   },
   {
@@ -200,7 +200,7 @@ export const COHORT_PREP_FEATURES = [
     ],
     footer:
       "This mentorship creates a supportive environment where students feel heard.",
-    image: "/assets/illustrations/svg_5.svg",
+    image: "/assets/images/mentor.svg",
     visual: "mentor",
   },
 ] as const;

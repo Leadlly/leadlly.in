@@ -6,13 +6,15 @@ import {
   COHORT_SEATS_TOTAL,
 } from "@/helpers/constants/cohort";
 import CohortCountdown from "./CohortCountdown";
-import { CohortCta, CohortIcon } from "./ui";
+import { CohortCta, CohortIcon, cohortShell } from "./ui";
 
 export default function CohortHero() {
   return (
     <section className="cohort-hero-glow relative overflow-hidden border-b border-[#e8e1f0] pt-28 md:pt-32">
       <div className="cohort-dot-grid pointer-events-none absolute inset-0 opacity-60" />
-      <div className="relative mx-auto max-w-5xl px-5 pb-16 text-center sm:px-8 md:pb-24">
+      <div
+        className={`relative pb-16 text-center md:pb-24 ${cohortShell}`}
+      >
         <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#d4cce0] bg-white px-4 py-2 text-[10px] font-extrabold tracking-[.12em] text-primary shadow-sm sm:text-xs">
           <CohortIcon icon={GraduationCap} size={14} />
           COHORT 1 — BY STUDENTS OF IIT &amp; AIIMS
@@ -22,14 +24,14 @@ export default function CohortHero() {
           India&apos;s First AI + Mentor Execution Program
         </p>
 
-        <h1 className="mx-auto mt-5 max-w-4xl text-[2.35rem] leading-[1.12] font-medium text-foreground sm:text-5xl md:text-6xl lg:text-[4.25rem]">
+        <h1 className="mx-auto mt-5 max-w-5xl text-[2.35rem] leading-[1.12] font-medium text-foreground sm:text-5xl md:text-6xl lg:text-[4.25rem]">
           <span className="block">You Already Know What To Study.</span>
           <span className="mt-2 block text-primary">
             We Take Responsibility For How You Study It.
           </span>
         </h1>
 
-        <p className="mx-auto mt-8 max-w-2xl border border-[#b7c9e8] px-5 py-4 text-base font-medium leading-7 text-[#444] sm:px-8 sm:text-lg">
+        <p className="mx-auto mt-8 max-w-2xl  px-5 py-4 text-base font-medium leading-7 text-[#444] sm:px-8 sm:text-lg">
           A daily planner + dedicated mentor from IIT &amp; AIIMS — built to
           execute your JEE/NEET preparation with you, every single day.
         </p>

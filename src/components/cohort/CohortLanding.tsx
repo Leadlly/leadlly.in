@@ -1,6 +1,7 @@
+import Footer from "@/components/shared/Footer";
+
 import CohortFaq from "./CohortFaq";
 import CohortFeatures from "./CohortFeatures";
-import CohortFooter from "./CohortFooter";
 import CohortHeader from "./CohortHeader";
 import CohortHero from "./CohortHero";
 import CohortHowItWorks from "./CohortHowItWorks";
@@ -20,7 +21,7 @@ export default function CohortLanding() {
         <CohortPricing />
         <CohortFaq />
       </main>
-      <CohortFooter />
+      <Footer />
       <CohortStickyBar />
     </div>
   );

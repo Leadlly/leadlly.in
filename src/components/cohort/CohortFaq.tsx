@@ -1,5 +1,5 @@
 import { COHORT_FAQS } from "@/helpers/constants/cohort";
-import { CohortDisplay, CohortEyebrow } from "./ui";
+import { CohortDisplay, CohortEyebrow, cohortShell } from "./ui";
 
 export default function CohortFaq() {
   return (
@@ -7,7 +7,7 @@ export default function CohortFaq() {
       className="border-t border-[#e8e1f0] bg-[#f5f3f8] py-20 sm:py-24"
       id="faq"
     >
-      <div className="mx-auto max-w-4xl px-5 sm:px-8">
+      <div className={cohortShell}>
         <div className="text-center">
           <CohortEyebrow>Before you reserve</CohortEyebrow>
           <CohortDisplay as="h2" className="mt-3 text-5xl">
