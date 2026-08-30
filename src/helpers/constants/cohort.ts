@@ -109,3 +109,98 @@ export const COHORT_STEPS = [
       "Every week, your system and mentor guidance get sharper — and your progress stays visible.",
   },
 ] as const;
+
+export const COHORT_PREP_FEATURES = [
+  {
+    number: "01",
+    title: "Smart Study Planner",
+    intro:
+      "Students can manage their daily study plan based on the lectures and practice assignments given in class.",
+    listLabel: "This helps students:",
+    bullets: [
+      "Stay organized with their daily study goals",
+      "Maintain consistency in preparation",
+      "Avoid procrastination and confusion about what to study",
+    ],
+    footer:
+      "A clear daily plan leads to better productivity and stronger discipline.",
+    image: "/assets/illustrations/svg_3.svg",
+    visual: "planner",
+  },
+  {
+    number: "02",
+    title: "Daily & Weekly Progress Tracker",
+    intro:
+      "The platform automatically tracks student activity and performance to help them understand their preparation progress.",
+    listLabel: "Students can monitor:",
+    bullets: [
+      "Study consistency",
+      "Task completion rate",
+      "Improvement over time",
+    ],
+    footer:
+      "Tracking progress regularly helps students stay motivated and accountable.",
+    image: "/assets/illustrations/svg_6.svg",
+    visual: "tracker",
+  },
+  {
+    number: "03",
+    title: "Subject & Chapter Tracking",
+    intro:
+      "Students can monitor their syllabus completion across different subjects and chapters.",
+    listLabel: "This helps them clearly identify:",
+    bullets: [
+      "Completed topics",
+      "Topics that need revision",
+      "Weak areas that require more practice",
+    ],
+    footer:
+      "With chapter tracking, students always know where they stand in the syllabus.",
+    image: "/assets/illustrations/svg_1.svg",
+    visual: "chapter",
+  },
+  {
+    number: "04",
+    title: "Weekly Practice Quizzes",
+    intro:
+      "Regular quizzes help students evaluate their conceptual understanding and test their preparation.",
+    listLabel: "These quizzes are designed to:",
+    bullets: [
+      "Strengthen concepts",
+      "Improve retention",
+      "Increase exam readiness",
+    ],
+    footer:
+      "Frequent evaluation ensures that students continuously improve their performance.",
+    image: "/assets/illustrations/svg_8.svg",
+    visual: "quizzes",
+  },
+  {
+    number: "05",
+    title: "Error Book System",
+    intro:
+      "One of the most powerful features of the platform. Students can record mistakes they make during:",
+    listLabel: "",
+    bullets: ["Practice questions", "Assignments", "Tests"],
+    footer:
+      "These mistakes are stored in a personal error book, allowing students to revisit and correct them regularly.",
+    image: "/assets/illustrations/svg_2.svg",
+    visual: "errors",
+  },
+  {
+    number: "06",
+    title: "1 on 1 Mentorship Support",
+    intro:
+      "Students can connect with JEE and NEET toppers through personalized one-on-one mentorship sessions.",
+    listLabel: "Students can discuss:",
+    bullets: [
+      "Preparation challenges and motivation issues",
+      "Daily struggles during preparation",
+      "Concerns they may hesitate to share with parents or teachers",
+    ],
+    footer:
+      "This mentorship creates a supportive environment where students feel heard.",
+    image: "/assets/illustrations/svg_5.svg",
+    visual: "mentor",
+  },
+] as const;

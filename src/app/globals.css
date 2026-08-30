@@ -363,8 +363,31 @@ html{
 .cohort-page details[open] .cohort-plus {
   transform: rotate(45deg);
 }
+@keyframes cohort-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.cohort-float {
+  animation: cohort-float 4.5s ease-in-out infinite;
+}
+.cohort-float-slow {
+  animation: cohort-float 6s ease-in-out infinite;
+}
+.cohort-float-delay {
+  animation: cohort-float 5s 0.8s ease-in-out infinite;
+}
 @media (prefers-reduced-motion: reduce) {
   .cohort-cta {
     transition: none;
+  }
+  .cohort-float,
+  .cohort-float-slow,
+  .cohort-float-delay {
+    animation: none;
   }
 }

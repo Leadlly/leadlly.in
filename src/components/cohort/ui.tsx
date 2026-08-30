@@ -73,31 +73,9 @@ export function CohortDisplay({
   as?: "h1" | "h2" | "h3" | "p";
 }) {
   return (
-    <Tag
-      className={cn("font-serif font-medium tracking-[-0.025em]", className)}
-    >
+    <Tag className={cn("font-sans font-medium tracking-tight", className)}>
       {children}
     </Tag>
-  );
-}
-
-export function PhoneFrame({
-  children,
-  className,
-}: {
-  children: ReactNode;
-  className?: string;
-}) {
-  return (
-    <div
-      className={cn(
-        "relative mx-auto w-full max-w-[180px] rounded-[1.75rem] border-[5px] border-[#1a1a1a] bg-white p-2 shadow-xl",
-        className,
-      )}
-    >
-      <div className="mx-auto mb-2 h-1.5 w-12 rounded-full bg-[#1a1a1a]" />
-      {children}
-    </div>
   );
 }
 
