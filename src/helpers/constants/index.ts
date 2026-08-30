@@ -17,6 +17,7 @@ import Tracking from "@/components/Icons/Tracker/Tracking";
 import { Points } from "../types/index.type";
 
 export const NavLinks = [
+  { label: "Cohort 1", href: "/cohort" },
   // { label: "Plans", href: "#plans" },
   { label: "Reviews", href: "#testimonial" },
   // { label: "FAQs", href: "#faqs" },
