@@ -124,8 +124,9 @@ export const COHORT_PREP_FEATURES = [
     ],
     footer:
       "A clear daily plan leads to better productivity and stronger discipline.",
-    image: "/assets/images/planner.png",
-    visual: "planner",
+    image: "/assets/images/student-app-booklet-1.png",
+    width: 285,
+    height: 305,
   },
   {
     number: "02",
@@ -140,8 +141,9 @@ export const COHORT_PREP_FEATURES = [
     ],
     footer:
       "Tracking progress regularly helps students stay motivated and accountable.",
-    image: "/assets/images/tracker.png",
-    visual: "tracker",
+    image: "/assets/images/student-app-booklet-2.png",
+    width: 239,
+    height: 305,
   },
   {
     number: "03",
@@ -156,8 +158,9 @@ export const COHORT_PREP_FEATURES = [
     ],
     footer:
       "With chapter tracking, students always know where they stand in the syllabus.",
-    image: "/assets/images/rotate.png",
-    visual: "chapter",
+    image: "/assets/images/student-app-booklet-3.png",
+    width: 277,
+    height: 309,
   },
   {
     number: "04",
@@ -172,8 +175,9 @@ export const COHORT_PREP_FEATURES = [
     ],
     footer:
       "Frequent evaluation ensures that students continuously improve their performance.",
-    image: "/assets/images/growthMeter.png",
-    visual: "quizzes",
+    image: "/assets/images/student-app-booklet-4.png",
+    width: 277,
+    height: 305,
   },
   {
     number: "05",
@@ -184,8 +188,9 @@ export const COHORT_PREP_FEATURES = [
     bullets: ["Practice questions", "Assignments", "Tests"],
     footer:
       "These mistakes are stored in a personal error book, allowing students to revisit and correct them regularly.",
-    image: "/assets/images/growthMeter/dailyReport.png",
-    visual: "errors",
+    image: "/assets/images/student-app-booklet-5.png",
+    width: 239,
+    height: 305,
   },
   {
     number: "06",
@@ -200,7 +205,8 @@ export const COHORT_PREP_FEATURES = [
     ],
     footer:
       "This mentorship creates a supportive environment where students feel heard.",
-    image: "/assets/images/mentor.svg",
-    visual: "mentor",
+    image: "/assets/images/student-app-booklet-6.png",
+    width: 318,
+    height: 305,
   },
 ] as const;

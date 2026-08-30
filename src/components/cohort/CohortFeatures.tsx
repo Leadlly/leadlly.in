@@ -68,9 +68,11 @@ export default function CohortFeatures() {
 
                 <div className={cn(reversed && "lg:order-1")}>
                   <FeatureVisual
-                    visual={feature.visual}
                     image={feature.image}
                     title={feature.title}
+                    width={feature.width}
+                    height={feature.height}
+                    priority={index === 0}
                   />
                 </div>
               </article>
