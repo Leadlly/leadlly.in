@@ -5,12 +5,7 @@ export type WaitlistResponse = {
 };
 
 export async function joinCohortWaitlist(email: string) {
-  const apiUrl = process.env.NEXT_PUBLIC_STUDENT_API_URL;
-  if (!apiUrl) {
-    throw new Error("Waitlist is not configured");
-  }
-
-  const response = await fetch(`${apiUrl}/api/cohort/waitlist`, {
+  const response = await fetch("/api/cohort/waitlist", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
