@@ -1,13 +1,11 @@
-export const COHORT_CHECKOUT_HREF = "#pricing";
 export const COHORT_PRICE = "₹3,990";
-export const COHORT_SEATS_TOTAL = 1000;
-export const COHORT_SEATS_LEFT = 327;
+export const COHORT_WAITLIST_CTA = "Join the Waitlist";
 
 export const COHORT_FAQS = [
   {
-    question: "What happens once all 1,000 seats are filled?",
+    question: "What happens after I join the waitlist?",
     answer:
-      "Cohort 1 closes and registrations stop. Future cohorts may open later at different pricing.",
+      "We'll email you when Cohort 1 opens so you can complete your registration. Joining the waitlist doesn't charge you anything.",
   },
   {
     question: "Is this a subscription or a one-time payment?",
@@ -22,7 +20,7 @@ export const COHORT_FAQS = [
   {
     question: "Do I need to download the app separately?",
     answer:
-      "Yes — after you reserve your seat, you'll get access to download the app and get started immediately.",
+      "Yes — after Cohort 1 opens, you'll get access to download the app and get started immediately.",
   },
   {
     question: "How is this different from a normal coaching app?",
@@ -64,49 +62,44 @@ export const COHORT_STEPS = [
     offset: "lg:mr-36",
     title: "Your Plan Is Built Around You",
     bullets: [
-      "You share your class schedule, syllabus stage, and pace.",
-      "The app builds today's sequenced to-do list for your real starting point.",
-      "No overwhelming 6-month roadmap — just today's execution.",
+      "Share your class schedule, syllabus stage, and pace",
+      "Get a fresh, sequenced to-do list every single day — built around your pace, not a fixed 6-month roadmap",
     ],
-    outcome:
-      "You stop wondering what to study. You open the app and know exactly what to do, in what order.",
+    outcome: "No wondering what to study. Open the app, know exactly what to do.",
   },
   {
     label: "Step 2 · Week 1",
     offset: "lg:ml-12 lg:mr-24",
-    title: "The System Starts Learning How You Perform",
+    title: "The System Starts Learning You",
     bullets: [
-      "Daily adaptive quizzes connect directly to what you studied.",
-      "Every result becomes real topic-level accuracy data.",
-      "Your mentor sees the data from day one — not a month later.",
+      "Daily and weekly quizzes tied to what you studied — keeping your revision up to date",
+      "Every result becomes topic-level accuracy data — visible to your mentor from day one",
     ],
     outcome:
-      "You get an honest picture of where you stand, and your mentor already understands your preparation.",
+      "An honest picture of where you stand, shared with your mentor in real time.",
   },
   {
     label: "Step 3 · Month 1",
     offset: "lg:ml-24 lg:mr-12",
     title: "Your Plan Restructures Around Real Performance",
     bullets: [
-      "Weak topics surface automatically through accuracy tracking.",
-      "Your plan spends more time where accuracy is low and less where you're strong.",
-      "Below 40% accuracy triggers a mentor call; you can also request one anytime.",
-      "Every mistake is saved in your error book for revision.",
+      "Weak topics surface automatically; your plan spends more time where accuracy is low and less where you're strong",
+      "Below 40% accuracy triggers a mentor call — or request one anytime",
     ],
     outcome:
-      "Your preparation actively corrects itself around weak spots before they become bigger gaps.",
+      "Your prep corrects itself before weak spots become gaps.",
   },
   {
     label: "Step 4 · Ongoing",
     offset: "lg:ml-36",
-    title: "You Always Know Exactly Where You Stand",
+    title: "You Always Know Where You Stand",
     bullets: [
-      "Weekly and monthly dashboards show coverage, accuracy, and time spent.",
-      "Mentor guidance is based on your numbers, not generic tips.",
-      "Study → test → adjust → mentor input → sharper execution.",
+      "Weekly/monthly dashboards: coverage, accuracy, time spent",
+      "Get structured with your everyday studies and revision",
+      "Mentor guidance based on your numbers, not generic tips",
     ],
     outcome:
-      "Every week, your system and mentor guidance get sharper — and your progress stays visible.",
+      "Sharper system, sharper mentor, visible progress — every week.",
   },
 ] as const;
 
@@ -115,7 +108,7 @@ export const COHORT_PREP_FEATURES = [
     number: "01",
     title: "Smart Study Planner",
     intro:
-      "Students can manage their daily study plan based on the lectures and practice assignments given in class.",
+      "Students can manage their daily study plan based on their lectures and practice revision questions. Each day, students get a to-do list — once they check it off, they unlock 3–5 questions to practice.",
     listLabel: "This helps students:",
     bullets: [
       "Stay organized with their daily study goals",
@@ -147,24 +140,24 @@ export const COHORT_PREP_FEATURES = [
   },
   {
     number: "03",
-    title: "Subject & Chapter Tracking",
+    title: "Revision Tracking",
     intro:
-      "Students can monitor their syllabus completion across different subjects and chapters.",
+      "Students can monitor their revision completion across different subjects and chapters.",
     listLabel: "This helps them clearly identify:",
     bullets: [
       "Completed topics",
-      "Topics that need revision",
+      "Revision accuracy",
       "Weak areas that require more practice",
     ],
     footer:
-      "With chapter tracking, students always know where they stand in the syllabus.",
+      "With revision tracking, a student always knows where they stand in their syllabus.",
     image: "/assets/images/student-app-booklet-3.png",
     width: 277,
     height: 309,
   },
   {
     number: "04",
-    title: "Weekly Practice Quizzes",
+    title: "Daily & Weekly Practice Quizzes",
     intro:
       "Regular quizzes help students evaluate their conceptual understanding and test their preparation.",
     listLabel: "These quizzes are designed to:",

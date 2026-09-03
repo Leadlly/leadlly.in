@@ -2,8 +2,7 @@ import { ShieldCheck } from "lucide-react";
 
 import {
   COHORT_PRICE,
-  COHORT_SEATS_LEFT,
-  COHORT_SEATS_TOTAL,
+  COHORT_WAITLIST_CTA,
 } from "@/helpers/constants/cohort";
 import {
   CohortCta,
@@ -25,7 +24,7 @@ export default function CohortPricing() {
         </div>
         <div className="relative mt-10 overflow-hidden rounded-[2rem] border-2 border-[#1a1a1a] bg-white p-6 shadow-[10px_10px_0_#1a1a1a] sm:p-10">
           <div className="absolute right-0 top-0 rounded-bl-2xl bg-primary px-5 py-3 text-xs font-extrabold tracking-wider text-white uppercase">
-            Limited to {COHORT_SEATS_TOTAL.toLocaleString("en-IN")}
+            Waitlist Open
           </div>
           <p className="text-sm font-extrabold tracking-widest text-primary uppercase">
             Full 1-Year Program
@@ -50,12 +49,10 @@ export default function CohortPricing() {
             Refund/guarantee terms will be confirmed and shown before payment.
           </p>
           <CohortCta className="mt-7 w-full px-6 text-base sm:text-lg">
-            Reserve Your Seat — {COHORT_PRICE}
+            {COHORT_WAITLIST_CTA}
           </CohortCta>
           <p className="mt-4 text-center text-xs font-bold text-[#777]">
-            {COHORT_SEATS_LEFT.toLocaleString("en-IN")} of{" "}
-            {COHORT_SEATS_TOTAL.toLocaleString("en-IN")} seats currently left ·
-            No recurring charges
+            Join the waitlist now · No payment until Cohort 1 opens
           </p>
         </div>
       </div>

@@ -87,7 +87,7 @@ export default function CohortHowItWorks() {
         </div>
         <div className="mt-12 text-center">
           <CohortCta className="bg-white text-[#34156d] hover:bg-white">
-            Reserve Your Seat
+            Join the Waitlist
           </CohortCta>
         </div>
       </div>

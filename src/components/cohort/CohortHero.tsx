@@ -1,10 +1,6 @@
-import { Building2, Flame, GraduationCap, Timer, Users } from "lucide-react";
+import { Building2, GraduationCap, Timer, Users } from "lucide-react";
 
-import {
-  COHORT_PRICE,
-  COHORT_SEATS_LEFT,
-  COHORT_SEATS_TOTAL,
-} from "@/helpers/constants/cohort";
+import { COHORT_WAITLIST_CTA } from "@/helpers/constants/cohort";
 import CohortCountdown from "./CohortCountdown";
 import { CohortCta, CohortIcon, cohortShell } from "./ui";
 
@@ -12,9 +8,7 @@ export default function CohortHero() {
   return (
     <section className="cohort-hero-glow relative overflow-hidden border-b border-[#e8e1f0] pt-28 md:pt-32">
       <div className="cohort-dot-grid pointer-events-none absolute inset-0 opacity-60" />
-      <div
-        className={`relative pb-16 text-center md:pb-24 ${cohortShell}`}
-      >
+      <div className={`relative pb-16 text-center md:pb-24 ${cohortShell}`}>
         <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#d4cce0] bg-white px-4 py-2 text-[10px] font-extrabold tracking-[.12em] text-primary shadow-sm sm:text-xs">
           <CohortIcon icon={GraduationCap} size={14} />
           COHORT 1 — BY STUDENTS OF IIT &amp; AIIMS
@@ -31,7 +25,7 @@ export default function CohortHero() {
           </span>
         </h1>
 
-        <p className="mx-auto mt-8 max-w-2xl  px-5 py-4 text-base font-medium leading-7 text-[#444] sm:px-8 sm:text-lg">
+        <p className="mx-auto mt-8 max-w-2xl px-5 py-4 text-base font-medium leading-7 text-[#444] sm:px-8 sm:text-lg">
           A daily planner + dedicated mentor from IIT &amp; AIIMS — built to
           execute your JEE/NEET preparation with you, every single day.
         </p>
@@ -42,7 +36,7 @@ export default function CohortHero() {
 
         <div className="mt-5 flex justify-center">
           <CohortCta className="w-full max-w-md px-6 text-base sm:w-auto sm:px-9 sm:text-lg">
-            Reserve Your Seat — {COHORT_PRICE}
+            {COHORT_WAITLIST_CTA}
           </CohortCta>
         </div>
 
@@ -67,17 +61,9 @@ export default function CohortHero() {
 
         <div className="mx-auto mt-8 grid max-w-2xl grid-cols-1 gap-2 rounded-2xl border border-[#d4cce0] bg-white p-3 text-sm font-extrabold shadow-sm sm:grid-cols-2">
           <div className="flex items-center justify-center gap-2 rounded-xl bg-[#f5f3f8] px-3 py-3 sm:justify-start">
-            <CohortIcon
-              icon={Flame}
-              size={16}
-              className="shrink-0 text-primary"
-            />
+            <span className="size-2 shrink-0 rounded-full bg-emerald-500" />
             <span>
-              Cohort 1 · {COHORT_SEATS_TOTAL.toLocaleString("en-IN")} Seats ·{" "}
-              <span className="text-primary">
-                {COHORT_SEATS_LEFT.toLocaleString("en-IN")}
-              </span>{" "}
-              Left
+              Cohort 1 · <span className="text-primary">Waitlist Open</span>
             </span>
           </div>
           <div className="flex items-center justify-center gap-2 rounded-xl bg-[#1a1a1a] px-3 py-3 text-white sm:justify-start">

@@ -81,7 +81,7 @@ export default function CohortFeatures() {
         </div>
 
         <div className="mt-16 text-center md:mt-24">
-          <CohortCta>Reserve Your Seat</CohortCta>
+          <CohortCta>Join the Waitlist</CohortCta>
         </div>
       </div>
     </section>

@@ -2,7 +2,6 @@ import {
   AlertTriangle,
   BookMarked,
   Eye,
-  GraduationCap,
   Handshake,
   MessageCircle,
   PhoneCall,
@@ -82,40 +81,9 @@ export default function CohortMentor() {
             alt="A Leadlly mentor supporting a student"
             tilt="left"
             className="max-w-lg"
-          >
-            <div className="mt-5 rounded-2xl bg-[#1a1a1a] p-4 text-white">
-              <p className="text-xs font-extrabold uppercase tracking-[.16em] text-[#b998f3]">
-                Who your mentor is
-              </p>
-              <p className="mt-2 text-sm font-bold leading-6">
-                A student from an IIT or Government Medical College who cracked
-                JEE or NEET themselves.
-              </p>
-            </div>
-          </FramedIllustration>
+          />
 
           <div className="space-y-5">
-            <article className="rounded-3xl border border-[#d4cce0] bg-white p-6 shadow-sm sm:p-8">
-              <div className="flex items-center gap-3">
-                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[#ede9f2] text-primary">
-                  <CohortIcon icon={GraduationCap} size={20} />
-                </span>
-                <CohortDisplay as="h3" className="text-3xl">
-                  Who Your Mentor Is
-                </CohortDisplay>
-              </div>
-              <p className="mt-5 text-sm leading-7 text-[#555] sm:text-base">
-                Your mentor is a student from IIT or a Government Medical
-                College — someone who cracked JEE or NEET themselves, not too
-                long ago.
-              </p>
-              <p className="mt-3 text-sm leading-7 text-[#555] sm:text-base">
-                They know the syllabus, the pressure, and the mistakes that cost
-                students months — because they lived through the same year
-                you&apos;re in right now.
-              </p>
-            </article>
-
             <article className="rounded-3xl border border-[#d4cce0] bg-[#1a1a1a] p-6 text-white shadow-sm sm:p-8">
               <div className="flex items-center gap-3">
                 <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-primary text-white">
@@ -195,7 +163,7 @@ export default function CohortMentor() {
           </CohortDisplay>
         </div>
         <div className="mt-10 text-center">
-          <CohortCta>Reserve Your Seat</CohortCta>
+          <CohortCta>Join the Waitlist</CohortCta>
         </div>
       </div>
     </section>

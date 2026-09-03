@@ -9,7 +9,7 @@ export default function CohortFaq() {
     >
       <div className={cohortShell}>
         <div className="text-center">
-          <CohortEyebrow>Before you reserve</CohortEyebrow>
+          <CohortEyebrow>Before you join</CohortEyebrow>
           <CohortDisplay as="h2" className="mt-3 text-5xl">
             Frequently Asked Questions
           </CohortDisplay>

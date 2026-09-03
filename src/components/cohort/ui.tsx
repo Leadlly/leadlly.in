@@ -1,11 +1,11 @@
 import type { ReactNode } from "react";
 import Image from "next/image";
-import Link from "next/link";
 
-import { ArrowRight, type LucideIcon } from "lucide-react";
+import { type LucideIcon } from "lucide-react";
 
-import { COHORT_CHECKOUT_HREF } from "@/helpers/constants/cohort";
 import { cn } from "@/lib/utils";
+
+export { CohortCta, WaitlistTrigger } from "./WaitlistCta";
 
 export const cohortShell =
   "mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-16";
@@ -21,29 +21,6 @@ export function CohortIcon({
 }) {
   return (
     <Icon className={className} size={size} strokeWidth={2.15} aria-hidden />
-  );
-}
-
-export function CohortCta({
-  children,
-  className,
-  href = COHORT_CHECKOUT_HREF,
-}: {
-  children: ReactNode;
-  className?: string;
-  href?: string;
-}) {
-  return (
-    <Link
-      href={href}
-      className={cn(
-        "cohort-cta inline-flex items-center justify-center gap-2 rounded-2xl bg-primary px-8 py-4 font-extrabold text-white",
-        className,
-      )}
-    >
-      {children}
-      <ArrowRight className="size-4 shrink-0 sm:size-5" strokeWidth={2.5} />
-    </Link>
   );
 }
 
