@@ -70,8 +70,6 @@ export default function CohortFeatures() {
                   <FeatureVisual
                     image={feature.image}
                     title={feature.title}
-                    width={feature.width}
-                    height={feature.height}
                     priority={index === 0}
                   />
                 </div>

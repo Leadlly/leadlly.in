@@ -117,9 +117,7 @@ export const COHORT_PREP_FEATURES = [
     ],
     footer:
       "A clear daily plan leads to better productivity and stronger discipline.",
-    image: "/assets/images/student-app-booklet-1.png",
-    width: 285,
-    height: 305,
+    image: "/assets/images/cohort-app-planner.png",
   },
   {
     number: "02",
@@ -134,9 +132,7 @@ export const COHORT_PREP_FEATURES = [
     ],
     footer:
       "Tracking progress regularly helps students stay motivated and accountable.",
-    image: "/assets/images/student-app-booklet-2.png",
-    width: 239,
-    height: 305,
+    image: "/assets/images/cohort-app-progress.png",
   },
   {
     number: "03",
@@ -151,9 +147,7 @@ export const COHORT_PREP_FEATURES = [
     ],
     footer:
       "With revision tracking, a student always knows where they stand in their syllabus.",
-    image: "/assets/images/student-app-booklet-3.png",
-    width: 277,
-    height: 309,
+    image: "/assets/images/cohort-app-tracker.png",
   },
   {
     number: "04",
@@ -168,9 +162,7 @@ export const COHORT_PREP_FEATURES = [
     ],
     footer:
       "Frequent evaluation ensures that students continuously improve their performance.",
-    image: "/assets/images/student-app-booklet-4.png",
-    width: 277,
-    height: 305,
+    image: "/assets/images/cohort-app-quizzes.png",
   },
   {
     number: "05",
@@ -181,9 +173,7 @@ export const COHORT_PREP_FEATURES = [
     bullets: ["Practice questions", "Assignments", "Tests"],
     footer:
       "These mistakes are stored in a personal error book, allowing students to revisit and correct them regularly.",
-    image: "/assets/images/student-app-booklet-5.png",
-    width: 239,
-    height: 305,
+    image: "/assets/images/cohort-app-errors.png",
   },
   {
     number: "06",
@@ -198,8 +188,6 @@ export const COHORT_PREP_FEATURES = [
     ],
     footer:
       "This mentorship creates a supportive environment where students feel heard.",
-    image: "/assets/images/student-app-booklet-6.png",
-    width: 318,
-    height: 305,
+    image: "/assets/images/cohort-app-mentor.png",
   },
 ] as const;
