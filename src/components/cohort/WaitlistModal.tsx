@@ -5,6 +5,9 @@ import { X } from "lucide-react";
 
 import { joinCohortWaitlist } from "@/lib/cohortWaitlist";
 
+const fieldClassName =
+  "w-full rounded-2xl border border-[#d4cce0] bg-[#fbfaff] px-4 py-3 text-sm font-medium outline-none ring-primary/20 placeholder:text-[#aaa] focus:border-primary focus:ring-4";
+
 export default function WaitlistModal({
   open,
   onClose,
@@ -12,7 +15,11 @@ export default function WaitlistModal({
   open: boolean;
   onClose: () => void;
 }) {
+  const nameId = useId();
+  const phoneId = useId();
   const emailId = useId();
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success">("idle");
   const [message, setMessage] = useState("");
@@ -36,6 +43,8 @@ export default function WaitlistModal({
 
   useEffect(() => {
     if (open) return;
+    setName("");
+    setPhone("");
     setEmail("");
     setStatus("idle");
     setMessage("");
@@ -50,7 +59,7 @@ export default function WaitlistModal({
     setStatus("loading");
 
     try {
-      const result = await joinCohortWaitlist(email);
+      const result = await joinCohortWaitlist({ name, phone, email });
       setStatus("success");
       setMessage(result.message);
     } catch (submitError) {
@@ -99,14 +108,54 @@ export default function WaitlistModal({
 
         {status === "success" ? (
           <p className="mt-6 rounded-2xl bg-[#f5f3f8] px-4 py-5 text-sm font-semibold leading-6 text-[#333]">
-            {message || "You're on the waitlist. We'll email you when Cohort 1 opens."}
+            {message ||
+              "You're on the waitlist. We'll email you when Cohort 1 opens."}
           </p>
         ) : (
           <>
             <p className="mt-3 text-sm leading-6 text-[#555]">
-              Enter your email and we&apos;ll notify you when Cohort 1 opens.
+              Share your details and we&apos;ll notify you when Cohort 1 opens.
             </p>
             <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
+              <div>
+                <label
+                  htmlFor={nameId}
+                  className="mb-2 block text-xs font-extrabold tracking-wide text-[#333] uppercase"
+                >
+                  Name
+                </label>
+                <input
+                  id={nameId}
+                  type="text"
+                  required
+                  autoComplete="name"
+                  autoFocus
+                  minLength={2}
+                  value={name}
+                  onChange={(event) => setName(event.target.value)}
+                  placeholder="Your full name"
+                  className={fieldClassName}
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor={phoneId}
+                  className="mb-2 block text-xs font-extrabold tracking-wide text-[#333] uppercase"
+                >
+                  Phone number
+                </label>
+                <input
+                  id={phoneId}
+                  type="tel"
+                  required
+                  autoComplete="tel"
+                  inputMode="tel"
+                  value={phone}
+                  onChange={(event) => setPhone(event.target.value)}
+                  placeholder="+91 98765 43210"
+                  className={fieldClassName}
+                />
+              </div>
               <div>
                 <label
                   htmlFor={emailId}
@@ -119,11 +168,10 @@ export default function WaitlistModal({
                   type="email"
                   required
                   autoComplete="email"
-                  autoFocus
                   value={email}
                   onChange={(event) => setEmail(event.target.value)}
                   placeholder="you@email.com"
-                  className="w-full rounded-2xl border border-[#d4cce0] bg-[#fbfaff] px-4 py-3 text-sm font-medium outline-none ring-primary/20 placeholder:text-[#aaa] focus:border-primary focus:ring-4"
+                  className={fieldClassName}
                 />
               </div>
               {error ? (
