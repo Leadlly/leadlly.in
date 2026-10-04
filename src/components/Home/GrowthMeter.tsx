@@ -49,11 +49,7 @@ const GrowthMeter = () => {
                 ))}
               </ul>
 
-              <LinkButton
-                href="https://play.google.com/store/apps/details?id=com.leadlly.app"
-                target="_blank"
-                className="pl-5"
-              >
+              <LinkButton href="#download-section" className="pl-5">
                 Start Planning Now
               </LinkButton>
             </div>

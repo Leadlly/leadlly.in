@@ -1,4 +1,6 @@
-import { ReactNode } from "react";
+"use client";
+
+import { MouseEvent, ReactNode } from "react";
 import Link from "next/link";
 
 import { ChevronRight } from "@hugeicons/core-free-icons";
@@ -18,6 +20,7 @@ interface LinkButtonProps
   iconContainerClassName?: string;
   iconClassName?: string;
 }
+
 const LinkButton = ({
   children,
   href,
@@ -26,11 +29,28 @@ const LinkButton = ({
   size = "default",
   iconContainerClassName = "",
   iconClassName = "",
+  onClick,
   ...props
 }: LinkButtonProps) => {
+  const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    onClick?.(event);
+    if (event.defaultPrevented || !href.startsWith("#")) return;
+
+    const id = href.slice(1);
+    if (!id) return;
+
+    const target = document.getElementById(id);
+    if (!target) return;
+
+    event.preventDefault();
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+    window.history.replaceState(null, "", href);
+  };
+
   return (
     <Link
       href={href}
+      onClick={handleClick}
       className={cn(
         buttonVariants({ size, variant }),
         "h-14 gap-4 text-base md:text-lg font-medium",

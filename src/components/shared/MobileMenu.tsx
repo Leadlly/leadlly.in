@@ -6,12 +6,10 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import Menu from "../Icons/Menu";
+import PlayStoreIcon from "../Icons/PlayStoreIcon";
 import { Button } from "../ui/button";
 
 interface MenuItem {
@@ -22,6 +20,7 @@ interface MenuItem {
 interface MobileMenuProps {
   menuItems: MenuItem[];
   signUpLink?: string;
+  downloadLink?: string;
 }
 
 const itemVariants = {
@@ -34,7 +33,11 @@ const sheetVariants = {
   visible: { opacity: 1, y: 0 },
 };
 
-const MobileMenu = ({ menuItems, signUpLink }: MobileMenuProps) => {
+const MobileMenu = ({
+  menuItems,
+  signUpLink,
+  downloadLink,
+}: MobileMenuProps) => {
   return (
     <Sheet>
       <SheetTrigger
@@ -65,22 +68,45 @@ const MobileMenu = ({ menuItems, signUpLink }: MobileMenuProps) => {
               <SheetClose>{item.label}</SheetClose>
             </motion.a>
           ))}
-          {signUpLink && (
-            <motion.a
-              initial="hidden"
-              href={signUpLink}
-              animate="visible"
-              transition={{
-                delay: menuItems.length * 0.2,
-                type: "spring",
-                stiffness: 50,
-              }}
-              variants={itemVariants}
-              className="block mx-auto mt-16 px-6 py-2 bg-[linear-gradient(110deg,#8B4CF4,45%,#B078F9,55%,#8B4CF4)] bg-size-[200%_100%] text-white rounded-full border border-blue-500 font-semibold transition-colors hover:opacity-90"
-            >
-              Download
-            </motion.a>
-          )}
+          <div className="mt-10 flex w-full max-w-xs flex-col gap-3 px-6">
+            {downloadLink ? (
+              <motion.a
+                initial="hidden"
+                href={downloadLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                animate="visible"
+                transition={{
+                  delay: menuItems.length * 0.2,
+                  type: "spring",
+                  stiffness: 50,
+                }}
+                variants={itemVariants}
+                className="flex items-center justify-center gap-2 rounded-full border border-blue-500 bg-[linear-gradient(110deg,#8B4CF4,45%,#B078F9,55%,#8B4CF4)] bg-size-[200%_100%] px-6 py-3 text-base font-semibold text-white transition-colors hover:opacity-90"
+              >
+                <PlayStoreIcon className="size-5" />
+                Download
+              </motion.a>
+            ) : null}
+            {signUpLink ? (
+              <motion.a
+                initial="hidden"
+                href={signUpLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                animate="visible"
+                transition={{
+                  delay: (menuItems.length + 1) * 0.2,
+                  type: "spring",
+                  stiffness: 50,
+                }}
+                variants={itemVariants}
+                className="flex items-center justify-center rounded-full border border-primary/30 bg-white px-6 py-3 text-base font-semibold text-primary"
+              >
+                Signup
+              </motion.a>
+            ) : null}
+          </div>
         </motion.div>
       </SheetContent>
     </Sheet>

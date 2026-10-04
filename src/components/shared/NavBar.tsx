@@ -6,8 +6,13 @@ import { NavLinks } from "@/helpers/constants";
 import { cn } from "@/lib/utils";
 import Logo from "../Icons/Logo";
 import LogoFull from "../Icons/LogoFull";
+import PlayStoreIcon from "../Icons/PlayStoreIcon";
 import { buttonVariants } from "../ui/button";
 import MobileMenu from "./MobileMenu";
+
+const PLAY_STORE_URL =
+  "https://play.google.com/store/apps/details?id=com.leadlly.app";
+const SIGNUP_URL = "https://education.leadlly.in";
 
 const NavBar = () => {
   return (
@@ -23,7 +28,7 @@ const NavBar = () => {
           <LogoFull className="hidden md:flex" />
         </div>
 
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden md:flex items-center gap-4">
           <ul className="flex items-center gap-6">
             {NavLinks.map((link, index) => (
               <motion.li
@@ -42,26 +47,33 @@ const NavBar = () => {
             ))}
           </ul>
 
-          {/* <Link
-            href={"https://education.leadlly.in/login"}
-            target="_blank"
-            className={cn(buttonVariants({ size: "xl" }), "rounded-full")}
-          >
-            Login / Signup
-          </Link> */}
           <Link
-            href={"https://play.google.com/store/apps/details?id=com.leadlly.app"}
+            href={PLAY_STORE_URL}
             target="_blank"
-            className={cn(buttonVariants({ size: "xl" }), "rounded-full")}
+            rel="noopener noreferrer"
+            className={cn(buttonVariants({ size: "xl" }), "rounded-full gap-2")}
           >
+            <PlayStoreIcon className="size-4" />
             Download
+          </Link>
+          <Link
+            href={SIGNUP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={cn(
+              buttonVariants({ size: "xl", variant: "outline" }),
+              "rounded-full"
+            )}
+          >
+            Signup
           </Link>
         </nav>
 
         <div className="flex md:hidden">
           <MobileMenu
             menuItems={NavLinks}
-            signUpLink="https://play.google.com/store/apps/details?id=com.leadlly.app"
+            signUpLink={SIGNUP_URL}
+            downloadLink={PLAY_STORE_URL}
           />
         </div>
       </motion.div>

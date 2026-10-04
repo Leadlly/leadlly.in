@@ -1,4 +1,5 @@
 import AskAI from "@/components/Home/AskAI";
+import DownloadSection from "@/components/Home/Download";
 import GrowthMeter from "@/components/Home/GrowthMeter";
 import Hero from "@/components/Home/Hero";
 import MarqueeList from "@/components/Home/Marquee";
@@ -22,6 +23,7 @@ export default function GridBackgroundDemo() {
       <AskAI />
       <Testimonals />
       <OurMission />
+      <DownloadSection />
     </>
   );
 }
