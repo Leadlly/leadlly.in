@@ -26,7 +26,7 @@ export const NavLinks = [
 ];
 
 export const WHATSAPP_COMMUNITY_URL =
-  "https://chat.whatsapp.com/JSFgMMU6JL46MP8iaGwpiF";
+  "https://chat.whatsapp.com/BSSwdHEnwP11TnRKuZzl2Z";
 
 export const PlannerPoints: Points[] = [
   { icon: DailyTask, label: "Daily task accomplishment." },
