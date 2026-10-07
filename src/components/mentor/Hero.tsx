@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-import HeroImg from "../../../public/assets/images/mentor.svg";
+import HeroImg from "../../../public/assets/illustrations/svg_6.svg";
 
 const HeroSection = () => {
   return (
@@ -19,19 +19,19 @@ const HeroSection = () => {
           </span>
         </h1>
         <p className="font-medium text-base sm:text-lg lg:text-xl mb-6 md:mb-8 text-gray-700">
-          At Leadlly, we believe that the right mentorship can make all the
-          difference. Our team of dedicated mentors, hailing from top-tier
-          institutions, is here to provide you with personalized guidance and
-          support.
+          At Leadlly, we&apos;re hiring mentors from top-tier institutions to
+          guide serious JEE and NEET aspirants. Share your experience, earn
+          while mentoring, and help students stay consistent, accountable, and
+          on track.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
-          <button className="bg-black hover:bg-gray-700 transition-colors text-white px-4 md:px-6 py-2 rounded-full flex items-center justify-center text-base sm:text-lg w-full sm:w-auto">
-            <span className="mr-2">▶</span>
-            App Coming Soon
-          </button>
-          <a href={"https://mentor.leadlly.in"} target="_blank">
-            <button className="text-brand-purple  hover:bg-purple-50 transition-colors px-4 md:px-6 py-2 rounded-full font-medium border-2 border-purple-600 flex items-center justify-center text-base sm:text-lg w-full sm:w-auto">
-              Login
+          <a
+            href="https://mentor.leadlly.in/signup"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="text-brand-purple hover:bg-purple-50 transition-colors px-4 md:px-6 py-2 rounded-full font-medium border-2 border-purple-600 flex items-center justify-center text-base sm:text-lg w-full sm:w-auto">
+              Signup
               <span className="ml-2">›</span>
             </button>
           </a>

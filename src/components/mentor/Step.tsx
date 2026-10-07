@@ -9,7 +9,7 @@ interface StepProps {
 const Step = ({
   number = 1,
   title = "Stipend",
-  description = "Earn ₹2000/month with potential growth based on performance.",
+  description = "Earn ₹500/week with potential growth based on performance.",
 }: StepProps) => {
   return (
     <div

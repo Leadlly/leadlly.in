@@ -6,7 +6,7 @@ const PerksSection = () => {
       number: 1,
       title: "Stipend",
       description:
-        "Earn ₹2000/month with potential growth based on performance.",
+        "Earn ₹500/week with potential growth based on performance.",
     },
     {
       number: 2,
